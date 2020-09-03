@@ -1,0 +1,48 @@
+// colors
+$black: #353535
+$red: #AD0A22
+$grey: #A0A0A0
+// light colors
+$pink: #C8495E
+$green: #2C7A60
+$lightblue: #5E7289
+$lightgrey: #9C9E9F
+$e3: #E3E3E3
+$blue: #203668
+
+
+// respo sizes
+$tablet-width: 768px
+$desktop-width: 1024px
+
+@mixin tabletPlus768()
+    @media screen and (min-width: $tablet-width)
+        @content
+
+@mixin sizePlus($width)
+    @media screen and (min-width: $width)
+        @content
+
+@mixin desktopPlus1024()
+    @media screen and (min-width: $desktop-width)
+        @content
+    
+@mixin centering()
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin flexing($justi, $align,)
+    display: flex
+    justify-content: $justi
+    align-items: $align
+@mixin flexingDir($dir, $justi, $align,)
+    display: flex
+    flex-direction: $dir
+    justify-content: $justi
+    align-items: $align
+@mixin font($size, $weight)
+    font-size: $size
+    font-weight: $weight
+    
+    

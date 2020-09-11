@@ -2,7 +2,18 @@
 @import header
 @import variables
 
-
+body.active
+    &::after
+        content: ''
+        background: $darkbg
+        position: absolute
+        z-index: -10
+        width: 100vw
+        height: 100vh
+        right: 0
+        top: 0
+        opacity: 90%
+        
 header
     background: white
     text-align: center
@@ -12,7 +23,9 @@ header
     font-family: firaMedium
     display: flex
     flex-direction: column
-    @include tabletPlus768()
+    background: white
+        
+    @include desktopPlus1024()
         position: static
     hr
         display: none
@@ -22,55 +35,106 @@ header
         right: 0
         width: 100%
         height: 1px
-        @include tabletPlus768()
+        @include desktopPlus1024()
             display: unset
     .header-bot.active ~ hr
         display: unset
         top: 70px
         position: fixed
+    .header-logo-desktop
+        width: 175px
+        @include desktopPlus1024()
+            width: 250px
     &.active
         width: 90%
         height: 100vh
+        animation: burgerSlideStart 1s
+        .header-logo-desktop
+            @include desktopPlus1024()
+                width: 250px
 
+     
+    &.removing
+        width: 90%
+        height: 100vh
+        animation: burgerSlideStartReverse 1s
+        .header-logo-desktop
+            @include desktopPlus1024()
+                width: 250px
+@keyframes burgerSlideStart
+    0%
+        width: 0
+    1%
+        width: 0        
+    100%
+        width: 90%
+@keyframes burgerSlideStartReverse
+    0%
+        width: 90%
+    1%
+        width: 90%      
+    100%
+        width: 0
 
 .header-top
     display: flex
     align-items: center
     justify-content: space-between  
     height: 70px
+    border-bottom: 1px solid $green
+    @include desktopPlus1024()
+        border-bottom: none
     .header-top-left
-        @include tabletPlus768()
+        @include desktopPlus1024()
             flex: 1
         @include flexing(space-between, center)
 
+.header-top,
+.header-bot
+    padding: 0 20px
+    @include desktopPlus1024()
+        height: 100px     
+        padding: 0 
+
 .header-bot
     height: unset
+    display: none
+    padding: 0 37px
+    @include tabletPlus768()
+        padding: 0 50px
+    @include desktopPlus1024()
+        display: block
     
-.active 
+.active, .removing 
     .header-bot
         flex: 1
+        display: flex
+        flex-direction: column
+        &.active
+            display: none
     .header-nav
         margin-top: 30px
         height: 375px
     
 
-.header-top,
-.header-bot
-    padding: 0 20px
-    @include tabletPlus768()
-        height: 100px     
-        padding: 0 
-    
+
+
+// burger
 .burger
+    cursor: pointer
     &::after
         width: 100%
         height: 100%
         content: url(../images/burger.svg)
-    &.active
+    @include desktopPlus1024()
+        display: none
+.active, .removing
+    .burger
         &::after
             content: url(../images/x.svg)
-    @include tabletPlus768()
-        display: none
+
+
+
 .top-right-languagebar
     width: 100px
     height: 50px
@@ -79,7 +143,7 @@ header
     margin-left: 46px
     @include centering()
     display: none
-    @include tabletPlus768()
+    @include desktopPlus1024()
         display: flex
     select, option
         border: none
@@ -87,21 +151,21 @@ header
         font-family: inherit
 .header-aboutus
     display: none
-    @include tabletPlus768()
+    @include desktopPlus1024()
         display: unset   
 
 .header-nav
     height: 100%
 .header-nav-ul    
-    @include flexingDir(column, space-between, center)
+    @include flexingDir(column, space-between, flex-start)
     margin: 0 auto
     max-width: 980px
     height: 100%
-    @include tabletPlus768()
+    @include desktopPlus1024()
         @include flexingDir(row, space-between, center)
 
 .header-nav-li
-    @include tabletPlus768()
+    @include desktopPlus1024()
         margin-right: 56px
         &:last-child
             margin-right: 0
@@ -109,5 +173,16 @@ header
         margin-right: 76px
         &:last-child
             margin-right: 0
-
+    a
+        display: inline-block
+        max-height: 19px
+        overflow: hidden
+        text-align: left
     
+
+.header-socials
+    display: flex
+    height: 50px
+    border-top: 1px solid #E8E8E8
+    border-bottom: 1px solid #E8E8E8
+    align-items: center

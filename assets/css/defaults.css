@@ -89,6 +89,10 @@ body {
   padding: 0 20px;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
 }

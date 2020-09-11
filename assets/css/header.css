@@ -439,6 +439,7 @@ header.removing::after {
 
 @media screen and (min-width: 1024px) {
   .header-nav-ul {
+    padding-top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -452,7 +453,6 @@ header.removing::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: none;
   }
 }
 

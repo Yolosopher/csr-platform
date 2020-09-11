@@ -1,5 +1,5 @@
-// @import defaults
-// @import variables
+@import defaults
+@import variables
         
 header
     background: white
@@ -159,8 +159,9 @@ header
     height: 100%
     padding-top: 31px
     @include desktopPlus1024()
+        padding-top: 0
         @include flexingDir(row, space-between, center)
-        padding-top: none
+        
 
 .header-nav-li
     @include desktopPlus1024()

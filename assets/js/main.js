@@ -1,5 +1,5 @@
 // variables
-
+var headerBot = document.querySelector(".header-bot");
 
 
 // functions
@@ -18,9 +18,20 @@ function toggleBurger() {
     }    
 }
 
+function headerBotFixer() {
+    if (window.pageYOffset > 100) {
+        headerBot.classList.add("fixed");
+      } else {
+        headerBot.classList.remove("fixed");
+      }
+}
+
 // event listeners
 window.addEventListener('load', () => {
     $('.burger').click(function(){
         toggleBurger();
     });
 });
+window.onscroll = () => {
+    headerBotFixer()
+};

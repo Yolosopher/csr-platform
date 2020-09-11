@@ -86,21 +86,10 @@
 body {
   font-family: FiraRegular;
   color: #353535;
-  padding: 0 20px;
 }
 
 body.active {
   overflow: hidden;
-}
-
-a {
-  color: inherit;
-}
-
-.container {
-  max-width: 1336px;
-  margin: 0 auto;
-  width: 100%;
 }
 
 body.active::after {
@@ -115,10 +104,24 @@ body.active::after {
   opacity: 90%;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1336px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 header {
   background: white;
   text-align: center;
-  position: fixed;
   right: 0;
   font-size: 16px;
   font-family: firaMedium;
@@ -138,26 +141,22 @@ header {
   }
 }
 
-header hr {
+header::after {
+  content: '';
   display: none;
-  border-bottom: 1px solid #2C7A60;
+  height: 1px;
+  background: #2C7A60;
   position: absolute;
   top: 100px;
   right: 0;
-  width: 100%;
+  width: 100vw;
   height: 1px;
 }
 
 @media screen and (min-width: 1024px) {
-  header hr {
-    display: unset;
+  header::after {
+    display: block;
   }
-}
-
-header .header-bot.active ~ hr {
-  display: unset;
-  top: 70px;
-  position: fixed;
 }
 
 header .header-logo-desktop {
@@ -173,8 +172,15 @@ header .header-logo-desktop {
 header.active {
   width: 90%;
   height: 100vh;
+  padding: 0;
+  position: fixed;
   -webkit-animation: burgerSlideStart 1s;
           animation: burgerSlideStart 1s;
+}
+
+header.active::after {
+  display: block;
+  width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -186,8 +192,14 @@ header.active {
 header.removing {
   width: 90%;
   height: 100vh;
+  position: fixed;
   -webkit-animation: burgerSlideStartReverse 1s;
           animation: burgerSlideStartReverse 1s;
+}
+
+header.removing::after {
+  display: block;
+  width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -255,13 +267,6 @@ header.removing {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 70px;
-  border-bottom: 1px solid #2C7A60;
-}
-
-@media screen and (min-width: 1024px) {
-  .header-top {
-    border-bottom: none;
-  }
 }
 
 .header-top .header-top-left {
@@ -292,8 +297,8 @@ header.removing {
 @media screen and (min-width: 1024px) {
   .header-top,
   .header-bot {
-    height: 100px;
-    padding: 0;
+    height: 100px !important;
+    padding: 0 !important;
   }
 }
 
@@ -312,6 +317,16 @@ header.removing {
 @media screen and (min-width: 1024px) {
   .header-bot {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-bot.fixed {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    background: white;
   }
 }
 
@@ -411,15 +426,15 @@ header.removing {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 0 auto;
   max-width: 980px;
   height: 100%;
+  padding-top: 31px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -437,6 +452,7 @@ header.removing {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: none;
   }
 }
 
@@ -470,10 +486,69 @@ header.removing {
   display: -ms-flexbox;
   display: flex;
   height: 50px;
+  margin-top: 15px;
   border-top: 1px solid #E8E8E8;
   border-bottom: 1px solid #E8E8E8;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-socials {
+    display: none;
+  }
+}
+
+.header-socials p {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 415px) {
+  .header-socials p {
+    margin-right: 35px;
+  }
+}
+
+.social-logos {
+  width: 141px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-respo-languagebar {
+  margin-top: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 181px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-respo-languagebar {
+    display: none;
+  }
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200vh;
+  width: 100%;
+  background: grey;
 }
 /*# sourceMappingURL=style.css.map */

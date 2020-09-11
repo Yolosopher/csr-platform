@@ -1,0 +1,208 @@
+// @import defaults
+// @import variables
+        
+header
+    background: white
+    text-align: center
+    // position: fixed
+    right: 0
+    font-size: 16px
+    font-family: firaMedium
+    display: flex
+    flex-direction: column
+    background: white
+        
+    @include desktopPlus1024()
+        position: static
+    &::after
+        content: ''
+        display: none
+        height: 1px 
+        background: $green
+        position: absolute
+        top: 100px
+        right: 0
+        width: 100vw
+        height: 1px
+        @include desktopPlus1024()
+            display: block
+    .header-logo-desktop
+        width: 175px
+        @include desktopPlus1024()
+            width: 250px
+    &.active
+        width: 90%
+        height: 100vh
+        padding: 0
+        position: fixed
+        animation: burgerSlideStart 1s
+        &::after
+            display: block
+            width: 100%
+        .header-logo-desktop
+            @include desktopPlus1024()
+                width: 250px     
+    &.removing
+        width: 90%
+        height: 100vh
+        position: fixed
+        animation: burgerSlideStartReverse 1s
+        &::after
+            display: block
+            width: 100%
+        .header-logo-desktop
+            @include desktopPlus1024()
+                width: 250px
+@keyframes burgerSlideStart
+    0%
+        width: 0
+    1%
+        width: 0        
+    100%
+        width: 90%
+@keyframes burgerSlideStartReverse
+    0%
+        width: 90%
+    1%
+        width: 90%      
+    100%
+        width: 0
+
+.header-top
+    display: flex
+    align-items: center
+    justify-content: space-between  
+    height: 70px
+    .header-top-left
+        @include desktopPlus1024()
+            flex: 1
+        @include flexing(space-between, center)
+
+.header-top,
+.header-bot
+    padding: 0 20px
+    @include desktopPlus1024()
+        height: 100px !important
+        padding: 0 !important
+
+.header-bot
+    height: unset
+    display: none
+    padding: 0 37px
+    @include tabletPlus768()
+        padding: 0 50px
+    @include desktopPlus1024()
+        display: block
+    &.fixed
+        @include desktopPlus1024()
+            position: fixed
+            right: 0
+            top: 0
+            width: 100vw
+            background: white
+    
+.active, .removing 
+    .header-bot
+        flex: 1
+        display: flex
+        flex-direction: column
+        &.active
+            display: none
+    .header-nav
+        margin-top: 30px
+        height: 375px
+    
+
+
+
+// burger
+.burger
+    cursor: pointer
+    &::after
+        width: 100%
+        height: 100%
+        content: url(../images/burger.svg)
+    @include desktopPlus1024()
+        display: none
+.active, .removing
+    .burger
+        &::after
+            content: url(../images/x.svg)
+
+
+
+.top-right-languagebar
+    width: 100px
+    height: 50px
+    border-left: 1px solid $e3
+    border-right: 1px solid $e3
+    margin-left: 46px
+    @include centering()
+    display: none
+    @include desktopPlus1024()
+        display: flex
+    select, option
+        border: none
+        font-size: inherit
+        font-family: inherit
+.header-aboutus
+    display: none
+    @include desktopPlus1024()
+        display: unset   
+
+.header-nav
+    height: 100%
+.header-nav-ul    
+    @include flexingDir(column, space-around, flex-start)
+    margin: 0 auto
+    max-width: 980px
+    height: 100%
+    padding-top: 31px
+    @include desktopPlus1024()
+        @include flexingDir(row, space-between, center)
+        padding-top: none
+
+.header-nav-li
+    @include desktopPlus1024()
+        margin-right: 56px
+        &:last-child
+            margin-right: 0
+    @include sizePlus(1000px)
+        margin-right: 76px
+        &:last-child
+            margin-right: 0
+    a
+        display: inline-block
+        max-height: 19px
+        overflow: hidden
+        text-align: left
+    
+
+.header-socials
+    display: flex
+    height: 50px
+    margin-top: 15px
+    border-top: 1px solid #E8E8E8
+    border-bottom: 1px solid #E8E8E8
+    align-items: center
+    @include desktopPlus1024()
+        display: none
+    p
+        margin-right: 10px
+        @include sizePlus(415px)
+            margin-right: 35px
+.social-logos
+    width: 141px
+    display: flex
+    justify-content: space-between
+    align-items: center
+.header-respo-languagebar
+    margin-top: 46px
+    display: flex
+    width: 181px
+    justify-content: space-between
+    align-items: center
+    @include desktopPlus1024()
+        display: none
+
+

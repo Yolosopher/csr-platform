@@ -86,11 +86,26 @@
 body {
   font-family: FiraRegular;
   color: #353535;
-  padding: 0 20px;
 }
 
 body.active {
   overflow: hidden;
+}
+
+body.active::after {
+  content: '';
+  background: #363636;
+  position: absolute;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  opacity: 90%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -98,6 +113,7 @@ a {
 }
 
 .container {
+  padding: 0 20px;
   max-width: 1336px;
   margin: 0 auto;
   width: 100%;

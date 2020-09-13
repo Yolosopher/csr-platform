@@ -120,128 +120,6 @@ a {
   width: 100%;
 }
 
-@font-face {
-  font-family: firaBold;
-  src: url(../fonts/FiraGO-Bold.ttf);
-}
-
-@font-face {
-  font-family: firaBook;
-  src: url(../fonts/FiraGO-Book.ttf);
-}
-
-@font-face {
-  font-family: firaEight;
-  src: url(../fonts/FiraGO-Eight.ttf);
-}
-
-@font-face {
-  font-family: firaExtraBold;
-  src: url(../fonts/FiraGO-ExtraBold.ttf);
-}
-
-@font-face {
-  font-family: firaExtraLight;
-  src: url(../fonts/FiraGO-ExtraLight.ttf);
-}
-
-@font-face {
-  font-family: firaFour;
-  src: url(../fonts/FiraGO-Four.ttf);
-}
-
-@font-face {
-  font-family: firaHair;
-  src: url(../fonts/FiraGO-Hair.ttf);
-}
-
-@font-face {
-  font-family: firaHeavy;
-  src: url(../fonts/FiraGO-Heavy.ttf);
-}
-
-@font-face {
-  font-family: firaLight;
-  src: url(../fonts/FiraGO-Light.ttf);
-}
-
-@font-face {
-  font-family: firaMedium;
-  src: url(../fonts/FiraGO-Medium.ttf);
-}
-
-@font-face {
-  font-family: firaRegular;
-  src: url(../fonts/FiraGO-Regular.ttf);
-}
-
-@font-face {
-  font-family: firaSemiBold;
-  src: url(../fonts/FiraGO-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: firaThin;
-  src: url(../fonts/FiraGO-Thin.ttf);
-}
-
-@font-face {
-  font-family: firaTwo;
-  src: url(../fonts/FiraGO-Two.ttf);
-}
-
-@font-face {
-  font-family: firaUltraLight;
-  src: url(../fonts/FiraGO-UltraLight.ttf);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: none;
-}
-
-body {
-  font-family: FiraRegular;
-  color: #353535;
-  background: #F6F6F6;
-}
-
-body.active {
-  overflow: hidden;
-}
-
-body.active::after {
-  content: '';
-  background: #363636;
-  position: absolute;
-  z-index: 9;
-  width: 100vw;
-  height: 100vh;
-  right: 0;
-  top: 0;
-  opacity: 90%;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-a {
-  color: inherit;
-}
-
-.container {
-  padding: 0 20px;
-  max-width: 1336px;
-  margin: 0 auto;
-  width: 100%;
-}
-
 header {
   background: white;
   text-align: center;
@@ -801,7 +679,7 @@ main {
      object-position: center;
 }
 
-.home-latest-news {
+.home-latest-news, .home-personal-stories {
   position: relative;
   margin-bottom: 98px;
   background: white;
@@ -811,13 +689,13 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-  .home-latest-news {
+  .home-latest-news, .home-personal-stories {
     padding-bottom: 70px;
     margin-bottom: 180px;
   }
 }
 
-.latest-news-h1 {
+.latest-news-h1, .personal-stories-h1 {
   width: 220px;
   height: 50px;
   background: url(../images/green-title-text-bg.svg) center;
@@ -841,7 +719,7 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .latest-news-h1 {
+  .latest-news-h1, .personal-stories-h1 {
     width: 354px;
     font-size: 20px;
     background: url(../images/green-title-text-bg768.svg);
@@ -849,24 +727,13 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-  .latest-news-h1 {
+  .latest-news-h1, .personal-stories-h1 {
     width: 470px;
     height: 80px;
     top: -80px;
     font-size: 26px;
     background: url(../images/green-title-text-bg1024.svg);
   }
-}
-
-.latest-news-h1::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: -16px;
-  border-radius: 16px;
-  height: 100%;
-  width: 16px;
-  background: #F6F6F6;
 }
 
 .latest-news-ul {
@@ -1029,6 +896,27 @@ main {
   .latest-news-li .latest-news-text-content h2 {
     font-size: 24px;
     line-height: 38.4px;
+  }
+}
+
+.home-personal-stories {
+  border-top: 2px dashed #C8495E;
+}
+
+.personal-stories-h1 {
+  background-image: url(../images/pink-title-text-bg.svg);
+  background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+  .personal-stories-h1 {
+    background-image: url(../images/pink-title-text-bg768.svg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .personal-stories-h1 {
+    background-image: url(../images/pink-title-text-bg1024.svg);
   }
 }
 /*# sourceMappingURL=style.css.map */

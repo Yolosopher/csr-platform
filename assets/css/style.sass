@@ -1,8 +1,21 @@
-@import defaults
+@import fonts
 @import variables
+@import defaults
 // real components
 @import header
 @import main
 @import latest-news
 
 
+.home-personal-stories
+    border-top: 2px dashed $pink
+
+
+
+.personal-stories-h1
+    background-image: url(../images/pink-title-text-bg.svg)
+    background-size: contain
+    @include tabletPlus768()
+        background-image: url(../images/pink-title-text-bg768.svg)
+    @include desktopPlus1024()
+        background-image: url(../images/pink-title-text-bg1024.svg)

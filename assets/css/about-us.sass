@@ -1,0 +1,114 @@
+h1.home-aboutus-h1
+    background-image: url(../images/pink-title-text-bg.svg)
+    background-size: contain
+    @include tabletPlus768()
+        background-image: url(../images/pink-title-text-bg768.svg)
+    @include desktopPlus1024()
+        background-image: url(../images/pink-title-text-bg1024.svg)
+
+
+
+.home-aboutus
+    position: relative
+    border-top: 2px dashed $pink
+    background-color: white
+    margin-top: 30px
+    padding-bottom: 72px
+    margin-bottom: 98px
+    @include tabletPlus768()
+        padding-bottom: 76px
+    @include desktopPlus1024()
+        padding-bottom: 143px
+.home-aboutus-inner 
+    min-height: min-content
+    width: 100%
+    margin-top: 30px
+    display: flex
+    flex-direction: column
+    img
+        width: 100%
+        height: 100%
+        border-radius: 12px 12px 0 0
+        object-fit: cover
+        object-position: center 33%
+        @include desktopPlus1024()
+            border-radius: 12px
+    .aboutus-cover, .aboutus-texts
+        width: 100%
+        height: 269px
+        font-family: firaBold
+        font-size: 12px
+        line-height: 15px    
+        @include tabletPlus768()
+            font-family: firaMedium
+            font-size: 16px
+            line-height: 25.6px
+        @include desktopPlus1024()
+            width: unset
+            flex: 1
+            height: 100%
+    .aboutus-cover
+        @include desktopPlus1024()
+            height: 570px
+    .aboutus-texts
+        padding: 30px 15px
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: auto
+        border: 1px solid $e3
+        border-radius: 0 0 20px 20px
+        @include tabletPlus768()
+            position: static
+            padding: 30px 50px
+            &::after
+                content: none
+                display: none
+        @include desktopPlus1024()
+            border: none
+            padding: 0 
+            height: 570px
+            position: relative
+            display: flex
+            align-items: center
+    @include tabletPlus768()
+        min-height: 557px
+    @include desktopPlus1024()
+        flex-direction: row
+        border-radius: none
+        border: none
+        height: min-content
+        gap: 36px
+        align-items: stretch
+    .aboutus-link
+        font-family: firaMedium
+        color: $green
+        margin-top: 25.6px
+        font-size: 14px
+        line-height: 24px
+        display: block
+        text-align: right
+        @include tabletPlus768()
+            text-align: left
+            margin-top: 37.8px
+            font-size: 18px
+            line-height: 22px
+        @include desktopPlus1024()
+            margin-top: unset
+            font-size: 22px
+            line-height: 31px
+            position: absolute
+            bottom: 0
+            left: 0
+
+.aboutus-divOfPs
+    p     
+        margin-bottom: 8px
+        &:last-child
+            margin-bottom: 0
+    @include desktopPlus1024()        
+        p     
+            margin-bottom: 17px
+            &:last-child
+                margin-bottom: 0

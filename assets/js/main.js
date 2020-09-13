@@ -1,6 +1,6 @@
 // VARIABLES
 let headerBot = document.querySelector(".header-bot");
-
+let psnStryCnt = document.querySelector('.personal-stories-content');
 
 // FUNCTIONS
 function toggleBurger() {
@@ -30,6 +30,14 @@ function slideBgChanger() {
     $('.main-slider-hc .swiper-slide:first-child').css("background", "url('../images/real-images/sliderIMG.jpg')")
 }
 
+function personalStoriesSetter() {
+    let winWidth = window.innerWidth;
+    if (winWidth > 768 && winWidth < 1024) {
+        psnStryCnt.classList.add('container');
+    } else {
+        psnStryCnt.classList.remove('container');
+    }
+}
 
 
 
@@ -38,12 +46,14 @@ window.addEventListener('load', () => {
     $('.burger').click(function(){
         toggleBurger();
     });
-    // slideBgChanger();
+    personalStoriesSetter();
 });
 window.onscroll = () => {
     headerBotFixer();
 };
-
+window.onresize = () => {
+    personalStoriesSetter();
+};
 
 
 
@@ -63,7 +73,6 @@ const mainSwiper = new Swiper('.main-slider-hc', {
     pagination: {
       el: '.main-slider-hc-pagination'
     },
-    // mousewheel: true,
     keyboard: true,
     // cssMode: true,
 });

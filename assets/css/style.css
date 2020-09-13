@@ -695,7 +695,7 @@ main {
   }
 }
 
-.latest-news-h1, .personal-stories-h1 {
+.container h1 {
   width: 220px;
   height: 50px;
   background: url(../images/green-title-text-bg.svg) center;
@@ -719,7 +719,7 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .latest-news-h1, .personal-stories-h1 {
+  .container h1 {
     width: 354px;
     font-size: 20px;
     background: url(../images/green-title-text-bg768.svg);
@@ -727,7 +727,7 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-  .latest-news-h1, .personal-stories-h1 {
+  .container h1 {
     width: 470px;
     height: 80px;
     top: -80px;
@@ -737,7 +737,7 @@ main {
 }
 
 .latest-news-ul {
-  margin-top: 28px;
+  margin-top: 29px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -748,7 +748,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 28px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -901,22 +900,153 @@ main {
 
 .home-personal-stories {
   border-top: 2px dashed #203668;
+  height: 350px;
+  width: 100%;
 }
 
-.personal-stories-h1 {
+@media screen and (min-width: 1024px) {
+  .home-personal-stories {
+    height: 810px;
+    padding-bottom: 0;
+  }
+}
+
+h1.personal-stories-h1 {
   background-image: url(../images/blue-title-text-bg.svg);
   background-size: contain;
 }
 
 @media screen and (min-width: 768px) {
-  .personal-stories-h1 {
+  h1.personal-stories-h1 {
     background-image: url(../images/blue-title-text-bg768.svg);
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .personal-stories-h1 {
+  h1.personal-stories-h1 {
     background-image: url(../images/blue-title-text-bg1024.svg);
+  }
+}
+
+.personal-stories-content {
+  margin-top: 28px;
+  margin-bottom: 28px;
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .personal-stories-content {
+    padding-bottom: 30px;
+  }
+}
+
+.personal-stories-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.personal-stories-a-outter {
+  padding: 0 20px;
+  position: absolute;
+  bottom: 61px;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  font-family: firaMedium;
+  font-size: 14px;
+  line-height: 20.6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .personal-stories-a-outter {
+    padding: 0 67px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .personal-stories-a-outter {
+    font-size: 16px;
+  }
+}
+
+.personal-stories-a-outter .personal-stories-button {
+  height: 50px;
+  border-radius: 8px;
+  background-color: white;
+  position: relative;
+  width: 100%;
+  -webkit-transition: border .4s ease-in-out;
+  transition: border .4s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .personal-stories-a-outter .personal-stories-button {
+    width: 223px;
+    height: 60px;
+    border-radius: 12px;
+    padding: 0;
+  }
+}
+
+.personal-stories-a-outter .personal-stories-button::after {
+  content: url(../images/arrow-right-button-inside.svg);
+  position: relative;
+  left: 18px;
+}
+
+.personal-stories-a-outter .personal-stories-button:hover, .personal-stories-a-outter .personal-stories-button:active {
+  border: 1px solid #2C7A60;
+}
+
+@media screen and (min-width: 768px) {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container {
+    max-width: 632px;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container {
+    max-width: 1336px;
+    padding: 0 20px;
+  }
+}
+
+.personal-stories-content.container {
+  position: relative;
+}
+
+.personal-stories-content.container img {
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+  .personal-stories-a-outter.container {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 0 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

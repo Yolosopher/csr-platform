@@ -4,13 +4,11 @@
 header
     background: white
     text-align: center
-    // position: fixed
     right: 0
     font-size: 16px
     font-family: firaMedium
     display: flex
     flex-direction: column
-    background: white
         
     @include desktopPlus1024()
         position: static
@@ -34,6 +32,7 @@ header
         width: 90%
         height: 100vh
         padding: 0
+        z-index: 10
         position: fixed
         animation: burgerSlideStart 1s
         &::after
@@ -45,6 +44,8 @@ header
     &.removing
         width: 90%
         height: 100vh
+        z-index: 10
+        padding: 0
         position: fixed
         animation: burgerSlideStartReverse 1s
         &::after

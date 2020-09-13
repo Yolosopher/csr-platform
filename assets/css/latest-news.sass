@@ -1,0 +1,127 @@
+.home-latest-news
+    position: relative
+    margin-bottom: 98px
+    background: white
+    padding-bottom: 35px
+    border: none
+    border-top: 2px dashed $green
+    @include desktopPlus1024()
+        padding-bottom: 70px
+        margin-bottom: 180px
+
+
+
+.latest-news-h1
+    width: 220px
+    height: 50px
+    background: url(../images/green-title-text-bg.svg) center
+    background-size: contain
+    background-repeat: no-repeat
+    position: absolute
+    z-index: -1
+    display: flex
+    align-items: center
+    color: white
+    font-family: firaBold
+    font-size: 16px
+    padding-left: 31px
+    top: -50px
+    box-sizing: border-box
+    @include tabletPlus768()
+        width: 354px
+        font-size: 20px
+        background: url(../images/green-title-text-bg768.svg)
+    @include desktopPlus1024()
+        width: 470px   
+        height: 80px   
+        top: -80px
+        font-size: 26px
+        background: url(../images/green-title-text-bg1024.svg)
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        right: -16px
+        border-radius: 16px
+        height: 100%
+        width: 16px
+        background: $normalbg
+
+.latest-news-ul
+    margin-top: 28px
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    padding-top: 28px
+    @include desktopPlus1024()
+        flex-direction: row
+        gap: 36px
+.latest-news-li
+    width: 324px
+    overflow: hidden
+    border: 1px solid $e3
+    border-radius: 0 10px 10px 0
+    height: 120px
+    margin-top: 28px
+    &:first-child
+        margin-top: 0
+    @include tabletPlus768()
+        margin-top: 24px
+        width: 632px
+        height: 160px
+        &:first-child
+            margin-top: 0
+    @include desktopPlus1024()
+        width: 420px
+        margin-top: 0
+        border-radius: 0 0 40px 40px
+        height: unset
+    img
+        object-fit: cover
+        object-position: center
+        width: 156px
+        height: 120px
+        border: 1px solid #707070
+        @include tabletPlus768()
+            width: 304px
+            height: 160px
+        @include desktopPlus1024()
+            width: 100%
+            max-width: 420px
+            height: 260px
+    figure
+        display: flex
+        height: 100%
+        @include desktopPlus1024()
+            display: block
+    figcaption
+        margin-bottom: 7px
+        font-family: firaRegular
+        font-size: 10px
+        @include tabletPlus768()
+            font-size: 14px
+        @include desktopPlus1024()
+            margin-bottom: 25px
+    .latest-news-text-content
+        padding: 18px 13px 25px 14px
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        @include tabletPlus768()
+            padding: 28px 49px 28px 24px
+        @include desktopPlus1024()
+            padding: 25px 26px 46px 30px
+            height: 230px
+        h2            
+            font-size: 12px
+            line-height: 19.2px
+            font-family: firaBold
+            display: block
+            @include tabletPlus768()
+                font-size: 18px
+                line-height: 28px
+            @include desktopPlus1024()
+                font-size: 24px
+                line-height: 38.4px
+                

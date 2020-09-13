@@ -803,17 +803,28 @@ main {
 
 .home-latest-news {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 98px;
+  background: white;
+  padding-bottom: 35px;
+  border: none;
+  border-top: 2px dashed #2C7A60;
+}
+
+@media screen and (min-width: 1024px) {
+  .home-latest-news {
+    padding-bottom: 70px;
+    margin-bottom: 180px;
+  }
 }
 
 .latest-news-h1 {
   width: 220px;
   height: 50px;
-  background: #2C7A60;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: -16px;
+  background: url(../images/green-title-text-bg.svg) center;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
+  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -825,21 +836,25 @@ main {
   font-size: 16px;
   padding-left: 31px;
   top: -50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media screen and (min-width: 768px) {
   .latest-news-h1 {
     width: 354px;
     font-size: 20px;
+    background: url(../images/green-title-text-bg768.svg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .latest-news-h1 {
-    width: 454px;
+    width: 470px;
     height: 80px;
     top: -80px;
     font-size: 26px;
+    background: url(../images/green-title-text-bg1024.svg);
   }
 }
 
@@ -884,13 +899,19 @@ main {
   overflow: hidden;
   border: 1px solid #E3E3E3;
   border-radius: 0 10px 10px 0;
+  height: 120px;
+  margin-top: 28px;
+}
+
+.latest-news-li:first-child {
+  margin-top: 0;
 }
 
 @media screen and (min-width: 768px) {
   .latest-news-li {
     margin-top: 24px;
     width: 632px;
-    border-radius: 0 0 40px 40px;
+    height: 160px;
   }
   .latest-news-li:first-child {
     margin-top: 0;
@@ -901,6 +922,8 @@ main {
   .latest-news-li {
     width: 420px;
     margin-top: 0;
+    border-radius: 0 0 40px 40px;
+    height: unset;
   }
 }
 
@@ -929,12 +952,23 @@ main {
   }
 }
 
+.latest-news-li figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .latest-news-li figure {
+    display: block;
+  }
+}
+
 .latest-news-li figcaption {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  font-family: firaGo;
+  margin-bottom: 7px;
+  font-family: firaRegular;
   font-size: 10px;
-  padding: 0 24px;
 }
 
 @media screen and (min-width: 768px) {
@@ -943,17 +977,58 @@ main {
   }
 }
 
-.latest-news-li .latest-news-h2 {
-  padding: 24px 26px 46px 31px;
-  font-size: 24px;
-  line-height: 38.4px;
+@media screen and (min-width: 1024px) {
+  .latest-news-li figcaption {
+    margin-bottom: 25px;
+  }
+}
+
+.latest-news-li .latest-news-text-content {
+  padding: 18px 13px 25px 14px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-news-li .latest-news-text-content {
+    padding: 28px 49px 28px 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .latest-news-li .latest-news-text-content {
+    padding: 25px 26px 46px 30px;
+    height: 230px;
+  }
+}
+
+.latest-news-li .latest-news-text-content h2 {
+  font-size: 12px;
+  line-height: 19.2px;
   font-family: firaBold;
   display: block;
 }
 
+@media screen and (min-width: 768px) {
+  .latest-news-li .latest-news-text-content h2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
-  .latest-news-li .latest-news-h2 {
-    height: 230px;
+  .latest-news-li .latest-news-text-content h2 {
+    font-size: 24px;
+    line-height: 38.4px;
   }
 }
 /*# sourceMappingURL=style.css.map */

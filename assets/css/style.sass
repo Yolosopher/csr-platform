@@ -2,89 +2,95 @@
 @import variables
 // real components
 @import header
+@import main
 
-
-
-// main
-
-main 
-    display: flex
-    height: 280px
-    width: 100%
-    margin-bottom: 98px
-    @include desktopPlus1024()
-        height: 500px
-        margin-bottom: 180px
-
-// home-main slider
-.swiper-container, .swiper-wrapper, .swiper-slide
-    width: 100%
-    height: 100%
-
-.home-hero-content
+.home-latest-news
     position: relative
+    margin-bottom: 50px
 
-.main-slider-hc-pagination
+.latest-news-h1
+    width: 220px
+    height: 50px
+    background: $green
+    border-top-left-radius: 16px
+    border-top-right-radius: 16px
+    border-bottom-right-radius: -16px
     position: absolute
-    bottom: 0
-    width: 100%
-    text-align: center
-    z-index: 2
-    transform: translateY(calc(100% + 12px))
+    display: flex
+    align-items: center
+    color: white
+    font-family: firaBold
+    font-size: 16px
+    padding-left: 31px
+    top: -50px
     @include tabletPlus768()
-        transform: translateY(calc(100% + 14px))
+        width: 354px
+        font-size: 20px
     @include desktopPlus1024()
-        transform: translateY(calc(100% + 22px))
-.main-slider-hc-nav
-    height: 80px
-    position: absolute
-    top: 50%
-    bottom: unset
-    left: unset
-    right: unset
-    transform: translateY(-50%)
-    z-index: 2
-    width: 100%
-    display: none
-    @include desktopPlus1024()
-        display: block
-.main-slider-hc-nav-inner
-    margin: 0 auto
-    width: 100%
-    height: 80px
+        width: 454px   
+        height: 80px   
+        top: -80px
+        font-size: 26px
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        right: -16px
+        border-radius: 16px
+        height: 100%
+        width: 16px
+        background: $normalbg
+
+.latest-news-ul
+    margin-top: 28px
     display: flex
     justify-content: space-between
-    > div
-        width: 40px
-        height: 100%
-        background-repeat: no-repeat
-        background-size: contain
-        cursor: pointer
-.main-slider-hc-prev
-    background-image: url(../images/swiper-nav-left.svg)
-.main-slider-hc-next
-    background-image: url(../images/swiper-nav-right.svg)
-
-.swiper-pagination-bullet 
-    width: 8px
-    height: 8px
-    display: inline-block
-    border-radius: 100%
-    background: #CBCBCB
-    opacity: unset
-    margin-right: 14px
+    flex-direction: column
+    padding-top: 28px
     @include desktopPlus1024()
-        margin-right: 31px
-        width: 12px
-        height: 12px
-    &:last-child
-        margin-right: 0
-    &.swiper-pagination-bullet-active
-        background: $green
-        
-.swiper-slide 
+        flex-direction: row
+        gap: 36px
+.latest-news-li
+    width: 324px
+    overflow: hidden
+    border: 1px solid $e3
+    border-radius: 0 10px 10px 0
+    @include tabletPlus768()
+        margin-top: 24px
+        width: 632px
+        border-radius: 0 0 40px 40px
+        &:first-child
+            margin-top: 0
+    @include desktopPlus1024()
+        width: 420px
+        margin-top: 0
     img
-        width: 100%
-        height: 100%
         object-fit: cover
         object-position: center
+        width: 156px
+        height: 120px
+        border: 1px solid #707070
+        @include tabletPlus768()
+            width: 304px
+            height: 160px
+        @include desktopPlus1024()
+            width: 100%
+            max-width: 420px
+            height: 260px
+    figcaption
+        margin-top: 25px
+        margin-bottom: 25px
+        font-family: firaGo
+        font-size: 10px
+        padding: 0 24px
+        @include tabletPlus768()
+            font-size: 14px
+    .latest-news-h2
+        padding-top: 24px
+        padding-bottom: 24
+        font-size: 24px
+        line-height: 38.4px
+        font-family: firaBold
+        display: block
+        @include desktopPlus1024()
+            height: 230px

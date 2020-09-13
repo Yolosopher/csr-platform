@@ -800,4 +800,161 @@ main {
   -o-object-position: center;
      object-position: center;
 }
+
+.home-latest-news {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.latest-news-h1 {
+  width: 220px;
+  height: 50px;
+  background: #2C7A60;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: -16px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-family: firaBold;
+  font-size: 16px;
+  padding-left: 31px;
+  top: -50px;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-news-h1 {
+    width: 354px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .latest-news-h1 {
+    width: 454px;
+    height: 80px;
+    top: -80px;
+    font-size: 26px;
+  }
+}
+
+.latest-news-h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -16px;
+  border-radius: 16px;
+  height: 100%;
+  width: 16px;
+  background: #F6F6F6;
+}
+
+.latest-news-ul {
+  margin-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 28px;
+}
+
+@media screen and (min-width: 1024px) {
+  .latest-news-ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 36px;
+  }
+}
+
+.latest-news-li {
+  width: 324px;
+  overflow: hidden;
+  border: 1px solid #E3E3E3;
+  border-radius: 0 10px 10px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-news-li {
+    margin-top: 24px;
+    width: 632px;
+    border-radius: 0 0 40px 40px;
+  }
+  .latest-news-li:first-child {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .latest-news-li {
+    width: 420px;
+    margin-top: 0;
+  }
+}
+
+.latest-news-li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 156px;
+  height: 120px;
+  border: 1px solid #707070;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-news-li img {
+    width: 304px;
+    height: 160px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .latest-news-li img {
+    width: 100%;
+    max-width: 420px;
+    height: 260px;
+  }
+}
+
+.latest-news-li figcaption {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: firaGo;
+  font-size: 10px;
+  padding: 0 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-news-li figcaption {
+    font-size: 14px;
+  }
+}
+
+.latest-news-li .latest-news-h2 {
+  padding-top: 24px;
+  padding-bottom: 24;
+  font-size: 24px;
+  line-height: 38.4px;
+  font-family: firaBold;
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .latest-news-li .latest-news-h2 {
+    height: 230px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

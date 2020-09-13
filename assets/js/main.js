@@ -66,15 +66,4 @@ const mainSwiper = new Swiper('.main-slider-hc', {
     mousewheel: true,
     keyboard: true,
     // cssMode: true,
-    breakpoints: {
-        0: {
-            navigation: false,
-        },
-        1024: {
-            navigation: {
-                nextEl: '.main-slider-hc-next',
-                prevEl: '.main-slider-hc-prev',
-            },
-        },
-    },
 });

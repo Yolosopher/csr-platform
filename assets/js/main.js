@@ -63,7 +63,7 @@ const mainSwiper = new Swiper('.main-slider-hc', {
     pagination: {
       el: '.main-slider-hc-pagination'
     },
-    mousewheel: true,
+    // mousewheel: true,
     keyboard: true,
     // cssMode: true,
 });

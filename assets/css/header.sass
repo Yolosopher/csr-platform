@@ -1,6 +1,3 @@
-// @import defaults
-// @import variables
-        
 header
     background: white
     text-align: center
@@ -109,7 +106,7 @@ header
         flex-direction: column
         &.active
             display: none
-    .header-nav
+    .nav
         margin-top: 30px
         height: 375px
     
@@ -151,7 +148,7 @@ header
     @include desktopPlus1024()
         display: unset   
 
-.header-nav
+.nav
     height: 100%
 .header-nav-ul    
     @include flexingDir(column, space-around, flex-start)
@@ -198,12 +195,13 @@ header
     display: flex
     justify-content: space-between
     align-items: center
-.header-respo-languagebar
+.respo-languagebar
     margin-top: 46px
     display: flex
     width: 181px
     justify-content: space-between
     align-items: center
+header .respo-languagebar    
     @include desktopPlus1024()
         display: none
 

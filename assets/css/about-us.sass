@@ -60,6 +60,7 @@ h1.home-aboutus-h1
             @include desktopPlus1024()
                 transform: translateY(155px)
                 height: 150px
+                width: 100%
         @include desktopPlus1024()
             height: 570px
     .aboutus-texts
@@ -74,7 +75,8 @@ h1.home-aboutus-h1
         @include tabletPlus768()
             position: static
             padding: 30px 50px
-            &::after
+        &::after
+            @include tabletPlus768()
                 content: none
                 display: none
         @include desktopPlus1024()

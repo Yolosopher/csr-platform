@@ -1,0 +1,167 @@
+footer
+    background: url(../images/CSR_bg_2.jpg) no-repeat
+    background-size: cover
+
+.footer-logo-div
+    width: 100%
+    height: 115px
+    @include centering()    
+
+    @include desktopPlus1024()
+        height: 200px
+
+    svg
+        width: 150px
+        height: 30px
+        @include desktopPlus1024()        
+            width: 250px
+            height: 50px
+
+
+.footer-top
+    background: white
+    height: 340px
+    width: 100%
+    @include tabletPlus768()
+        height: 180px
+    @include desktopPlus1024()
+        height: 100px
+.footer-top-inner
+    height: 100%
+    display: flex
+    padding-top: 26px !important
+    padding-bottom: 30px !important
+    font-family: firaMedium
+    font-size: 14px
+    line-height: 17px
+    flex-direction: column
+    @include tabletPlus768()
+        padding-top: 0 !important
+        padding-bottom: 0 !important
+        font-size: 12px
+        line-height: 24px
+    @include desktopPlus1024()
+        font-size: 16px
+        flex-direction: row
+        justify-content: space-between
+    .nav
+        flex: 1
+        height: unset
+        flex-direction: column
+        min-height: 206px
+        max-height: 206px
+        font-size: 12px
+        line-height: 25px
+        @include tabletPlus768()
+            min-height: unset
+            max-height: unset
+        @include desktopPlus1024()
+            flex: 1
+            padding-right: 195px
+            min-height: unset
+            max-height: unset
+            justify-content: space-between
+        .header-nav-ul
+            flex-direction: column
+            align-items: center
+            padding-bottom: 23px
+            border-bottom: 1px solid $grey
+            @include tabletPlus768()
+                flex-direction: row
+                padding-bottom: 0
+
+.footer-deskPlus
+    display: flex
+    justify-content: center
+    align-items: center
+    transform: translateY(19px)
+    flex: 1
+    @include tabletPlus768()
+        flex: initial
+        transform: none
+        margin-top: unset
+        height: 92px
+        align-items: center
+        justify-content: space-between
+    @include desktopPlus1024()
+        height: unset
+        justify-content: flex-end
+    .respo-languagebar
+        margin-top: 0
+        display: none
+        @include tabletPlus768()
+            display: flex
+        @include desktopPlus1024()
+            display: none 
+
+.footer-respo-bot
+    height: 80px
+    background: url(../images/CSR_bg_2.jpg) no-repeat
+    background-size: cover
+    @include centering()
+
+footer
+    .header-nav-ul
+        max-width: unset
+        margin: unset
+        padding: 0
+
+        @include tabletPlus768()
+            height: 88px
+        @include desktopPlus1024()
+            height: 100%
+.footer-socials
+    display: flex
+    align-items: center
+    a
+        display: block
+        height: 26px
+        width: 26px
+        @include tabletPlus768()
+            height: 26px
+            width: 26px
+        @include desktopPlus1024()
+        
+    .social-logos
+        width: unset
+        gap: 40px
+        @include tabletPlus768()
+            gap: 26px
+        @include desktopPlus1024()
+            gap: 16px
+    svg 
+        width: 100%
+        height: 100%
+    p 
+        color: $black
+        font-size: 12px
+        line-height: 14px
+        margin-right: 38px
+        font-family: firaMedium
+        @include tabletPlus768()
+            margin-right: 20px
+        @include desktopPlus1024()
+            margin-right: 18px
+            font-size: 16px
+            line-height: 19px
+
+footer .footer-respo-languagebar
+    margin-top: 0
+    height: 80px
+    width: 100%
+    color: white
+    display: none
+    @include centering()    
+    font-family: firaGo
+    font-size: 14px
+    line-height: 17px
+    @include desktopPlus1024()
+        height: 190px
+    &.active
+        display: flex
+        @include tabletPlus768()
+            display: none
+        @include desktopPlus1024()
+            display: flex
+    a:nth-child(2)
+        margin: 0 50px

@@ -35,6 +35,8 @@ footer
     font-size: 14px
     line-height: 17px
     flex-direction: column
+    position: relative
+    justify-content: space-between
     @include tabletPlus768()
         padding-top: 0 !important
         padding-bottom: 0 !important
@@ -48,8 +50,6 @@ footer
         flex: 1
         height: unset
         flex-direction: column
-        min-height: 206px
-        max-height: 206px
         font-size: 12px
         line-height: 25px
         @include tabletPlus768()
@@ -65,18 +65,36 @@ footer
             flex-direction: column
             align-items: center
             padding-bottom: 23px
-            border-bottom: 1px solid $grey
+            justify-content: space-between
+            &::after
+                content: ''
+                height: 1px
+                width: 100vw
+                position: absolute
+                right: 0
+                bottom: 80px
+                background: $grey
+                @include tabletPlus768()
+                    bottom: 91px
+                @include desktopPlus1024()
+                    display: none
             @include tabletPlus768()
                 flex-direction: row
                 padding-bottom: 0
+                border-bottom: 0
+
+            
+
 
 .footer-deskPlus
     display: flex
     justify-content: center
-    align-items: center
-    transform: translateY(19px)
+    align-items: flex-end
+    // transform: translateY(19px)
     flex: 1
+    max-height: 50px
     @include tabletPlus768()
+        max-height: unset
         flex: initial
         transform: none
         margin-top: unset
@@ -165,3 +183,24 @@ footer .footer-respo-languagebar
             display: flex
     a:nth-child(2)
         margin: 0 50px
+    > a
+        @include desktopPlus1024()
+            display: none
+    .desktopSizeCandLang
+        display: none
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        @include desktopPlus1024()
+            display: flex
+    
+.copyright
+    display: flex
+    align-items: center
+    font-size: 14px
+    line-height: 17px
+    font-family: firaMedium
+    &::before
+        position: relative
+        content: url(../images/copyright.svg)
+        margin-right: 13px

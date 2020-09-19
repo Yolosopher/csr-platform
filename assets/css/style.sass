@@ -12,14 +12,17 @@
 @import respogame/main
 
 .rg-news
+    @include tabletPlus768()    
+        background: white 
+
+.rg-news-inner
     display: flex
     flex-direction: column
     gap: 98px  
     @include desktopPlus1024()
         flex-flow: row wrap
-        background: white 
+        gap: 98px 9px
         justify-content: space-between
-        column-gap: 36px
     img
         width: 48%
         height: 100%
@@ -27,30 +30,47 @@
         object-position: center
         @include desktopPlus1024()
             width: 100%
-        
+.rg-news-inner.container
+    padding: 0
+    @include tabletPlus768()
+.rg-news-each-inner.container
+    padding: 0
+    position: static
+    
 .rg-news-each
     background: none
     width: 100%
     position: relative
     background: white 
-    border-top: 2px dashed $pink 
     padding: 28px 18px 32px
     @include desktopPlus1024()
-        width: calc(50% - 17.9844069px)       
+        width: calc(50% - 5px)       
         background: none
-        border-top: none
+
     &::after
         content: ''
-        display: none
         height: 0
         width: 100vw
         border-bottom: 2px dashed $pink
         position: absolute
         right: 0
-        top: 0
+        top: -2px
+        @include tabletPlus768()
+            right: calc((100vw - 632px) / -2)
         @include desktopPlus1024()
-            display: block
+            display: none
+    &:nth-of-type(even)         
+        &::after
+            
+            @include desktopPlus1024()
+                display: block
+                right: -20px 
+                top: 0  
+            @include sizePlus(1336px)
+                right: calc((100vw - 1336px + 40px) / -2)
         
+        
+
 
 
 .rg-news-h1

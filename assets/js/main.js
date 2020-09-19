@@ -31,11 +31,13 @@ function slideBgChanger() {
 }
 
 function personalStoriesSetter() {
-    let winWidth = window.innerWidth;
-    if (winWidth > 768 && winWidth < 1024) {
-        psnStryCnt.classList.add('container');
-    } else {
-        psnStryCnt.classList.remove('container');
+    if (document.querySelector('.home-personal-stories')) {
+        let winWidth = window.innerWidth;
+        if (winWidth > 768 && winWidth < 1024) {
+            psnStryCnt.classList.add('container');
+        } else {
+            psnStryCnt.classList.remove('container');
+        }
     }
 }
 

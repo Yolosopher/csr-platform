@@ -1735,10 +1735,96 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   margin-right: 13px;
 }
 
-.hero-content.respoGame img {
+.hero-content.respoGame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hero-content.respoGame .hero-respo-game-cover-div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero-content.respoGame .hero-respo-game-cover-div img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.hero-respo-article {
+  background-image: url(../images/respogame/hero-content-cover.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  width: 322.5px;
+  height: 150px;
+  padding: 14px 30px 16px 12px;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-respo-article {
+    width: 714px;
+    height: 135px;
+    background-image: url(../images/respogame/hero-content-cover768.svg);
+    padding: 16px 57px 16px 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-respo-article {
+    background-image: url(../images/respogame/hero-content-cover1024.svg);
+    width: 1100px;
+    height: 180px;
+    padding: 40px 140px 40px 40px;
+  }
+}
+
+.hero-respo-article h2 {
+  font-family: firaBold;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-respo-article h2 {
+    font-size: 20px;
+    margin-bottom: 9.2px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-respo-article h2 {
+    font-size: 26px;
+    line-height: 41px;
+    margin-bottom: 12px;
+  }
+}
+
+.hero-respo-article p {
+  font-family: firaMedium;
+  font-size: 12px;
+  line-height: 19px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-respo-article p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-respo-article p {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

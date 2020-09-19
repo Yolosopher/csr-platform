@@ -9,65 +9,74 @@
 @import about-us
 @import footer
 // responsive game
-@import respoGame
+@import respogame/main
 
-
-
-
-.hero-content.respoGame
+.rg-news
     display: flex
-    align-items: flex-end
-    .hero-respo-game-cover-div
-        width: 100%
+    flex-direction: column
+    gap: 98px  
+    @include desktopPlus1024()
+        flex-flow: row wrap
+        background: white 
+        justify-content: space-between
+        column-gap: 36px
+    img
+        width: 48%
         height: 100%
-        position: absolute
-        z-index: -1
-        img
-            object-fit: cover
+        object-fit: cover
+        object-position: center
+        @include desktopPlus1024()
             width: 100%
-            height: 100%
-    .hero-respo-article-outter
-        // position: absolute
+        
+.rg-news-each
+    background: none
+    width: 100%
+    position: relative
+    background: white 
+    border-top: 2px dashed $pink 
+    padding: 28px 18px 32px
+    @include desktopPlus1024()
+        width: calc(50% - 17.9844069px)       
+        background: none
+        border-top: none
+    &::after
+        content: ''
+        display: none
+        height: 0
+        width: 100vw
+        border-bottom: 2px dashed $pink
+        position: absolute
+        right: 0
+        top: 0
+        @include desktopPlus1024()
+            display: block
         
 
-.hero-respo-article //article.reo-respo    
-    background-image: url(../images/respogame/hero-content-cover.svg)
-    background-repeat: no-repeat 
-    background-size: contain
-    background-position: left
-    width: 322.5px
-    height: 150px
-    padding: 14px 30px 16px 12px
-    color: white
-    @include tabletPlus768()
-        width: 714px
-        height: 135px
-        background-image: url(../images/respogame/hero-content-cover768.svg)
-        padding: 16px 57px 16px 20px
 
+.rg-news-h1
+    width: 220px
+    height: 50px
+    background: url(../images/respogame/grey-title-text-bg.svg)
+    background-size: contain
+    background-repeat: no-repeat
+    position: absolute
+    display: flex
+    align-items: center
+    color: $pink
+    font-family: firaBold
+    font-size: 16px
+    padding-left: 31px
+    top: -52px
+    box-sizing: border-box
+    @include tabletPlus768()
+        width: 354px
+        font-size: 20px
+        background: url(../images/respogame/grey-title-text-bg768.svg)
     @include desktopPlus1024()
-        background-image: url(../images/respogame/hero-content-cover1024.svg)
-        width: 1100px
-        height: 180px
-        padding: 40px 140px 40px 40px
-    h2
-        font-family: firaBold
-        font-size: 16px
-        margin-bottom: 7px
-        @include tabletPlus768()
-            font-size: 20px
-            margin-bottom: 9.2px
-        @include desktopPlus1024()
-            font-size: 26px
-            line-height: 41px
-            margin-bottom: 12px
-    p
-        font-family: firaMedium
-        font-size: 12px
-        line-height: 19px
-        @include tabletPlus768()
-            font-size: 16px
-            line-height: 25px
-        @include desktopPlus1024()
-            font-size: 18px
-            line-height: 28px
+        width: 470px   
+        height: 80px   
+        top: -80px
+        font-size: 26px
+        background: url(../images/respogame/grey-title-text-bg1024.svg)
+
+

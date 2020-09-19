@@ -121,14 +121,14 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-latest-news.container {
     max-width: 632px;
     padding: 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-latest-news.container {
     max-width: 1336px;
     padding: 0 20px;
   }
@@ -783,7 +783,7 @@ main {
 }
 
 .latest-news-li {
-  width: 324px;
+  width: 100%;
   overflow: hidden;
   border: 1px solid #E3E3E3;
   border-radius: 0 10px 10px 0;
@@ -1765,7 +1765,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   background-position: left;
   width: 322.5px;
   height: 150px;
-  padding: 14px 30px 16px 12px;
+  padding: 14px 30px 0 12px;
   color: white;
 }
 
@@ -1774,7 +1774,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
     width: 714px;
     height: 135px;
     background-image: url(../images/respogame/hero-content-cover768.svg);
-    padding: 16px 57px 16px 20px;
+    padding: 16px 57px 0 20px;
   }
 }
 
@@ -1783,7 +1783,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
     background-image: url(../images/respogame/hero-content-cover1024.svg);
     width: 1100px;
     height: 180px;
-    padding: 40px 140px 40px 40px;
+    padding: 36px 140px 0 36px;
   }
 }
 
@@ -1825,6 +1825,121 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   .hero-respo-article p {
     font-size: 18px;
     line-height: 28px;
+  }
+}
+
+.rg-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 98px;
+}
+
+@media screen and (min-width: 1024px) {
+  .rg-news {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    background: white;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 36px;
+            column-gap: 36px;
+  }
+}
+
+.rg-news img {
+  width: 48%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .rg-news img {
+    width: 100%;
+  }
+}
+
+.rg-news-each {
+  background: none;
+  width: 100%;
+  position: relative;
+  background: white;
+  border-top: 2px dashed #C8495E;
+  padding: 28px 18px 32px;
+}
+
+@media screen and (min-width: 1024px) {
+  .rg-news-each {
+    width: calc(50% - 17.9844069px);
+    background: none;
+    border-top: none;
+  }
+}
+
+.rg-news-each::after {
+  content: '';
+  display: none;
+  height: 0;
+  width: 100vw;
+  border-bottom: 2px dashed #C8495E;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .rg-news-each::after {
+    display: block;
+  }
+}
+
+.rg-news-h1 {
+  width: 220px;
+  height: 50px;
+  background: url(../images/respogame/grey-title-text-bg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #C8495E;
+  font-family: firaBold;
+  font-size: 16px;
+  padding-left: 31px;
+  top: -52px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .rg-news-h1 {
+    width: 354px;
+    font-size: 20px;
+    background: url(../images/respogame/grey-title-text-bg768.svg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rg-news-h1 {
+    width: 470px;
+    height: 80px;
+    top: -80px;
+    font-size: 26px;
+    background: url(../images/respogame/grey-title-text-bg1024.svg);
   }
 }
 /*# sourceMappingURL=style.css.map */

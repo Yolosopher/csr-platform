@@ -2115,4 +2115,142 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
     background: url(../images/respogame/grey-title-text-bg1024.svg);
   }
 }
+
+body.arena {
+  background-color: white;
+}
+
+.menuAndSoc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menuAndSoc-backButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 140px;
+  font-family: firaRegular;
+  font-size: 14px;
+  height: 40px;
+  text-transform: uppercase;
+  color: #2C7A60;
+  border-radius: 6px;
+  background: white;
+  -webkit-box-shadow: 0px 3px 10px #00000029;
+          box-shadow: 0px 3px 10px #00000029;
+}
+
+@media screen and (min-width: 1024px) {
+  .menuAndSoc-backButton {
+    width: 165px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+.menuAndSoc-backButton::before {
+  content: url(../images/respogame/backArrow.svg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-right: 18px;
+}
+
+.menuAndSoc-backButton:hover {
+  border: 1px solid #2C7A60;
+}
+
+.onHoverSocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  width: 146px;
+  position: absolute;
+  height: 0;
+  font-size: 12px;
+  line-height: 45px;
+  color: #3C364E;
+  font-family: firaRegular;
+  bottom: 100%;
+  background-image: url(../images/respogame/socAndCopyLink-hover.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  overflow: hidden;
+  -webkit-transition: height .6s ease-in-out, height .6s ease-in-out;
+  transition: height .6s ease-in-out, height .6s ease-in-out;
+}
+
+.onHoverSocial:first-child {
+  width: 100px;
+}
+
+.menuAndSoc-socials {
+  border-bottom: 1px solid #E3E3E3;
+  position: relative;
+  width: 130px;
+  height: 38.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menuAndSoc-socials a {
+  position: relative;
+}
+
+.menuAndSoc-socials span {
+  display: block;
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  bottom: 5.5px;
+  width: 1px;
+  height: 32px;
+  background-color: #E3E3E3;
+}
+
+.menuAndSoc-socials a:hover .onHoverSocial {
+  padding: 12px 0 21px 0;
+  height: 50px;
+}
 /*# sourceMappingURL=style.css.map */

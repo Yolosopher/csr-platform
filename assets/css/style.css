@@ -2120,6 +2120,44 @@ body.arena {
   background-color: white;
 }
 
+.rg-arena {
+  margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .rg-arena {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rg-arena {
+    margin-bottom: 120px;
+  }
+}
+
+.rg-arena-inner.container {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .rg-arena-inner.container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .menuAndSoc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2186,36 +2224,46 @@ body.arena {
 }
 
 .onHoverSocial {
+  padding: 0;
+  position: absolute;
+  height: 0;
+  width: 0;
+  font-size: 12px;
+  line-height: 45px;
+  color: #3C364E;
+  font-family: firaRegular;
+  bottom: 140%;
+  background-image: url(../images/respogame/bigger.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+  right: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0;
-  width: 146px;
-  position: absolute;
-  height: 0;
-  font-size: 12px;
-  line-height: 45px;
-  color: #3C364E;
-  font-family: firaRegular;
-  bottom: 100%;
-  background-image: url(../images/respogame/socAndCopyLink-hover.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  text-align: center;
-  right: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
   overflow: hidden;
-  -webkit-transition: height .6s ease-in-out, height .6s ease-in-out;
-  transition: height .6s ease-in-out, height .6s ease-in-out;
+  -webkit-transition: height .2s ease-in-out, padding .2s ease-out;
+  transition: height .2s ease-in-out, padding .2s ease-out;
 }
 
 .onHoverSocial:first-child {
-  width: 100px;
+  width: 100px !important;
+  background-image: url(../images/respogame/socAndCopyLink-hover.svg);
+}
+
+.onHoverSocial div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .menuAndSoc-socials {
@@ -2235,6 +2283,18 @@ body.arena {
 
 .menuAndSoc-socials a {
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menuAndSoc-socials span {
@@ -2252,5 +2312,196 @@ body.arena {
 .menuAndSoc-socials a:hover .onHoverSocial {
   padding: 12px 0 21px 0;
   height: 50px;
+  width: 146px;
+}
+
+.coppied {
+  display: none;
+}
+
+.copyLink.active .beforeCopy {
+  display: none;
+}
+
+.copyLink.active .coppied {
+  display: unset;
+}
+
+@media screen and (min-width: 1024px) {
+  .arena-left-textbox {
+    margin-right: 16px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.arena-left-textbox h2 {
+  font-family: firaBold;
+  font-size: 16px;
+  line-height: 41px;
+  margin-bottom: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  .arena-left-textbox h2 {
+    font-size: 20px;
+    line-height: 18px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .arena-left-textbox h2 {
+    font-family: firaMedium;
+    font-size: 36px;
+    line-height: 57px;
+    margin-bottom: 62px;
+  }
+}
+
+.arena-left-textbox .arena-text-div {
+  font-family: firaBold;
+  font-size: 12px;
+  line-height: 19.2px;
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .arena-left-textbox .arena-text-div {
+    font-family: firaMedium;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 4px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .arena-left-textbox .arena-text-div {
+    font-size: 22px;
+    line-height: 38px;
+    margin-bottom: 11px;
+  }
+}
+
+.arena-left-textbox .arena-text-div p {
+  margin-bottom: 17.8px;
+}
+
+@media screen and (min-width: 768px) {
+  .arena-left-textbox .arena-text-div p {
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .arena-left-textbox .arena-text-div p {
+    margin-bottom: 52px;
+  }
+}
+
+.arena-left-textbox .arena-text-div p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.arena-left-textbox .arena-text-mainMessage {
+  font-family: firaBold;
+  font-size: 16px;
+  line-height: 41.6px;
+  color: #C8495E;
+  margin-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .arena-left-textbox .arena-text-mainMessage {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .arena-left-textbox .arena-text-mainMessage {
+    font-size: 26px;
+    margin-bottom: 62px;
+  }
+}
+
+.arena-try-it {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #2C7A60;
+  border-radius: 12px;
+  font-family: firaMedium;
+  font-size: 14px;
+  line-height: 25px;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .arena-try-it {
+    max-width: 345px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .arena-try-it {
+    max-width: unset;
+    width: 220px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.arena-right-image {
+  width: 100%;
+  height: 265px;
+}
+
+@media screen and (min-width: 768px) {
+  .arena-right-image {
+    height: 312px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .arena-right-image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    min-height: 755px;
+    height: 100%;
+    margin-left: 18px;
+  }
+}
+
+.arena-right-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .arena-right-image img {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .arena-right-image img {
+    border-radius: 12px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

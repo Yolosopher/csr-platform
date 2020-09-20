@@ -12,9 +12,28 @@
 @import respogame/main
 @import respogame/section
 
+
+
+
+
+//menuAndSoc
 body.arena
     background-color: white
+.rg-arena
+    margin-bottom: 72px
+    @include tabletPlus768()
+        margin-bottom: 80px
+    @include desktopPlus1024()
+        margin-bottom: 120px
 
+.rg-arena-inner.container
+    padding: 0 20px
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: auto
+    @include desktopPlus1024()
+        flex-direction: row
 .menuAndSoc
     display: flex
     align-items: center
@@ -48,28 +67,33 @@ body.arena
 
 
 .onHoverSocial    
-    display: flex
-    justify-content: center
     padding: 0
-    width: 146px
     position: absolute
     height: 0
+    width: 0
     font-size: 12px
     line-height: 45px
     color: #3C364E
     font-family: firaRegular 
-    bottom: 100% 
-    background-image: url(../images/respogame/socAndCopyLink-hover.svg)
+    bottom: 140% 
+    background-image: url(../images/respogame/bigger.svg)
     background-repeat: no-repeat
     background-size: contain
     background-position: center
     text-align: center
     right: 50%
+    @include centering()
+    
     transform: translateX(50%)
     overflow: hidden
-    transition: height .6s ease-in-out, height .6s ease-in-out   
+    transition: height .2s ease-in-out, padding .2s ease-out   
     &:first-child
-        width: 100px
+        width: 100px !important
+        background-image: url(../images/respogame/socAndCopyLink-hover.svg)
+    div
+        width: 100%
+        height: 100%
+        overflow: hidden
 .menuAndSoc-socials
     border-bottom: 1px solid $e3
     position: relative
@@ -80,6 +104,9 @@ body.arena
     align-items: center
     a
         position: relative
+        flex: 1
+        @include centering()
+        
     span
         display: block
         position: absolute
@@ -93,4 +120,105 @@ body.arena
         .onHoverSocial 
             padding: 12px 0 21px 0     
             height: 50px
-        
+            width: 146px
+.coppied
+    display: none
+
+.copyLink.active
+    .beforeCopy
+        display: none
+    .coppied
+        display: unset
+
+
+// article
+.arena-left-textbox
+    @include desktopPlus1024()
+        margin-right: 16px
+        flex: 1
+    h2
+        font-family: firaBold
+        font-size: 16px
+        line-height: 41px
+        margin-bottom: 21px
+        @include tabletPlus768()
+            font-size: 20px
+            line-height: 18px
+            margin-bottom: 32px
+        @include desktopPlus1024()        
+            font-family: firaMedium
+            font-size: 36px
+            line-height: 57px
+            margin-bottom: 62px
+    .arena-text-div
+        font-family: firaBold
+        font-size: 12px
+        line-height: 19.2px
+        margin-bottom: 12px
+        @include tabletPlus768()
+            font-family: firaMedium
+            font-size: 16px
+            line-height: 25px
+            margin-bottom: 4px
+        @include desktopPlus1024()
+            font-size: 22px
+            line-height: 38px
+            margin-bottom: 11px
+        p
+            margin-bottom: 17.8px
+            @include tabletPlus768()
+                margin-bottom: 36px
+            @include desktopPlus1024()
+                margin-bottom: 52px
+            &:last-child
+                margin-bottom: 0 !important
+    .arena-text-mainMessage
+        font-family: firaBold
+        font-size: 16px
+        line-height: 41.6px
+        color: $pink
+        margin-bottom: 48px
+        @include tabletPlus768()
+            font-size: 20px
+        @include desktopPlus1024()
+            font-size: 26px
+            margin-bottom: 62px
+.arena-try-it
+    @include centering()
+    width: 100%
+    height: 50px
+    background: $green
+    border-radius: 12px
+    font-family: firaMedium
+    font-size: 14px
+    line-height: 25px
+    color: white
+    @include tabletPlus768()
+        max-width: 345px
+    @include desktopPlus1024()
+        max-width: unset
+        width: 220px
+        font-size: 16px
+        line-height: 19px
+
+.arena-right-image
+    width: 100%
+    height: 265px
+    @include tabletPlus768()
+        height: 312px
+    @include desktopPlus1024()
+        flex: 1
+        width: 100%
+        min-height: 755px
+        height: 100%
+        margin-left: 18px
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+        border-radius: 6px
+        @include tabletPlus768()
+            border-radius: 8px
+        @include desktopPlus1024()
+            border-radius: 12px

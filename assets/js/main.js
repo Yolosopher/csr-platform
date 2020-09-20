@@ -42,7 +42,6 @@ function personalStoriesSetter() {
 }
 
 
-
 // EVENT LISTENERS
 window.addEventListener('load', () => {
     $('.burger').click(function(){
@@ -56,6 +55,14 @@ window.onscroll = () => {
 window.onresize = () => {
     personalStoriesSetter();
 };
+
+$('.copyLink').click(function(){
+    $(this).addClass('active');    
+});
+
+$('.copyLink').mouseout(function() {
+    $(this).removeClass('active');
+});
 
 
 

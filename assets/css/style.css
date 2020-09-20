@@ -121,14 +121,14 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container {
     max-width: 632px;
     padding: 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container {
     max-width: 1336px;
     padding: 0 20px;
   }
@@ -582,6 +582,16 @@ main {
   main {
     height: 500px;
     margin-bottom: 180px;
+  }
+}
+
+main.arena-hero-content.respoGame.hero-content {
+  margin-bottom: 36px;
+}
+
+@media screen and (min-width: 1024px) {
+  main.arena-hero-content.respoGame.hero-content {
+    margin-bottom: 72px;
   }
 }
 
@@ -1838,7 +1848,6 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   border: 1px solid #E3E3E3;
   border-radius: 0 10px 10px 0;
   height: 120px;
-  margin-top: 28px;
 }
 
 .rg-news-div:first-child {
@@ -1847,7 +1856,6 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
 
 @media screen and (min-width: 768px) {
   .rg-news-div {
-    margin-top: 24px;
     height: 160px;
     width: 100%;
   }
@@ -1972,9 +1980,19 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
+.rg-news {
+  margin-bottom: 40px;
+}
+
 @media screen and (min-width: 768px) {
   .rg-news {
     background: white;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rg-news {
+    margin-bottom: 88px;
   }
 }
 
@@ -2190,6 +2208,9 @@ body.arena {
   background: white;
   -webkit-box-shadow: 0px 3px 10px #00000029;
           box-shadow: 0px 3px 10px #00000029;
+  border: 1px solid transparent;
+  -webkit-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
 }
 
 @media screen and (min-width: 1024px) {
@@ -2503,5 +2524,174 @@ body.arena {
   .arena-right-image img {
     border-radius: 12px;
   }
+}
+
+.martetamashi-see-here-link {
+  color: #C8495E;
+}
+
+body.sports {
+  background-color: white;
+}
+
+.hero-sports-game-cover-div + * .hero-respo-article {
+  background-image: url(../images/sports/hero-content-cover.svg);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-sports-game-cover-div + * .hero-respo-article {
+    background-image: url(../images/sports/hero-content-cover768.svg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-sports-game-cover-div + * .hero-respo-article {
+    background-image: url(../images/sports/hero-content-cover1024.svg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sports-inner.container {
+    padding: 0 20px;
+    max-width: unset;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sports-inner.container {
+    max-width: 1336px;
+    padding: 0 20px;
+  }
+}
+
+article.sports-each {
+  margin-bottom: 36px;
+  -webkit-box-shadow: 0px 0px 20px #b895950a;
+          box-shadow: 0px 0px 20px #b895950a;
+  border-radius: 12px;
+  border: 1px solid #E3E3E3;
+}
+
+@media screen and (min-width: 768px) {
+  article.sports-each {
+    padding: 47px 140px;
+    margin-bottom: 52px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  article.sports-each {
+    padding: 76px 20px;
+    height: 800px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 36px;
+    margin-bottom: 72px;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  article.sports-each {
+    padding: 76px 114px;
+  }
+}
+
+article.sports-each:last-child {
+  margin-bottom: 0;
+}
+
+article.sports-each .sports-each-text-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.sports-each-text-div {
+  padding: 0 18px 58px 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .sports-each-text-div {
+    padding: 0;
+  }
+}
+
+.sports-each-text-div h2 {
+  margin-bottom: 37px;
+  font-family: firaBold;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+@media screen and (min-width: 768px) {
+  .sports-each-text-div h2 {
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 17.6px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sports-each-text-div h2 {
+    margin-bottom: 100px;
+    font-family: firaMedium;
+    font-size: 36px;
+    line-height: 57.6px;
+  }
+}
+
+.sports-each-text-div p {
+  font-family: firaBold;
+  font-size: 12px;
+  line-height: 19.2px;
+}
+
+@media screen and (min-width: 768px) {
+  .sports-each-text-div p {
+    font-family: firaMedium;
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sports-each-text-div p {
+    font-size: 22px;
+    line-height: 38px;
+  }
+}
+
+.sports-each-img-div {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 265px;
+  margin-bottom: 57px;
+}
+
+@media screen and (min-width: 768px) {
+  .sports-each-img-div {
+    margin-bottom: 40px;
+    height: 230px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sports-each-img-div {
+    margin-bottom: 0;
+    height: 100%;
+  }
+}
+
+.sports-each-img-div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 /*# sourceMappingURL=style.css.map */

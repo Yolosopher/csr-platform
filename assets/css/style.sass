@@ -10,215 +10,94 @@
 @import footer
 // responsive game
 @import respogame/main
-@import respogame/section
+@import respogame/sectionNarticle
+@import respogame/martetamashi
 
-
-
-
-
-//menuAndSoc
-body.arena
+body.sports
     background-color: white
-.rg-arena
-    margin-bottom: 72px
+
+.hero-sports-game-cover-div + * .hero-respo-article
+    background-image: url(../images/sports/hero-content-cover.svg)
     @include tabletPlus768()
-        margin-bottom: 80px
+        background-image: url(../images/sports/hero-content-cover768.svg)
     @include desktopPlus1024()
-        margin-bottom: 120px
+        background-image: url(../images/sports/hero-content-cover1024.svg)
 
-.rg-arena-inner.container
-    padding: 0 20px
-    display: flex
-    flex-direction: column
-    width: 100%
-    height: auto
-    @include desktopPlus1024()
-        flex-direction: row
-.menuAndSoc
-    display: flex
-    align-items: center
-    justify-content: space-between
-
-.menuAndSoc-backButton
-    @include centering()
-    width: 140px
-    font-family: firaRegular
-    font-size: 14px    
-    height: 40px
-    text-transform: uppercase
-    color: $green
-    border-radius: 6px
-    background: white
-    box-shadow: 0px 3px 10px #00000029
-    @include desktopPlus1024()
-        width: 165px
-        height: 50px
-        font-size: 16px
-    &::before
-        content: url(../images/respogame/backArrow.svg)
-        @include centering()
-        position: relative
-        width: 12px
-        height: 12px 
-        transform: rotate(180deg)  
-        margin-right: 18px
-    &:hover
-        border: 1px solid $green
-
-
-.onHoverSocial    
-    padding: 0
-    position: absolute
-    height: 0
-    width: 0
-    font-size: 12px
-    line-height: 45px
-    color: #3C364E
-    font-family: firaRegular 
-    bottom: 140% 
-    background-image: url(../images/respogame/bigger.svg)
-    background-repeat: no-repeat
-    background-size: contain
-    background-position: center
-    text-align: center
-    right: 50%
-    @include centering()
+.sports-inner.container
     
-    transform: translateX(50%)
-    overflow: hidden
-    transition: height .2s ease-in-out, padding .2s ease-out   
-    &:first-child
-        width: 100px !important
-        background-image: url(../images/respogame/socAndCopyLink-hover.svg)
-    div
-        width: 100%
-        height: 100%
-        overflow: hidden
-.menuAndSoc-socials
-    border-bottom: 1px solid $e3
-    position: relative
-    width: 130px
-    height: 38.5px
-    display: flex
-    justify-content: space-around
-    align-items: center
-    a
-        position: relative
-        flex: 1
-        @include centering()
-        
-    span
-        display: block
-        position: absolute
-        right: 50%
-        transform: translateX(50%)
-        bottom: 5.5px
-        width: 1px
-        height: 32px
-        background-color: $e3 
-    a:hover
-        .onHoverSocial 
-            padding: 12px 0 21px 0     
-            height: 50px
-            width: 146px
-.coppied
-    display: none
-
-.copyLink.active
-    .beforeCopy
-        display: none
-    .coppied
-        display: unset
-
-
-// article
-.arena-left-textbox
+    @include tabletPlus768()
+        padding: 0 20px 
+        max-width: unset   
     @include desktopPlus1024()
-        margin-right: 16px
+        max-width: 1336px
+        padding: 0 20px
+
+
+article.sports-each
+    margin-bottom: 36px
+    box-shadow: 0px 0px 20px #b895950a
+    border-radius: 12px
+    border: 1px solid $e3
+    @include tabletPlus768()
+        padding: 47px 140px
+        margin-bottom: 52px
+    @include desktopPlus1024() 
+        padding: 76px 20px
+        height: 800px       
+        display: flex
+        gap: 36px
+        margin-bottom: 72px
+    @include sizePlus(1336px)
+        padding: 76px 114px  
+    &:last-child
+        margin-bottom: 0
+    .sports-each-text-div
         flex: 1
+
+.sports-each-text-div
+    padding: 0 18px 58px 14px
+    @include tabletPlus768()
+        padding: 0
     h2
+        margin-bottom: 37px
         font-family: firaBold
         font-size: 16px
-        line-height: 41px
-        margin-bottom: 21px
+        line-height: 25.6px
         @include tabletPlus768()
+            margin-bottom: 23px
             font-size: 20px
-            line-height: 18px
-            margin-bottom: 32px
-        @include desktopPlus1024()        
+            line-height: 17.6px
+        @include desktopPlus1024()
+            margin-bottom: 100px
             font-family: firaMedium
             font-size: 36px
-            line-height: 57px
-            margin-bottom: 62px
-    .arena-text-div
+            line-height: 57.6px
+    p
         font-family: firaBold
-        font-size: 12px
+        font-size:  12px
         line-height: 19.2px
-        margin-bottom: 12px
         @include tabletPlus768()
             font-family: firaMedium
             font-size: 16px
-            line-height: 25px
-            margin-bottom: 4px
+            line-height: 25.6px
         @include desktopPlus1024()
             font-size: 22px
             line-height: 38px
-            margin-bottom: 11px
-        p
-            margin-bottom: 17.8px
-            @include tabletPlus768()
-                margin-bottom: 36px
-            @include desktopPlus1024()
-                margin-bottom: 52px
-            &:last-child
-                margin-bottom: 0 !important
-    .arena-text-mainMessage
-        font-family: firaBold
-        font-size: 16px
-        line-height: 41.6px
-        color: $pink
-        margin-bottom: 48px
-        @include tabletPlus768()
-            font-size: 20px
-        @include desktopPlus1024()
-            font-size: 26px
-            margin-bottom: 62px
-.arena-try-it
-    @include centering()
+.sports-each-img-div
     width: 100%
-    height: 50px
-    background: $green
-    border-radius: 12px
-    font-family: firaMedium
-    font-size: 14px
-    line-height: 25px
-    color: white
-    @include tabletPlus768()
-        max-width: 345px
-    @include desktopPlus1024()
-        max-width: unset
-        width: 220px
-        font-size: 16px
-        line-height: 19px
-
-.arena-right-image
-    width: 100%
+    flex: 1
     height: 265px
+    margin-bottom: 57px
     @include tabletPlus768()
-        height: 312px
+        margin-bottom: 40px
+        height: 230px
     @include desktopPlus1024()
-        flex: 1
-        width: 100%
-        min-height: 755px
+        margin-bottom: 0
         height: 100%
-        margin-left: 18px
     img
         width: 100%
-        height: 100%
+        height: 100%        
+        border-radius: 8px
         object-fit: cover
         object-position: center
-        border-radius: 6px
-        @include tabletPlus768()
-            border-radius: 8px
-        @include desktopPlus1024()
-            border-radius: 12px
+

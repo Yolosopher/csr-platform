@@ -4,11 +4,10 @@
     border: 1px solid $e3
     border-radius: 0 10px 10px 0
     height: 120px
-    margin-top: 28px
     &:first-child
         margin-top: 0
     @include tabletPlus768()
-        margin-top: 24px
+        // margin-top: 24px
         height: 160px
         width: 100%
         &:first-child
@@ -71,8 +70,12 @@
 // 
 
 .rg-news
+    margin-bottom: 40px
     @include tabletPlus768()    
         background: white 
+        margin-bottom: 
+    @include desktopPlus1024()
+        margin-bottom: 88px
 
 .rg-news-inner
     display: flex

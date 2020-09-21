@@ -20,6 +20,29 @@ $desktop-width: 1024px
 @mixin tabletPlus768()
     @media screen and (min-width: $tablet-width)
         @content
+@mixin sportsEach()
+    margin-bottom: 36px
+    box-shadow: 0px 0px 20px #b895950a
+    border-radius: 12px
+    border: 1px solid $e3
+    @include tabletPlus768()
+        padding: 47px 140px
+        margin-bottom: 52px
+    @include desktopPlus1024() 
+        padding: 76px 20px
+        height: 800px       
+        display: flex
+        gap: 36px
+        margin-bottom: 72px
+    @include sizePlus(1336px)
+        padding: 76px 114px  
+    &:last-child
+        margin-bottom: 0
+    .sports-each-text-div
+        flex: 1
+    &:nth-of-type(even)
+        @include desktopPlus1024() 
+            flex-direction: row-reverse
 
 @mixin sizePlus($width)
     @media screen and (min-width: $width)

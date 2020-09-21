@@ -69,19 +69,22 @@ $('.copyLink').mouseout(function() {
 // SWIPERJS
 
     // main swiper
-const mainSwiper = new Swiper('.main-slider-hc', {
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    loop: true,
-    navigation: {
-      nextEl: '.main-slider-hc-next',
-      prevEl: '.main-slider-hc-prev',
-    },
-    pagination: {
-      el: '.main-slider-hc-pagination'
-    },
-    keyboard: true,
-    // cssMode: true,
-});
+    const mainSwiper = new Swiper('.main-slider-hc', {
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        navigation: {
+        nextEl: '.main-slider-hc-next',
+        prevEl: '.main-slider-hc-prev',
+        },
+        pagination: {
+        el: '.main-slider-hc-pagination'
+        },
+        keyboard: true,
+        // cssMode: true,
+    });
+
+    // atech gallery-swiper
+    // const atechGallerySwiper = new Swiper('.')

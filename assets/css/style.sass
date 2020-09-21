@@ -13,3 +13,111 @@
 @import respogame/sectionNarticle
 @import respogame/martetamashi
 @import sports
+
+// main
+.hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article
+    background-image: url(../images/inovations/hero-content-cover1024.svg)
+    @include tabletPlus768()
+        background-image: url(../images/inovations/hero-content-cover768.svg)
+    @include desktopPlus1024()
+        background-image: url(../images/inovations/hero-content-cover1024.svg)
+
+// article
+.rg-news-h1.tech-news-h1
+    color: $lightblue
+
+.rg-news-each.tech-news-each::after
+    border-bottom-color: $lightblue
+
+
+.atech-article-outter
+    .menuAndSoc.container
+        margin-bottom: 50px
+        @include desktopPlus1024()
+            margin-bottom: 80px
+// section
+
+.atech-article-img-div
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+        border-radius: 4px
+        @include desktopPlus1024()
+            border-radius: 12px
+
+article.atech-article
+    h2
+        font-family: firaBold
+        font-size: 16px
+        line-height: 41.6px
+        margin-bottom: 21px
+        @include tabletPlus768()
+            font-family: firaMedium
+            font-size: 20px
+            line-height: 17.6px
+            margin-bottom: 32px
+        @include desktopPlus1024()
+            margin-bottom: 56px            
+            font-size: 36px
+            line-height: 57px
+    p
+        font-family: firaBold
+        font-size: 12px
+        line-height: 19.2px
+        @include tabletPlus768()
+            font-family: firaMedium
+            font-size: 16px
+            line-height: 26.6px
+        @include desktopPlus1024()            
+            font-size: 22px
+            line-height: 38px
+    > div
+        display: flex
+        flex-direction: column
+        margin-bottom: 30px
+        gap: 35px
+        @include desktopPlus1024()
+            flex-direction: row
+            gap: 36px
+            width: 100%
+            height: 560px
+        > div
+            flex: 1
+            height: 100%
+
+.atech-article-bottom-textbox
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    order: -1
+    @include desktopPlus1024()
+        order: unset
+
+
+
+.atech-textbox-important
+    color: $pink
+    font-family: firaBold
+    font-size: 16px
+    line-height: 25.6px
+    margin-top: 20px  
+    @include desktopPlus1024()
+        margin-top: 48px
+        color: $lightblue
+        font-family: firaMedium
+        font-size: 30px
+        line-height: 48px
+
+
+
+// slider
+
+.tech-slider-main-image
+    img
+        display: none
+.zoomed-for-gallery
+    .tech-slider-main-image
+        img
+            display: unset

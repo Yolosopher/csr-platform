@@ -2549,6 +2549,17 @@ body.sports {
   background-color: white;
 }
 
+.hero-content-sports {
+  margin-bottom: 35px;
+  margin-bottom: 38px;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-content-sports {
+    margin-bottom: 72px;
+  }
+}
+
 .hero-sports-game-cover-div + * .hero-respo-article {
   background-image: url(../images/sports/hero-content-cover.svg);
 }
@@ -2620,6 +2631,15 @@ article.sports-each .sports-each-text-div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  article.sports-each:nth-of-type(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 .sports-each-text-div {
@@ -2708,5 +2728,181 @@ article.sports-each .sports-each-text-div {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
+  background-image: url(../images/inovations/hero-content-cover1024.svg);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
+    background-image: url(../images/inovations/hero-content-cover768.svg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
+    background-image: url(../images/inovations/hero-content-cover1024.svg);
+  }
+}
+
+.rg-news-h1.tech-news-h1 {
+  color: #5E7289;
+}
+
+.rg-news-each.tech-news-each::after {
+  border-bottom-color: #5E7289;
+}
+
+.atech-article-outter .menuAndSoc.container {
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .atech-article-outter .menuAndSoc.container {
+    margin-bottom: 80px;
+  }
+}
+
+.atech-article-img-div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .atech-article-img-div img {
+    border-radius: 12px;
+  }
+}
+
+article.atech-article h2 {
+  font-family: firaBold;
+  font-size: 16px;
+  line-height: 41.6px;
+  margin-bottom: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  article.atech-article h2 {
+    font-family: firaMedium;
+    font-size: 20px;
+    line-height: 17.6px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  article.atech-article h2 {
+    margin-bottom: 56px;
+    font-size: 36px;
+    line-height: 57px;
+  }
+}
+
+article.atech-article p {
+  font-family: firaBold;
+  font-size: 12px;
+  line-height: 19.2px;
+}
+
+@media screen and (min-width: 768px) {
+  article.atech-article p {
+    font-family: firaMedium;
+    font-size: 16px;
+    line-height: 26.6px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  article.atech-article p {
+    font-size: 22px;
+    line-height: 38px;
+  }
+}
+
+article.atech-article > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+  gap: 35px;
+}
+
+@media screen and (min-width: 1024px) {
+  article.atech-article > div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 36px;
+    width: 100%;
+    height: 560px;
+  }
+}
+
+article.atech-article > div > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+
+.atech-article-bottom-textbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  .atech-article-bottom-textbox {
+    -webkit-box-ordinal-group: unset;
+        -ms-flex-order: unset;
+            order: unset;
+  }
+}
+
+.atech-textbox-important {
+  color: #C8495E;
+  font-family: firaBold;
+  font-size: 16px;
+  line-height: 25.6px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .atech-textbox-important {
+    margin-top: 48px;
+    color: #5E7289;
+    font-family: firaMedium;
+    font-size: 30px;
+    line-height: 48px;
+  }
+}
+
+.tech-slider-main-image img {
+  display: none;
+}
+
+.zoomed-for-gallery .tech-slider-main-image img {
+  display: unset;
 }
 /*# sourceMappingURL=style.css.map */

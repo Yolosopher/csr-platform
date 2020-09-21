@@ -2732,7 +2732,7 @@ article.sports-each .sports-each-text-div {
 }
 
 .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
-  background-image: url(../images/inovations/hero-content-cover1024.svg);
+  background-image: url(../images/inovations/hero-content-cover.svg);
 }
 
 @media screen and (min-width: 768px) {

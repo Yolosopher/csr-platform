@@ -91,6 +91,7 @@ body {
 
 body.active {
   overflow: hidden;
+  position: relative;
 }
 
 body.active::after {
@@ -99,10 +100,10 @@ body.active::after {
   position: absolute;
   z-index: 9;
   width: 100vw;
-  height: 100vh;
+  height: 1000vh;
   right: 0;
   top: 0;
-  opacity: 90%;
+  opacity: 96.5%;
 }
 
 body::-webkit-scrollbar {
@@ -2780,6 +2781,10 @@ article.sports-each .sports-each-text-div {
   }
 }
 
+article.atech-article {
+  max-width: 1100px;
+}
+
 article.atech-article h2 {
   font-family: firaBold;
   font-size: 16px;
@@ -2898,20 +2903,60 @@ article.atech-article > div > div {
   }
 }
 
-.arena .container {
-  max-width: 1100px;
+.tech-slider-x-zoom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 28px;
+}
+
+.tech-slider-main-image {
+  display: none;
+  height: 59.925vh;
+  width: 100%;
+  margin-bottom: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tech-slider-main-image .swiper-wrapper {
+  width: 100%;
+  height: 90%;
 }
 
 .tech-slider-main-image img {
-  display: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
-.zoomed-for-gallery .tech-slider-main-image img {
-  display: unset;
+.for-zoom.active .tech-slider-main-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 0;
+  max-width: 1060px;
 }
 
 .tech-slider-outter {
   margin-bottom: 62px;
+  padding: 0 20px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -2920,8 +2965,28 @@ article.atech-article > div > div {
   }
 }
 
+.tech-slider-outter.active {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.tech-slider-outter.active .tech-slider-navigation {
+  z-index: -1;
+}
+
+.tech-slider-outter.active .tech-slider-navigation > * div {
+  position: relative;
+  z-index: 11;
+}
+
 .tech-section-outter {
   position: relative;
+  padding: 0;
+  max-width: 1060px;
 }
 
 .tech-slider-section {
@@ -2932,21 +2997,28 @@ article.atech-article > div > div {
 }
 
 .tech-slider-section .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 306px;
+  height: 100%;
+}
+
+.tech-slider-section .swiper-slide img {
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  cursor: pointer;
 }
 
 .tech-slider-navigation {
   position: absolute;
   z-index: 1;
   top: 50%;
-  width: calc(100% - 40px);
+  width: 100%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -2966,5 +3038,18 @@ article.atech-article > div > div {
 
 .tech-slider-nav-inner.container {
   padding: 0 20px;
+}
+
+.for-zoom {
+  width: 100%;
+  height: 100%;
+}
+
+.for-zoom.active {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  padding: 67px 0 93px;
 }
 /*# sourceMappingURL=style.css.map */

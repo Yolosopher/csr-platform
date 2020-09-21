@@ -48,6 +48,7 @@
             border-radius: 12px
 
 article.atech-article
+    max-width: 1100px
     h2
         font-family: firaBold
         font-size: 16px
@@ -113,33 +114,70 @@ article.atech-article
 
 
 // slider
-.arena
-    .container
-        max-width: 1100px
-        // padding: 0
+.tech-slider-x-zoom
+    display: flex
+    width: 100%
+    justify-content: flex-end
+    align-items: center 
+    margin-bottom: 28px
+
 .tech-slider-main-image
+    display: none
+    height: 59.925vh
+    width: 100%
+    margin-bottom: 60px
+    justify-content: space-between
+    flex-direction: column
+    .swiper-wrapper
+        width: 100%
+        height: 90%
     img
-        display: none
-.zoomed-for-gallery
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+.for-zoom.active
     .tech-slider-main-image
-        img
-            display: unset
+        display: flex
+        position: relative
+        padding: 0
+        max-width: 1060px
+
 
 .tech-slider-outter
-    margin-bottom: 62px
+    margin-bottom: 62px    
+    padding: 0 20px
     @include desktopPlus1024()
         margin-bottom: 123px
+    &.active
+        position: fixed
+        top: 0
+        right: 0
+        width: 100%
+        height: 100%
+        z-index: 10
+        .tech-slider-navigation
+            z-index: -1
+            > * div
+                position: relative
+                z-index: 11
+    
 .tech-section-outter
     position: relative
+    padding: 0
+    max-width: 1060px
 .tech-slider-section
     display: flex
     height: 171px
     .swiper-slide
+        display: flex
         width: 306px
         height: 100%
-        object-fit: cover
-        flex: 1
-        cursor: pointer
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            flex: 1
 
 
 
@@ -147,7 +185,7 @@ article.atech-article
     position: absolute
     z-index: 1
     top: 50%
-    width: calc(100% - 40px)
+    width: 100%
     transform: translateY(-50%)
 .tech-slider-nav-inner
     display: flex
@@ -156,3 +194,13 @@ article.atech-article
         cursor: pointer
     &.container
         padding: 0 20px
+
+.for-zoom
+    width: 100%
+    height: 100%
+    &.active
+        position: fixed
+        z-index: 10
+        top: 0
+        right: 0
+        padding: 67px 0 93px

@@ -2898,11 +2898,73 @@ article.atech-article > div > div {
   }
 }
 
+.arena .container {
+  max-width: 1100px;
+}
+
 .tech-slider-main-image img {
   display: none;
 }
 
 .zoomed-for-gallery .tech-slider-main-image img {
   display: unset;
+}
+
+.tech-slider-outter {
+  margin-bottom: 62px;
+}
+
+@media screen and (min-width: 1024px) {
+  .tech-slider-outter {
+    margin-bottom: 123px;
+  }
+}
+
+.tech-section-outter {
+  position: relative;
+}
+
+.tech-slider-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 171px;
+}
+
+.tech-slider-section .swiper-slide {
+  width: 306px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  cursor: pointer;
+}
+
+.tech-slider-navigation {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: calc(100% - 40px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.tech-slider-nav-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tech-slider-nav-inner div {
+  cursor: pointer;
+}
+
+.tech-slider-nav-inner.container {
+  padding: 0 20px;
 }
 /*# sourceMappingURL=style.css.map */

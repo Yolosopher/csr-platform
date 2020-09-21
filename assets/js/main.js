@@ -64,7 +64,9 @@ $('.copyLink').mouseout(function() {
     $(this).removeClass('active');
 });
 
-
+$('.tech-section-outter').click(function() {
+    
+});
 
 // SWIPERJS
 
@@ -87,4 +89,12 @@ $('.copyLink').mouseout(function() {
     });
 
     // atech gallery-swiper
-    // const atechGallerySwiper = new Swiper('.')
+    const atechGallerySwiper = new Swiper('.tech-section-outter', {
+        slidesPerView: 'auto',
+        keyboard: true,
+        spaceBetween: 35,
+        navigation: {
+            nextEl: '.tech-galleryslider-next',
+            prevEl: '.tech-galleryslider-prev',
+        },
+    });

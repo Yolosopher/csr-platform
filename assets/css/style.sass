@@ -113,7 +113,10 @@ article.atech-article
 
 
 // slider
-
+.arena
+    .container
+        max-width: 1100px
+        // padding: 0
 .tech-slider-main-image
     img
         display: none
@@ -121,3 +124,35 @@ article.atech-article
     .tech-slider-main-image
         img
             display: unset
+
+.tech-slider-outter
+    margin-bottom: 62px
+    @include desktopPlus1024()
+        margin-bottom: 123px
+.tech-section-outter
+    position: relative
+.tech-slider-section
+    display: flex
+    height: 171px
+    .swiper-slide
+        width: 306px
+        height: 100%
+        object-fit: cover
+        flex: 1
+        cursor: pointer
+
+
+
+.tech-slider-navigation
+    position: absolute
+    z-index: 1
+    top: 50%
+    width: calc(100% - 40px)
+    transform: translateY(-50%)
+.tech-slider-nav-inner
+    display: flex
+    justify-content: space-between
+    div
+        cursor: pointer
+    &.container
+        padding: 0 20px

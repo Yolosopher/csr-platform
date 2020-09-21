@@ -123,11 +123,13 @@ article.atech-article
 
 .tech-slider-main-image
     display: none
-    height: 59.925vh
+    flex: 1    
     width: 100%
     margin-bottom: 60px
     justify-content: space-between
     flex-direction: column
+    @include desktopPlus1024()
+        height: 59.925vh
     .swiper-wrapper
         width: 100%
         height: 90%
@@ -137,18 +139,33 @@ article.atech-article
         object-fit: cover
         object-position: center
 .for-zoom.active
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    @include desktopPlus1024()
+
     .tech-slider-main-image
         display: flex
         position: relative
         padding: 0
         max-width: 1060px
 
-
+.for-zoom.active
+    .tech-slider-outter
+        height: 55vh
+        margin-bottom: 0
+        @include desktopPlus1024()
+            height: 100%
 .tech-slider-outter
     margin-bottom: 62px    
     padding: 0 20px
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: flex-end
     @include desktopPlus1024()
         margin-bottom: 123px
+        display: initial
     &.active
         position: fixed
         top: 0
@@ -165,13 +182,19 @@ article.atech-article
 .tech-section-outter
     position: relative
     padding: 0
+    height: 63px
     max-width: 1060px
+    @include desktopPlus1024()
+        flex: unset
+        height: 171px
 .tech-slider-section
     display: flex
-    height: 171px
+    height: 100%
     .swiper-slide
         display: flex
-        width: 306px
+        width: 114px
+        @include desktopPlus1024()        
+            width: 306px
         height: 100%
         img
             width: 100%
@@ -203,4 +226,8 @@ article.atech-article
         z-index: 10
         top: 0
         right: 0
-        padding: 67px 0 93px
+        padding-bottom: 43px
+        @include desktopPlus1024()
+            padding: 67px 0 93px
+        .tech-slider-main-image
+            margin-bottom: 28px

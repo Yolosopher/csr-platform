@@ -76,70 +76,66 @@ $(".copyLink").mouseout(function () {
     $(this).removeClass("active");
 });
 
-// $(".tech-section-outter").click(function () {
-//     $("body");
-// });
-
 $(".thumb-sw-slide").click(function () {
     techGalleryZoomed();
 });
 
-// SWIPERJS
-
-// main swiper
-const mainSwiper = new Swiper(".main-slider-hc", {
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    loop: true,
-    navigation: {
-        nextEl: ".main-slider-hc-next",
-        prevEl: ".main-slider-hc-prev",
-    },
-    pagination: {
-        el: ".main-slider-hc-pagination",
-    },
-    keyboard: true,
-});
-
-// atech gallery-swiper
-
-const atechGallerySwiper = new Swiper(".tech-section-outter", {
-    slidesPerView: "auto",
-    keyboard: true,
-    spaceBetween: 35,
-    clickable: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    navigation: {
-        nextEl: ".tech-galleryslider-next",
-        prevEl: ".tech-galleryslider-prev",
-    },
-    // nested: true,
-});
-
-const mainPhotoSwiper = new Swiper(".tech-slider-main-image", {
-    thumbs: {
-        swiper: atechGallerySwiper,
-    },
-    navigation: {
-        nextEl: ".tech-galleryslider-next",
-        prevEl: ".tech-galleryslider-prev",
-    },
-    grabCursor: true,
-    // onClick: function
-});
-
-atechGallerySwiper.once('click', function() {
-    if (!$(".for-zoom").hasClass('active')) {
-        $("body").addClass('active');
-        $('.for-zoom').addClass('active');
-        atechGallerySwiper.update();
-        mainPhotoSwiper.update();
-    }
-});
 $('.tech-slider-x-zoom').click(function() {
     $("body").removeClass('active');
     $('.for-zoom').removeClass('active');
 });
+// SWIPERJS
+
+    // main swiper
+    const mainSwiper = new Swiper(".main-slider-hc", {
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        navigation: {
+            nextEl: ".main-slider-hc-next",
+            prevEl: ".main-slider-hc-prev",
+        },
+        pagination: {
+            el: ".main-slider-hc-pagination",
+        },
+        keyboard: true,
+    });
+
+    // atech gallery-swiper
+
+    const atechGallerySwiper = new Swiper(".tech-section-outter", {
+        slidesPerView: "auto",
+        keyboard: true,
+        spaceBetween: 35,
+        clickable: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: ".tech-galleryslider-next",
+            prevEl: ".tech-galleryslider-prev",
+        },
+        // nested: true,
+    });
+
+    const mainPhotoSwiper = new Swiper(".tech-slider-main-image", {
+        thumbs: {
+            swiper: atechGallerySwiper,
+        },
+        navigation: {
+            nextEl: ".tech-galleryslider-next",
+            prevEl: ".tech-galleryslider-prev",
+        },
+        grabCursor: true,
+        // onClick: function
+    });
+
+    atechGallerySwiper.once('click', function() {
+        if (!$(".for-zoom").hasClass('active')) {
+            $("body").addClass('active');
+            $('.for-zoom').addClass('active');
+            atechGallerySwiper.update();
+            mainPhotoSwiper.update();
+        }
+    });

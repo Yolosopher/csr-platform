@@ -1,0 +1,70 @@
+.atech-each-bottom.techjam-each-bottom
+    .atech-article-bottom-textbox
+        justify-content: center
+
+// techjam list
+.techjam-ul
+    height: 260px
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 19px 17px
+    @include desktopPlus1024()
+        height: 560px
+        padding: 50px 41px
+
+.techjam-li
+    display: flex
+    align-items: center 
+    font-family: firaBold
+    font-size: 16px
+    // margin-bottom: 19px  
+    @include tabletPlus768()
+        font-size: 20px 
+        // margin-bottom: 28px
+    @include desktopPlus1024()
+        font-family: firaMedium
+        font-size: 30px
+        // margin-bottom: 40px
+    &:last-child
+        margin-bottom: 0
+    a
+        font-family: inherit
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        &::before
+            content: ''
+            position: relative
+            display: block
+            margin-right: 20px
+            width: 20px
+            height: 20px
+            @include tabletPlus768()
+                width: 30px
+                height: 30px
+            @include desktopPlus1024()
+                width: 40px
+                height: 40px
+.big-data a
+    &::before
+        background: #51C05B
+.gamification a
+    &::before
+        background: #A174B0
+.internet-of-things a
+    &::before
+        background: #5FCCD0
+.artificial-intelligence a
+    &::before
+        background: #4CC465
+.e-commerce a
+    &::before
+        background: #987CB5
+.blockchain a
+    &::before
+        background: #65CACE
+
+.techjam-textbox-important
+    color: #5E7289

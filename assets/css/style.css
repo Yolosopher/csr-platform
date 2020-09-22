@@ -3126,4 +3126,123 @@ article.atech-article > div > div {
 .for-zoom.active .tech-slider-main-image {
   margin-bottom: 28px;
 }
+
+.atech-each-bottom.techjam-each-bottom .atech-article-bottom-textbox {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.techjam-ul {
+  height: 260px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 19px 17px;
+}
+
+@media screen and (min-width: 1024px) {
+  .techjam-ul {
+    height: 560px;
+    padding: 50px 41px;
+  }
+}
+
+.techjam-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: firaBold;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .techjam-li {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .techjam-li {
+    font-family: firaMedium;
+    font-size: 30px;
+  }
+}
+
+.techjam-li:last-child {
+  margin-bottom: 0;
+}
+
+.techjam-li a {
+  font-family: inherit;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.techjam-li a::before {
+  content: '';
+  position: relative;
+  display: block;
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .techjam-li a::before {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .techjam-li a::before {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.big-data a::before {
+  background: #51C05B;
+}
+
+.gamification a::before {
+  background: #A174B0;
+}
+
+.internet-of-things a::before {
+  background: #5FCCD0;
+}
+
+.artificial-intelligence a::before {
+  background: #4CC465;
+}
+
+.e-commerce a::before {
+  background: #987CB5;
+}
+
+.blockchain a::before {
+  background: #65CACE;
+}
+
+.techjam-textbox-important {
+  color: #5E7289;
+}
 /*# sourceMappingURL=style.css.map */

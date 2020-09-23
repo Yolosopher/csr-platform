@@ -191,8 +191,11 @@ footer
         
 .header-aboutus
     display: none
+    transition: color .4s
     @include desktopPlus1024()
         display: unset   
+    &:hover, &:active
+        color: $green
 
 .nav
     height: 100%

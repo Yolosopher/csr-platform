@@ -525,12 +525,18 @@ footer .lang-select li {
 
 .header-aboutus {
   display: none;
+  -webkit-transition: color .4s;
+  transition: color .4s;
 }
 
 @media screen and (min-width: 1024px) {
   .header-aboutus {
     display: unset;
   }
+}
+
+.header-aboutus:hover, .header-aboutus:active {
+  color: #2C7A60;
 }
 
 .nav {

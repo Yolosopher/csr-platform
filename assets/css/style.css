@@ -836,6 +836,10 @@ main.arena-hero-content.respoGame.hero-content {
   border-radius: 0 10px 10px 0;
   height: 120px;
   margin-top: 28px;
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  transition: -webkit-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
 }
 
 .latest-news-li:first-child {
@@ -1904,10 +1908,19 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   border: 1px solid #E3E3E3;
   border-radius: 0 10px 10px 0;
   height: 120px;
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  transition: -webkit-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
 }
 
 .rg-news-div:first-child {
   margin-top: 0;
+}
+
+.rg-news-div:hover {
+  -webkit-box-shadow: 0px 0px 20px #00000029;
+          box-shadow: 0px 0px 20px #00000029;
 }
 
 @media screen and (min-width: 768px) {

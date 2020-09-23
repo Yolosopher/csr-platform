@@ -139,7 +139,7 @@ header
     border-top-color: transparent
     border-bottom-color: transparent
     overflow: hidden
-    transition: height 1s, border-color 1s 1s
+    transition: height .4s, border-color .3s .4s
     li
         padding: 13.5px 0
         background: white
@@ -148,7 +148,6 @@ header
     width: 100px
     height: 50px
     margin-left: 46px
-    // overflow: hidden
     position: relative
     display: flex
     justify-content: center
@@ -164,7 +163,30 @@ header
             height: 140px
             li:hover
                 color: $green
-
+footer 
+    .top-right-languagebar
+        width: 90px
+        height: 33px
+        margin-left: 46px
+        position: relative
+        display: flex
+        justify-content: center
+        @include desktopPlus1024()
+            display: flex
+        *
+            font-size: inherit
+            font-family: inherit
+        &.active
+            overflow: initial
+            .lang-select
+                border: 1px solid $e3
+                height: 100px
+                li:hover
+                    color: $green
+    .lang-select
+        height: 31px
+        li
+            padding: 9.5px 0
 
         
 .header-aboutus

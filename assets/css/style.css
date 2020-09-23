@@ -418,8 +418,8 @@ header.removing::after {
   border-top-color: transparent;
   border-bottom-color: transparent;
   overflow: hidden;
-  -webkit-transition: height 1s, border-color 1s 1s;
-  transition: height 1s, border-color 1s 1s;
+  -webkit-transition: height .4s, border-color .3s .4s;
+  transition: height .4s, border-color .3s .4s;
 }
 
 .lang-select li {
@@ -464,6 +464,53 @@ header.removing::after {
 
 .top-right-languagebar.active .lang-select li:hover {
   color: #2C7A60;
+}
+
+footer .top-right-languagebar {
+  width: 90px;
+  height: 33px;
+  margin-left: 46px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  footer .top-right-languagebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+footer .top-right-languagebar * {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+footer .top-right-languagebar.active {
+  overflow: initial;
+}
+
+footer .top-right-languagebar.active .lang-select {
+  border: 1px solid #E3E3E3;
+  height: 100px;
+}
+
+footer .top-right-languagebar.active .lang-select li:hover {
+  color: #2C7A60;
+}
+
+footer .lang-select {
+  height: 31px;
+}
+
+footer .lang-select li {
+  padding: 9.5px 0;
 }
 
 .header-aboutus {
@@ -1714,6 +1761,15 @@ footer .header-nav-ul {
     font-size: 16px;
     line-height: 19px;
   }
+}
+
+footer .lang-select li, footer .lang-select {
+  background: none;
+  text-align: center;
+}
+
+footer .top-right-languagebar {
+  margin-left: 0;
 }
 
 footer .footer-respo-languagebar {

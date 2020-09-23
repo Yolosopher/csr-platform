@@ -1221,6 +1221,10 @@ h1.home-aboutus-h1 {
   }
 }
 
+.home-aboutus.in-real-aboutus {
+  padding-bottom: 0;
+}
+
 .home-aboutus-inner {
   min-height: -webkit-min-content;
   min-height: -moz-min-content;

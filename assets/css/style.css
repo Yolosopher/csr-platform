@@ -3483,6 +3483,8 @@ article.atech-article > div > div {
   height: 80px;
   padding: 22.5px 25px;
   border-radius: 8px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

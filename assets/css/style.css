@@ -2843,6 +2843,46 @@ article.sports-each .sports-each-text-div {
      object-position: center;
 }
 
+.sports-see-more {
+  width: calc(100% - 40px);
+  height: 50px;
+  border: 1px solid #2C7A60;
+  border-radius: 8px;
+  margin: 48px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .sports-see-more {
+    width: 250px;
+    margin: 48px auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sports-see-more {
+    margin: 72px auto 118px;
+    width: 300px;
+    height: 60px;
+    border-radius: 12px;
+  }
+}
+
+.sports-see-more:hover {
+  background: #2C7A60;
+  color: white;
+}
+
 .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
   background-image: url(../images/inovations/hero-content-cover.svg);
 }
@@ -3356,45 +3396,5 @@ article.atech-article > div > div {
 
 .techjam-textbox-important {
   color: #5E7289;
-}
-
-.sports-see-more {
-  width: calc(100% - 40px);
-  height: 50px;
-  border: 1px solid #2C7A60;
-  border-radius: 8px;
-  margin: 48px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-}
-
-@media screen and (min-width: 768px) {
-  .sports-see-more {
-    width: 250px;
-    margin: 48px auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .sports-see-more {
-    margin: 72px auto 118px;
-    width: 300px;
-    height: 60px;
-    border-radius: 12px;
-  }
-}
-
-.sports-see-more:hover {
-  background: #2C7A60;
-  color: white;
 }
 /*# sourceMappingURL=style.css.map */

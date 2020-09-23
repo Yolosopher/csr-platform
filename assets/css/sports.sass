@@ -78,3 +78,24 @@ article.sports-each
         object-fit: cover
         object-position: center
 
+.sports-see-more
+    width: calc(100% - 40px)
+    height: 50px
+    border: 1px solid $green
+    border-radius: 8px
+    margin: 48px 20px
+    @include centering()
+    transition: all .1s ease-in-out
+
+    @include tabletPlus768()
+        width: 250px
+        margin: 48px auto
+    @include desktopPlus1024()
+        margin: 72px auto 118px
+        width: 300px
+        height: 60px
+        border-radius: 12px
+    &:hover
+        background: $green
+        color: white
+        

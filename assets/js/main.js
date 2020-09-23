@@ -84,6 +84,14 @@ $('.tech-slider-x-zoom').click(function() {
     $("body").removeClass('active');
     $('.for-zoom').removeClass('active');
 });
+
+$('.top-right-languagebar').mouseover(function() {
+    $(this).toggleClass('active');
+});
+
+$('.top-right-languagebar').mouseout(function() {
+    $(this).toggleClass('active');
+});
 // SWIPERJS
 
     // main swiper

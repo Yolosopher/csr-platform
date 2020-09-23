@@ -127,22 +127,46 @@ header
         &::after
             content: url(../images/x.svg)
 
-
+.lang-select
+    flex: 1
+    width: 100%
+    height: 50px
+    background: white
+    display: flex
+    flex-direction: column
+    z-index: 2
+    border: 1px solid $e3
+    border-top-color: transparent
+    border-bottom-color: transparent
+    overflow: hidden
+    transition: height 1s, border-color 1s 1s
+    li
+        padding: 13.5px 0
+        background: white
 
 .top-right-languagebar
     width: 100px
     height: 50px
-    border-left: 1px solid $e3
-    border-right: 1px solid $e3
     margin-left: 46px
-    @include centering()
-    display: none
+    // overflow: hidden
+    position: relative
+    display: flex
+    justify-content: center
     @include desktopPlus1024()
         display: flex
-    select, option
-        border: none
+    *
         font-size: inherit
         font-family: inherit
+    &.active
+        overflow: initial
+        .lang-select
+            border: 1px solid $e3
+            height: 140px
+            li:hover
+                color: $green
+
+
+        
 .header-aboutus
     display: none
     @include desktopPlus1024()

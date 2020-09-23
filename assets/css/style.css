@@ -135,6 +135,18 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .atech.aboutus-article-div .for-borderNpad {
+    max-width: 632px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .atech.aboutus-article-div .for-borderNpad {
+    max-width: 1336px;
+  }
+}
+
 .social-logos a:hover {
   fill: #2C7A60;
 }
@@ -432,9 +444,7 @@ header.removing::after {
   height: 50px;
   margin-left: 46px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2707,8 +2717,8 @@ article.sports-each {
           box-shadow: 0px 0px 20px #b895950a;
   border-radius: 12px;
   border: 1px solid #E3E3E3;
-  -webkit-box-shadow: 0px 0px 20px #0000000A;
-          box-shadow: 0px 0px 20px #0000000A;
+  -webkit-box-shadow: 0px 0px 20px #00000029;
+          box-shadow: 0px 0px 20px #00000029;
 }
 
 @media screen and (min-width: 768px) {
@@ -3396,5 +3406,176 @@ article.atech-article > div > div {
 
 .techjam-textbox-important {
   color: #5E7289;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutus-article {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .aboutus-article-div {
+    padding: 47px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aboutus-article-div {
+    padding: 36px 20px;
+  }
+}
+
+.aboutus-article-div .atech-article-bottom-textbox {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .for-borderNpad {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .for-borderNpad {
+    padding: 79px 35px;
+    border: 1px solid #E3E3E3;
+    border-radius: 12px;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  .for-borderNpad {
+    padding: 79px 115px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  article.aboutus-article.atech-article > div {
+    height: 638px;
+    min-height: 560px;
+  }
+}
+
+.home-aboutus.in-real-aboutus .home-aboutus-inner {
+  height: auto;
+  min-height: unset;
+}
+
+.year-accountings-download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #ABADAD;
+}
+
+.year-accountings-download a {
+  font-family: firaMedium;
+  font-size: 16px;
+  line-height: 25.6px;
+  color: inherit;
+  background: #E3E3E3;
+  width: 100%;
+  height: 80px;
+  padding: 22.5px 25px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .year-accountings-download a {
+    width: 306px;
+  }
+}
+
+.year-accountings-download a span {
+  font-family: firaBold;
+  font-size: 24px;
+  line-height: 38.4px;
+}
+
+.year-accountings-download a:hover, .year-accountings-download a:active {
+  background: #2C7A60;
+  color: white;
+}
+
+.year-accountings-download a:hover svg path, .year-accountings-download a:active svg path {
+  fill: white;
+}
+
+.year-accountings-download li {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .year-accountings-download li {
+    width: unset;
+  }
+}
+
+.in-real-aboutus .home-aboutus-inner.container {
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .in-real-aboutus .home-aboutus-inner.container {
+    max-width: unset;
+  }
+}
+
+@supports not (gap: 30px) {
+  .year-accountings-download li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: 768px) {
+    .year-accountings-download li {
+      margin-right: 22px;
+      margin-bottom: 22px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .year-accountings-download li {
+      margin-right: 36px;
+      margin-bottom: 36px;
+    }
+  }
+  .year-accountings-download li:last-child {
+    margin-right: 0;
+  }
+}
+
+@supports (gap: 30px) {
+  .year-accountings-download {
+    gap: 12px;
+  }
+  @media screen and (min-width: 768px) {
+    .year-accountings-download {
+      gap: 22px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .year-accountings-download {
+      gap: 36px;
+    }
+  }
 }
 /*# sourceMappingURL=style.css.map */

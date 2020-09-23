@@ -92,6 +92,12 @@ $('.top-right-languagebar').mouseover(function() {
 $('.top-right-languagebar').mouseout(function() {
     $(this).toggleClass('active');
 });
+
+$('.donations-show-more').click(function() {
+    $(this).toggleClass('active');
+    $(this).prev().toggleClass('active');
+});
+
 // SWIPERJS
 
     // main swiper

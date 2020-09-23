@@ -26,8 +26,11 @@ body.sports
         padding: 0 20px
 
 
-article.sports-each
+.only-sports article.sports-each
     @include sportsEach()
+    &:nth-of-type(even)
+        @include desktopPlus1024() 
+            flex-direction: row-reverse
     box-shadow: 0px 0px 20px #00000029
         
 

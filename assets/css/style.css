@@ -2717,7 +2717,7 @@ body.sports {
   }
 }
 
-article.sports-each {
+.only-sports article.sports-each {
   margin-bottom: 36px;
   -webkit-box-shadow: 0px 0px 20px #b895950a;
           box-shadow: 0px 0px 20px #b895950a;
@@ -2728,14 +2728,14 @@ article.sports-each {
 }
 
 @media screen and (min-width: 768px) {
-  article.sports-each {
+  .only-sports article.sports-each {
     padding: 47px 140px;
     margin-bottom: 52px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  article.sports-each {
+  .only-sports article.sports-each {
     padding: 76px 20px;
     height: 800px;
     display: -webkit-box;
@@ -2747,23 +2747,23 @@ article.sports-each {
 }
 
 @media screen and (min-width: 1336px) {
-  article.sports-each {
+  .only-sports article.sports-each {
     padding: 76px 114px;
   }
 }
 
-article.sports-each:last-child {
+.only-sports article.sports-each:last-child {
   margin-bottom: 0;
 }
 
-article.sports-each .sports-each-text-div {
+.only-sports article.sports-each .sports-each-text-div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
 @media screen and (min-width: 1024px) {
-  article.sports-each:nth-of-type(even) {
+  .only-sports article.sports-each:nth-of-type(even) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -3585,5 +3585,160 @@ article.atech-article > div > div {
       gap: 36px;
     }
   }
+}
+
+.hero-sports-game-cover-div.donations + * .hero-respo-article {
+  background-image: url(../images/donations/grey-title-text-bg.svg);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-sports-game-cover-div.donations + * .hero-respo-article {
+    background-image: url(../images/donations/grey-title-text-bg768.svg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-sports-game-cover-div.donations + * .hero-respo-article {
+    background-image: url(../images/donations/grey-title-text-bg1024.svg);
+  }
+}
+
+.donations-each {
+  margin-bottom: 36px;
+  -webkit-box-shadow: 0px 0px 20px #b895950a;
+          box-shadow: 0px 0px 20px #b895950a;
+  border-radius: 12px;
+  border: 1px solid #E3E3E3;
+  max-height: unset;
+  overflow: initial;
+}
+
+@media screen and (min-width: 768px) {
+  .donations-each {
+    padding: 47px 140px;
+    margin-bottom: 52px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .donations-each {
+    padding: 76px 20px;
+    height: 800px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 36px;
+    margin-bottom: 72px;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  .donations-each {
+    padding: 76px 114px;
+  }
+}
+
+.donations-each:last-child {
+  margin-bottom: 0;
+}
+
+.donations-each .sports-each-text-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .donations-each {
+    height: auto;
+  }
+}
+
+.donations-each-text-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.donations-each-img-div {
+  height: 643px;
+}
+
+.donations-textNsee-more-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.donations-textNsee-more-btn p {
+  overflow: hidden;
+  margin-bottom: 37px;
+  max-height: 194px;
+  -webkit-transition: max-height -200ms 300ms ease-out;
+  transition: max-height -200ms 300ms ease-out;
+}
+
+@media screen and (min-width: 768px) {
+  .donations-textNsee-more-btn p {
+    margin-bottom: 23px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .donations-textNsee-more-btn p {
+    margin-bottom: 100px;
+    max-height: 235px;
+  }
+}
+
+.donations-textNsee-more-btn p.active {
+  max-height: 9999px;
+  -webkit-transition: max-height 400ms ease-in;
+  transition: max-height 400ms ease-in;
+}
+
+.donations-show-more {
+  font-family: firaBold;
+  text-decoration: underline;
+  color: #2C7A60;
+  font-size: 12px;
+  line-height: 19.2px;
+}
+
+@media screen and (min-width: 768px) {
+  .donations-show-more {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .donations-show-more {
+    font-family: firaRegular;
+    font-size: 22px;
+    line-height: 35.2px;
+  }
+}
+
+.donations-show-more .shrink {
+  display: none;
+}
+
+.donations-show-more.active {
+  color: #C8495E;
+}
+
+.donations-show-more.active .grow {
+  display: none;
+}
+
+.donations-show-more.active .shrink {
+  display: unset;
 }
 /*# sourceMappingURL=style.css.map */

@@ -16,61 +16,6 @@
 @import atech
 @import techjam
 @import about-page
+@import donations
 
-
-.hero-sports-game-cover-div.donations + * .hero-respo-article
-    background-image: url(../images/donations/grey-title-text-bg.svg)
-    @include tabletPlus768()
-        background-image: url(../images/donations/grey-title-text-bg768.svg)
-    @include desktopPlus1024()
-        background-image: url(../images/donations/grey-title-text-bg1024.svg)
-.donations-each
-    @include sportsEach()
-    @include desktopPlus1024()
-        height: auto
-    max-height: unset
-    overflow: initial
-
-.donations-each-text-div
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-.donations-each-img-div
-    height: 643px
-.donations-textNsee-more-btn
-    flex: 1
-    p
-        overflow: hidden
-        margin-bottom: 37px
-        max-height: 194px
-        transition: max-height -200ms 300ms ease-out
-        @include tabletPlus768()
-            margin-bottom: 23px
-        @include desktopPlus1024()
-            margin-bottom: 100px
-            max-height: 235px
-        &.active
-            max-height: 9999px
-            transition: max-height 400ms ease-in
-            
-.donations-show-more
-    font-family: firaBold
-    text-decoration: underline
-    color: $green
-    font-size: 12px
-    line-height: 19.2px
-    @include tabletPlus768()
-        font-size: 18px
-    @include desktopPlus1024()   
-        font-family: firaRegular 
-        font-size: 22px
-        line-height: 35.2px
-    .shrink
-        display: none
-    &.active
-        color: $pink
-        .grow
-            display: none
-        .shrink
-            display: unset
 

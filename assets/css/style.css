@@ -3745,4 +3745,20 @@ article.atech-article > div > div {
 .donations-show-more.active .shrink {
   display: unset;
 }
+
+.hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
+  background-image: url(../images/personal-stories/dblue-title-text-bg.svg);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
+    background-image: url(../images/personal-stories/dblue-title-text-bg768.svg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
+    background-image: url(../images/personal-stories/dblue-title-text-bg1024.svg);
+  }
+}
 /*# sourceMappingURL=style.css.map */

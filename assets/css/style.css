@@ -3783,7 +3783,7 @@ article.atech-article > div > div {
 }
 
 .ps-article-inner hr {
-  height: 1px solid #9C9E9F;
+  border-bottom: 1px solid #9C9E9F;
   margin: 72px 0;
 }
 
@@ -3849,7 +3849,7 @@ article.atech-article > div > div {
   font-family: firaBold;
   font-size: 12px;
   line-height: 19.2px;
-  margin-bottom: 144px;
+  margin-bottom: 72px;
 }
 
 @media screen and (min-width: 768px) {

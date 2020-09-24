@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="Group_5650" data-name="Group 5650" transform="translate(-285 -1492)" opacity="0.84">
+    <g id="Component_7_10" data-name="Component 7 – 10" transform="translate(285 1492)">
+      <rect id="Rectangle_230" data-name="Rectangle 230" width="60" height="60" rx="30" fill="#fff"/>
+    </g>
+    <g id="Group_346" data-name="Group 346" transform="translate(-35.855 -2.784)">
+      <path id="play" d="M5,3l15.121,9.721L5,22.441Z" transform="translate(340.327 1512.327)" fill="none"/>
+      <path id="Polygon_1" data-name="Polygon 1" d="M10,0,20,16H0Z" transform="translate(360.855 1514.784) rotate(90)"/>
+    </g>
+  </g>
+</svg>

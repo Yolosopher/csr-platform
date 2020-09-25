@@ -581,18 +581,18 @@ footer .lang-select li {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1000px) {
   .header-nav-li {
-    margin-right: 56px;
+    margin-right: 76px;
   }
   .header-nav-li:last-child {
     margin-right: 0;
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .header-nav-li {
-    margin-right: 76px;
+    margin-right: 56px;
   }
   .header-nav-li:last-child {
     margin-right: 0;

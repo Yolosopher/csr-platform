@@ -211,12 +211,13 @@ footer
         
 
 .header-nav-li
-    @include desktopPlus1024()
-        margin-right: 56px
-        &:last-child
-            margin-right: 0
+
     @include sizePlus(1000px)
         margin-right: 76px
+        &:last-child
+            margin-right: 0
+    @include desktopPlus1024()
+        margin-right: 56px
         &:last-child
             margin-right: 0
     a

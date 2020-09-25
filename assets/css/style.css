@@ -606,6 +606,12 @@ footer .lang-select li {
   text-align: left;
 }
 
+@media screen and (min-width: 1024px) {
+  .header-nav-li a {
+    max-height: unset;
+  }
+}
+
 .header-socials {
   display: -webkit-box;
   display: -ms-flexbox;

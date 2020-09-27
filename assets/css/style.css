@@ -81,6 +81,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -3261,8 +3267,7 @@ article.atech-article > div > div {
   z-index: 1;
   top: 50%;
   width: 100%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  height: 0;
 }
 
 .tech-slider-nav-inner {
@@ -3272,10 +3277,13 @@ article.atech-article > div > div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
+  height: 0;
 }
 
-.tech-slider-nav-inner div {
-  cursor: pointer;
+.tech-slider-nav-inner svg {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .tech-slider-nav-inner.container {

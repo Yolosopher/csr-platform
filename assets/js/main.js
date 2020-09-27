@@ -76,7 +76,7 @@ $(".copyLink").mouseout(function () {
     $(this).removeClass("active");
 });
 
-$(".thumb-sw-slide").click(function () {
+$(".tech-section-outter").click(function () {
     techGalleryZoomed();
 });
 

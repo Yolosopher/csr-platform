@@ -445,6 +445,19 @@ header.removing::after {
   background: white;
 }
 
+.lang-select::after {
+  content: url(../images/Polygon.svg);
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  -webkit-transform: translateY(-62%);
+          transform: translateY(-62%);
+}
+
+footer .lang-select::after {
+  content: url(../images/Polygon-footer.svg);
+}
+
 .top-right-languagebar {
   width: 100px;
   height: 50px;
@@ -514,11 +527,11 @@ footer .top-right-languagebar.active {
 
 footer .top-right-languagebar.active .lang-select {
   border: 1px solid #E3E3E3;
-  height: 100px;
+  height: 117.5px;
 }
 
 footer .top-right-languagebar.active .lang-select li:hover {
-  color: #2C7A60;
+  color: #93B19B;
 }
 
 footer .lang-select {
@@ -1444,6 +1457,13 @@ h1.home-aboutus-h1 {
 footer {
   background: url(../images/CSR_bg_2.jpg) no-repeat;
   background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  footer .top-right-languagebar {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
 }
 
 .footer-logo-div {

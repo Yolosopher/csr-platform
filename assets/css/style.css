@@ -3781,18 +3781,18 @@ article.atech-article > div > div {
 }
 
 .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
-  background-image: url(../images/personal-stories/dblue-title-text-bg.svg);
+  background-image: url(../images/personal-stories/blue-title-text-bg.svg);
 }
 
 @media screen and (min-width: 768px) {
   .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
-    background-image: url(../images/personal-stories/dblue-title-text-bg768.svg);
+    background-image: url(../images/personal-stories/blue-title-text-bg768.svg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
-    background-image: url(../images/personal-stories/dblue-title-text-bg1024.svg);
+    background-image: url(../images/personal-stories/blue-title-text-bg1024.svg);
   }
 }
 
@@ -3801,18 +3801,18 @@ article.atech-article > div > div {
 }
 
 .ps-video-gallery .latest-news-h1 {
-  background: url(../images/personal-stories/blue-title-text-bg.svg);
+  background: url(../images/blue-title-text-bg1024.svg);
 }
 
 @media screen and (min-width: 768px) {
   .ps-video-gallery .latest-news-h1 {
-    background: url(../images/personal-stories/blue-title-text-bg768.svg);
+    background: url(../images/blue-title-text-bg768.svg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .ps-video-gallery .latest-news-h1 {
-    background: url(../images/personal-stories/blue-title-text-bg1024.svg);
+    background: url(../images/blue-title-text-bg1024.svg);
   }
 }
 

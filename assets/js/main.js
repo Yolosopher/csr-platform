@@ -1,7 +1,7 @@
 // VARIABLES
 let headerBot = document.querySelector(".header-bot");
 let psnStryCnt = document.querySelector(".personal-stories-content");
-
+var videoSwiper = undefined;
 // FUNCTIONS
 function toggleBurger() {
     if (!$("header").hasClass("active")) {
@@ -51,6 +51,25 @@ function techGalleryZoomed() {
     }
 }
 
+
+function initSwiper() {
+    var screenWidth = window.innerWidth;
+    if(screenWidth >= 1024 && videoSwiper == undefined) {            
+        videoSwiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 35,
+            keyboard: true,
+        });
+    } else {
+        videoSwiper.destroy();
+        videoSwiper = undefined;
+        jQuery('.swiper-wrapper').removeAttr('style');
+        jQuery('.swiper-slide').removeAttr('style');            
+    }        
+}
+
+
+
 // EVENT LISTENERS
 window.addEventListener("load", () => {
     $(".burger").click(function () {
@@ -66,6 +85,9 @@ window.onscroll = () => {
 };
 window.onresize = () => {
     personalStoriesSetter();
+    if (document.querySelector('.ps-video-gallery')) {
+        initSwiper();
+    } 
 };
 
 $(".copyLink").click(function () {
@@ -153,3 +175,7 @@ $('.donations-show-more').click(function() {
             mainPhotoSwiper.update();
         }
     });
+
+    if (document.querySelector('.ps-video-gallery')) {
+        initSwiper();
+    }

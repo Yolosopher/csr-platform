@@ -851,7 +851,7 @@ main.arena-hero-content.respoGame.hero-content {
   }
 }
 
-.container h1 {
+.container h1, .ps-video-gallery h1 {
   width: 220px;
   height: 50px;
   background: url(../images/green-title-text-bg.svg) center;
@@ -876,7 +876,7 @@ main.arena-hero-content.respoGame.hero-content {
 }
 
 @media screen and (min-width: 768px) {
-  .container h1 {
+  .container h1, .ps-video-gallery h1 {
     width: 354px;
     font-size: 20px;
     background: url(../images/green-title-text-bg768.svg);
@@ -884,7 +884,7 @@ main.arena-hero-content.respoGame.hero-content {
 }
 
 @media screen and (min-width: 1024px) {
-  .container h1 {
+  .container h1, .ps-video-gallery h1 {
     width: 470px;
     height: 80px;
     top: -80px;
@@ -3925,5 +3925,21 @@ article.atech-article > div > div {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1024px) {
+  .ps-video-gallery-inner .latest-news-ul {
+    gap: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ps-video-gallery-inner .latest-news-li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

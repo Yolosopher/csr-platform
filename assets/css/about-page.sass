@@ -58,9 +58,11 @@ article.aboutus-article.atech-article > div
             font-family: firaBold
             font-size: 24px
             line-height: 38.4px
-        &:hover, &:active
+        &:not([href=""])
             background: $green
             color: white
+            &:hover
+                background: #2E9674
             svg path
                 fill: white
     li 

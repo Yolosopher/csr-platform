@@ -3571,12 +3571,16 @@ article.atech-article > div > div {
   line-height: 38.4px;
 }
 
-.year-accountings-download a:hover, .year-accountings-download a:active {
+.year-accountings-download a:not([href=""]) {
   background: #2C7A60;
   color: white;
 }
 
-.year-accountings-download a:hover svg path, .year-accountings-download a:active svg path {
+.year-accountings-download a:not([href=""]):hover {
+  background: #2E9674;
+}
+
+.year-accountings-download a:not([href=""]) svg path {
   fill: white;
 }
 

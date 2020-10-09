@@ -499,7 +499,7 @@ footer .lang-select::after {
   height: 140px;
 }
 
-.top-right-languagebar.active .lang-select li.active, .top-right-languagebar.active .lang-select li:hover {
+.top-right-languagebar.active .lang-select li.active, .top-right-languagebar.active .lang-select li:hover, .top-right-languagebar.active .lang-select li:active {
   color: #2C7A60;
 }
 
@@ -539,7 +539,7 @@ footer .top-right-languagebar.active .lang-select {
   height: 117.5px;
 }
 
-footer .top-right-languagebar.active .lang-select li.active, footer .top-right-languagebar.active .lang-select li:hover {
+footer .top-right-languagebar.active .lang-select li.active, footer .top-right-languagebar.active .lang-select li:hover, footer .top-right-languagebar.active .lang-select li:active {
   color: #93B19B;
 }
 
@@ -3576,7 +3576,7 @@ article.atech-article > div > div {
   color: white;
 }
 
-.year-accountings-download a:not([href=""]):hover {
+.year-accountings-download a:not([href=""]):hover, .year-accountings-download a:not([href=""]):active {
   background: #2E9674;
 }
 

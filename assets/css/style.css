@@ -2651,6 +2651,8 @@ body.arena {
   font-size: 14px;
   line-height: 25px;
   color: white;
+  -webkit-transition: background-color .1s ease-in-out;
+  transition: background-color .1s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
@@ -2666,6 +2668,10 @@ body.arena {
     font-size: 16px;
     line-height: 19px;
   }
+}
+
+.arena-try-it:hover {
+  background: #2E9674;
 }
 
 .arena-right-image {

@@ -178,6 +178,7 @@ body.arena
     font-size: 14px
     line-height: 25px
     color: white
+    transition: background-color .1s ease-in-out
     @include tabletPlus768()
         max-width: 345px
     @include desktopPlus1024()
@@ -185,6 +186,8 @@ body.arena
         width: 220px
         font-size: 16px
         line-height: 19px
+    &:hover
+        background: #2E9674
 
 .arena-right-image
     width: 100%

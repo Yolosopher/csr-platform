@@ -445,6 +445,12 @@ header.removing::after {
   background: white;
 }
 
+.lang-select li.active {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
 .lang-select::after {
   content: url(../images/Polygon.svg);
   position: absolute;
@@ -491,7 +497,7 @@ footer .lang-select::after {
   height: 140px;
 }
 
-.top-right-languagebar.active .lang-select li:hover {
+.top-right-languagebar.active .lang-select li.active, .top-right-languagebar.active .lang-select li:hover {
   color: #2C7A60;
 }
 
@@ -530,7 +536,7 @@ footer .top-right-languagebar.active .lang-select {
   height: 117.5px;
 }
 
-footer .top-right-languagebar.active .lang-select li:hover {
+footer .top-right-languagebar.active .lang-select li.active, footer .top-right-languagebar.active .lang-select li:hover {
   color: #93B19B;
 }
 

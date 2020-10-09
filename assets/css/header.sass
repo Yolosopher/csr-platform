@@ -143,6 +143,8 @@ header
     li
         padding: 13.5px 0
         background: white
+        &.active
+            order: -1
     &::after
         content: url(../images/Polygon.svg)
         position: absolute
@@ -170,8 +172,9 @@ footer .lang-select
         .lang-select
             border: 1px solid $e3
             height: 140px
-            li:hover
-                color: $green
+            li
+                &.active, &:hover
+                    color: $green
 footer 
     .top-right-languagebar
         width: 90px
@@ -190,8 +193,9 @@ footer
             .lang-select
                 border: 1px solid $e3
                 height: 117.5px
-                li:hover
-                    color: #93B19B
+                li
+                    &.active, &:hover
+                        color: #93B19B
     .lang-select
         height: 31px
         li

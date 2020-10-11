@@ -3571,16 +3571,16 @@ article.atech-article > div > div {
   line-height: 38.4px;
 }
 
-.year-accountings-download a:not([href=""]) {
+.year-accountings-download a:not([href="javascript:void(0)"]) {
   background: #2C7A60;
   color: white;
 }
 
-.year-accountings-download a:not([href=""]):hover, .year-accountings-download a:not([href=""]):active {
+.year-accountings-download a:not([href="javascript:void(0)"]):hover, .year-accountings-download a:not([href="javascript:void(0)"]):active {
   background: #2E9674;
 }
 
-.year-accountings-download a:not([href=""]) svg path {
+.year-accountings-download a:not([href="javascript:void(0)"]) svg path {
   fill: white;
 }
 

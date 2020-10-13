@@ -50,38 +50,40 @@ $desktop-width: 1024px
         @content
     
 @mixin complexBox($padding, $boxWidth, $boxHeight)
-    width: $boxWidth
-    height: $boxHeight
-    background: transparent
-    color: transparent
-    border-top-right-radius: calc( #{$padding} * 2 )
-    border-top-left-radius: calc( #{$padding} * 2 )
-    @include centering()
-    overflow: unset
-    position: relative
+    width: $boxWidth !important
+    height: $boxHeight !important
+    background: transparent !important
+    color: transparent !important
+    border-top-right-radius: calc( #{$padding} * 2 ) !important
+    border-top-left-radius: calc( #{$padding} * 2 ) !important
+    display: flex !important
+    align-items: center !important
+    // justify-content: center
+    overflow: unset !important
+    position: relative !important
     &::after, &::before
         content: ''
-        display: block
-        position: absolute
-        top: 0
-        right: calc( #{$padding} * -2)
+        display: block !important
+        position: absolute !important
+        top: 0 !important
+        right: calc( #{$padding} * -2 ) !important
         
-        padding: 0 #{$padding}
-        height: calc(100% - (#{$padding} * 2))
+        padding: 0 #{$padding} !important
+        height: calc(100% - (#{$padding} * 2) ) !important
 
-        border-bottom: calc(#{$padding} * 2) solid transparent
+        border-bottom: calc(#{$padding} * 2 ) solid transparent !important
     &::after
-        z-index: 1
-        border-color: transparent       
-        border-bottom-left-radius: calc(#{$padding} * 2)
+        z-index: 1 !important
+        border-color: transparent !important    
+        border-bottom-left-radius: $padding !important
 
 @mixin complexBoxColor($boxcolour, $font-color, $bg-colour)
-    background: $boxcolour
-    color: $font-color
+    background: $boxcolour !important
+    color: $font-color !important
     &::after, &::before
-        border-color: $boxcolour
+        border-color: $boxcolour !important
     &::after
-        border-color: $bg-colour
+        border-color: $bg-colour !important
     
 @mixin complexBoxLine()
     &::after

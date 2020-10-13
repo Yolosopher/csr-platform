@@ -49,6 +49,50 @@ $desktop-width: 1024px
     @media screen and (min-width: $desktop-width)
         @content
     
+@mixin complexBox($padding, $boxWidth, $boxHeight)
+    width: $boxWidth
+    height: $boxHeight
+    background: transparent
+    color: transparent
+    border-top-right-radius: calc( #{$padding} * 2 )
+    border-top-left-radius: calc( #{$padding} * 2 )
+    @include centering()
+    overflow: unset
+    position: relative
+    &::after, &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        right: calc( #{$padding} * -2)
+        
+        padding: 0 #{$padding}
+        height: calc(100% - (#{$padding} * 2))
+
+        border-bottom: calc(#{$padding} * 2) solid transparent
+    &::after
+        z-index: 1
+        border-color: transparent       
+        border-bottom-left-radius: calc(#{$padding} * 2)
+
+@mixin complexBoxColor($boxcolour, $font-color, $bg-colour)
+    background: $boxcolour
+    color: $font-color
+    &::after, &::before
+        border-color: $boxcolour
+    &::after
+        border-color: $bg-colour
+    
+@mixin complexBoxLine()
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        right: 0
+        width: 100vw
+        height: 2px
+        border-top: 2px dashed transparent
+
 @mixin centering()
     display: flex
     justify-content: center

@@ -207,6 +207,7 @@ footer
 .header-aboutus
     display: none
     transition: color .4s
+    text-transform: uppercase
     @include desktopPlus1024()
         display: unset   
     &:hover, &:active
@@ -226,20 +227,14 @@ footer
         
 
 .header-nav-li
-
-    @include sizePlus(1000px)
-        margin-right: 76px
-        &:last-child
-            margin-right: 0
-    @include desktopPlus1024()
-        margin-right: 56px
-        &:last-child
-            margin-right: 0
+    text-transform: uppercase
     a
-        display: inline-block
+        height: 63px
         max-height: 19px
         overflow: hidden
         text-align: left
+        padding: 0 20px
+        @include centering()
         @include desktopPlus1024()
             max-height: unset
     
@@ -272,4 +267,58 @@ header .respo-languagebar
     @include desktopPlus1024()
         display: none
 
+header nav
+    @include desktopPlus1024()
+        li
+            &.active
+                &:first-child
+                    color: $pink
+                &:nth-child(2)  
+                    color: $green
+                &:nth-child(3)  
+                    color: $lightblue
+                &:nth-child(4)  
+                    color: $lightgrey
+                &:nth-child(5)  
+                    color: $blue
+header .header-nav-li
+    @include desktopPlus1024()   
+        @include complexBoxLine()
+        &::after
+            transition: border-color .2s ease-out
+        a
+            @include complexBox(10px, 100%, 63px)
+            @include complexBoxColor(transparent, inherit, white)
+            transition: background-color .2s ease-out, color .2s ease-out
 
+            &::before
+                transition: border-color .2s ease-out
+        
+        &:hover, &:active      
+            &:first-child                      
+                a
+                    @include complexBoxColor($pink, white, white)
+                &::after
+                    border-color: $pink
+            &:nth-child(2)                                    
+                a
+                    @include complexBoxColor($green, white, white)
+                &::after
+                    border-color: $green
+            &:nth-child(3)                     
+                a
+                    @include complexBoxColor($lightblue, white, white)
+                &::after
+                    border-color: $lightblue
+            &:nth-child(4)                     
+                a
+                    @include complexBoxColor($lightgrey, white, white)
+                &::after
+                    border-color: $lightgrey
+            &:nth-child(5)                     
+                a
+                    @include complexBoxColor($blue, white, white)
+                &::after
+                    border-color: $blue
+            
+         

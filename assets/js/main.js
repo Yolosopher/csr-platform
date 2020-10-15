@@ -90,7 +90,12 @@ window.addEventListener("load", () => {
         $('header .header-nav-li:nth-child(4)').addClass('active');
     } else if (url.includes('humans')) {
         $('header .header-nav-li:nth-child(5)').addClass('active');
-    }
+    };
+
+    if ($('.menuAndSoc-fb')[0]) {
+        let url = document.URL;
+        $('.menuAndSoc-fb').attr('href', `https://www.facebook.com/sharer/sharer.php?u=${url}`);
+    };
 });
 window.onscroll = () => {
     headerBotFixer();
@@ -104,6 +109,13 @@ window.onresize = () => {
 
 $(".copyLink").click(function () {
     $(this).addClass("active");
+    let url = document.URL;
+    let txtArea = document.createElement('textarea');
+    txtArea.value = url;
+    document.body.appendChild(txtArea);
+    txtArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(txtArea);
 });
 
 $(".copyLink").mouseout(function () {

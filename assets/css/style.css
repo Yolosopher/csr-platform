@@ -833,6 +833,9 @@ footer .lang-select li {
     height: 2px;
     border-top: 2px dashed transparent;
   }
+  header .header-nav-li:not(:first-child) {
+    margin-left: 20px;
+  }
   header .header-nav-li::after {
     -webkit-transition: border-color .2s ease-out;
     transition: border-color .2s ease-out;
@@ -4230,15 +4233,6 @@ article.atech-article > div > div {
 
 .img-div {
   position: relative;
-}
-
-.img-div::after {
-  content: url(../images/personal-stories/video-play.svg);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 1024px) {

@@ -325,7 +325,10 @@ header nav
                     color: $blue
 header .header-nav-li
     @include desktopPlus1024()   
+        
         @include complexBoxLine()
+        &:not(:first-child)
+            margin-left: 20px
         &::after
             transition: border-color .2s ease-out
         a

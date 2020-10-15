@@ -78,6 +78,18 @@ window.addEventListener("load", () => {
     personalStoriesSetter();
     if (document.querySelector(".atech-article")) {
         $(".swiper-slide:first-child").attr("this-must-be-shown", true);
+    };
+    let url = document.URL;
+    if (url.includes('responsible-games')) {
+        $('header .header-nav-li:first-child').addClass('active');
+    } else if (url.includes('sport')) {
+        $('header .header-nav-li:nth-child(2)').addClass('active');
+    } else if (url.includes('technologies-and-inovations')) {
+        $('header .header-nav-li:nth-child(3)').addClass('active');
+    } else if (url.includes('donations')) {
+        $('header .header-nav-li:nth-child(4)').addClass('active');
+    } else if (url.includes('humans')) {
+        $('header .header-nav-li:nth-child(5)').addClass('active');
     }
 });
 window.onscroll = () => {

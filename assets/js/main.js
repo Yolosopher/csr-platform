@@ -94,7 +94,8 @@ window.addEventListener("load", () => {
 
     if ($('.menuAndSoc-fb')[0]) {
         let url = document.URL;
-        $('.menuAndSoc-fb').attr('href', `https://www.facebook.com/sharer/sharer.php?u=${url}`);
+        $('.menuAndSoc-fb').attr('href', `https://www.facebook.com/sharer/sharer.php?u=${url}`, `https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A5500%2Ftech-inovation-atech.html&amp;src=sdkpreparse`);
+        $('.menuAndSoc-fb').attr('target', '_blank')
     };
 });
 window.onscroll = () => {

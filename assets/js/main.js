@@ -80,13 +80,18 @@ function pageChecker() {
 		document.querySelector('article').classList.add('margin-top');
 	}
 }
-    
+
+function seeMoreCheck() {
+	if ($('.sports-see-more')[0] && !$('.sports-each:nth-child(3)')[0]) {
+		$('.sports-see-more').css('display', 'none');
+	} 
+}
     
 // EVENT LISTENERS
 window.addEventListener("load", () => {
 	$(".burger").click(function () {
 		toggleBurger();
-    });
+	});
 	pageChecker();
 	personalStoriesSetter();
 	if (document.querySelector(".atech-article")) {
@@ -113,7 +118,8 @@ window.addEventListener("load", () => {
 			`https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A5500%2Ftech-inovation-atech.html&amp;src=sdkpreparse`
 		);
 		$(".menuAndSoc-fb").attr("target", "_blank");
-	}
+	};
+	seeMoreCheck();
 });
 window.onscroll = () => {
 	headerBotFixer();

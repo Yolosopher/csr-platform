@@ -260,6 +260,7 @@ header.active {
 header.active::after {
   display: block;
   width: 100%;
+  top: 70px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -289,6 +290,7 @@ header.removing {
 header.removing::after {
   display: block;
   width: 100%;
+  top: 70px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -475,6 +477,7 @@ header.removing::after {
         -ms-flex-align: center;
             align-items: center;
     padding: 0 20px !important;
+    border-bottom: 1px solid #2C7A60;
   }
 }
 

@@ -92,7 +92,11 @@ footer
         color: inherit 
         font-size: inherit       
 
-
+.footer-nav-li
+    a
+        text-transform: uppercase
+        @include sizePlus(1300px)
+            font-size: 16px
 .footer-deskPlus
     display: flex
     justify-content: center
@@ -157,6 +161,7 @@ footer
     svg 
         width: 100%
         height: 100%
+        padding-bottom: 2px
     p 
         color: $black
         font-size: 12px
@@ -212,7 +217,9 @@ footer .footer-respo-languagebar
     font-size: 14px
     line-height: 17px
     font-family: firaMedium
+    text-transform: uppercase
     &::before
         position: relative
         content: url(../images/copyright.svg)
         margin-right: 13px
+        transform: translateY(1px)

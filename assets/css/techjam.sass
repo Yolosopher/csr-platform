@@ -45,29 +45,55 @@
                 width: 40px
                 height: 40px
 .big-data a
-    color: #51C05B
     &::before
         background: #51C05B
 .gamification a
-    color: #A174B0
     &::before
         background: #A174B0
 .internet-of-things a
-    color: #5FCCD0
     &::before
         background: #5FCCD0
 .artificial-intelligence a
-    color: #4CC465
     &::before
         background: #4CC465
 .e-commerce a
-    color: #987CB5
     &::before
         background: #987CB5
 .blockchain a
-    color: #65CACE
     &::before
         background: #65CACE
 
 .techjam-textbox-important
     color: #5E7289
+
+.techjam-for-list
+    li
+        display: flex
+        align-items: center
+        &::before
+            content: ''
+            position: relative
+            display: block
+            margin-right: 20px
+            width: 20px
+            height: 20px
+        &:nth-child(6n+1)
+            &::before
+                background: #51C05B
+        &:nth-child(6n+2)
+            &::before
+                background: #A174B0
+        &:nth-child(6n+3)
+            &::before
+                background: #5FCCD0
+        &:nth-child(6n+4)
+            &::before
+                background: #4CC465
+        &:nth-child(6n+5)
+            &::before
+                background: #987CB5
+        &:nth-child(6n+6)
+            &::before
+                background: #65CACE
+
+                

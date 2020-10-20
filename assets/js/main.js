@@ -119,7 +119,6 @@ window.addEventListener("load", () => {
 		);
 		$(".menuAndSoc-fb").attr("target", "_blank");
 	};
-	seeMoreCheck();
 });
 window.onscroll = () => {
 	headerBotFixer();

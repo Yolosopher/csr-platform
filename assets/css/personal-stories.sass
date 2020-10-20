@@ -58,6 +58,7 @@ h1.personal-stories-h1
         width: 100%
         border: 1px solid transparent
         transition: border .4s ease-in-out
+        text-transform: uppercase
 
         @include centering()
         @include desktopPlus1024()
@@ -69,6 +70,8 @@ h1.personal-stories-h1
             content: url(../images/arrow-right-button-inside.svg)
             position: relative
             left: 18px
+            display: inline
+            transform: translateY(3px)
         &:hover, &:active
             border: 1px solid $green
     

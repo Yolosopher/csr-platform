@@ -44,6 +44,8 @@ main.arena-hero-content.respoGame.hero-content
     display: none
     @include desktopPlus1024()
         display: block
+    &.disabled
+        display: none
 .main-slider-hc-nav-inner
     margin: 0 auto
     width: 100%
@@ -56,6 +58,7 @@ main.arena-hero-content.respoGame.hero-content
         background-repeat: no-repeat
         background-size: contain
         cursor: pointer
+
 .main-slider-hc-prev
     background-image: url(../images/swiper-nav-left.svg)
 .main-slider-hc-next

@@ -30,10 +30,13 @@ body.sports
 
 .only-sports article.sports-each
     @include sportsEach()
+    border-top: transparent
     &:nth-of-type(even)
         @include desktopPlus1024() 
             flex-direction: row-reverse
-    box-shadow: 0px 0px 20px #00000029
+    @include tabletPlus768()
+        border-top: $e3
+        box-shadow: 0px 0px 20px #00000029
         
 
 .sports-each-text-div
@@ -68,20 +71,28 @@ body.sports
 .sports-each-img-div
     width: 100%
     flex: 1
-    height: 265px
+    height: 235px
     margin-bottom: 57px
     @include tabletPlus768()
-        margin-bottom: 40px
-        height: 230px
+        margin-bottom: 74px
+        height: 200px
     @include desktopPlus1024()
         margin-bottom: 0
         height: 100%
     img
-        width: 100%
+        width: calc( 100% - 31px )
         height: 100%        
         border-radius: 8px
         object-fit: cover
         object-position: center
+        box-shadow: 31px 31px 6px -1px rgba(246,246,246,1)     
+        
+        @include desktopPlus1024()
+            border-radius: 12px
+            width: 480px
+            height: 560px
+            box-shadow: 31px 31px 3px -1px rgba(246,246,246,1)
+            
         
 
 .sports-see-more

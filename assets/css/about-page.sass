@@ -8,6 +8,7 @@
         padding: 47px 0
     @include desktopPlus1024()
         padding: 36px 20px
+        padding-top: 69px
     .atech-article-bottom-textbox
         justify-content: center
 .for-borderNpad
@@ -30,6 +31,9 @@ article.aboutus-article.atech-article > div
 
 // second section
 .home-aboutus.in-real-aboutus
+    @include tabletPlus768()
+        margin-bottom: 0
+        padding-bottom: 35px
     .home-aboutus-inner
         height: auto
         min-height: unset

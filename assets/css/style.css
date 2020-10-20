@@ -116,6 +116,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+body.bgcl-changed {
+  background: #fff;
+}
+
 a {
   color: inherit;
 }
@@ -182,7 +186,7 @@ header {
   }
 }
 
-header .header-nav-li.active li {
+header .header-nav-li.active {
   display: block;
   width: 100%;
 }
@@ -194,8 +198,10 @@ header .header-nav-li.active a {
   -webkit-box-align: unset;
       -ms-flex-align: unset;
           align-items: unset;
-  width: 100%;
   height: 50px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background: #C8495E;
 }
 
@@ -459,7 +465,38 @@ header.removing::after {
     width: 100vw;
     background: white;
     z-index: 9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 20px !important;
   }
+}
+
+@media screen and (min-width: 1350px) {
+  .header-bot.fixed .small-logo {
+    display: unset;
+  }
+  .header-bot.fixed .lang-when-scroll {
+    display: unset !important;
+  }
+  .header-bot.fixed .header-nav-ul {
+    max-width: unset;
+  }
+}
+
+.small-logo {
+  margin-right: 20px;
+  display: none;
+}
+
+.lang-when-scroll {
+  display: none !important;
 }
 
 .active .header-bot, .removing .header-bot {
@@ -482,6 +519,12 @@ header.removing::after {
 .active .nav, .removing .nav {
   margin-top: 30px;
   height: 375px;
+}
+
+@media screen and (min-width: 1024px) {
+  .fixed .nav {
+    margin: auto;
+  }
 }
 
 .burger {
@@ -657,6 +700,7 @@ footer .lang-select li {
 
 .nav {
   height: 100%;
+  white-space: nowrap;
 }
 
 .header-nav-ul {
@@ -821,6 +865,15 @@ footer .lang-select li {
   header nav li.active:nth-child(5) {
     color: #203668;
   }
+  header nav li.active:nth-child(6) {
+    color: #C8495E;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .fixed .header-nav-li:last-child {
+    display: unset;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -832,6 +885,9 @@ footer .lang-select li {
     width: 100vw;
     height: 2px;
     border-top: 2px dashed transparent;
+  }
+  header .header-nav-li:last-child {
+    display: none;
   }
   header .header-nav-li:not(:first-child) {
     margin-left: 20px;
@@ -950,6 +1006,19 @@ footer .lang-select li {
   header .header-nav-li:hover:nth-child(5)::after, header .header-nav-li:active:nth-child(5)::after {
     border-color: #203668;
   }
+  header .header-nav-li:hover:nth-child(6) a, header .header-nav-li:active:nth-child(6) a {
+    background: #C8495E !important;
+    color: white !important;
+  }
+  header .header-nav-li:hover:nth-child(6) a::after, header .header-nav-li:hover:nth-child(6) a::before, header .header-nav-li:active:nth-child(6) a::after, header .header-nav-li:active:nth-child(6) a::before {
+    border-color: #C8495E !important;
+  }
+  header .header-nav-li:hover:nth-child(6) a::after, header .header-nav-li:active:nth-child(6) a::after {
+    border-color: white !important;
+  }
+  header .header-nav-li:hover:nth-child(6)::after, header .header-nav-li:active:nth-child(6)::after {
+    border-color: #C8495E;
+  }
 }
 
 main {
@@ -1029,6 +1098,10 @@ main.arena-hero-content.respoGame.hero-content {
   .main-slider-hc-nav {
     display: block;
   }
+}
+
+.main-slider-hc-nav.disabled {
+  display: none;
 }
 
 .main-slider-hc-nav-inner {
@@ -2428,7 +2501,7 @@ main h2 {
 
 @media screen and (min-width: 1024px) {
   .rg-news {
-    margin-bottom: 88px;
+    margin-bottom: 0;
   }
 }
 
@@ -2464,6 +2537,7 @@ main h2 {
 @media screen and (min-width: 1024px) {
   .rg-news-inner.container {
     padding: 0 18px 32px;
+    padding-bottom: 120px;
   }
 }
 
@@ -2966,6 +3040,10 @@ body.arena {
 @media screen and (min-width: 1024px) {
   .arena-right-image img {
     border-radius: 12px;
+    width: 480px;
+    height: 560px;
+    -webkit-box-shadow: 49px 51px 3px -1px #f6f6f6;
+            box-shadow: 49px 51px 3px -1px #f6f6f6;
   }
 }
 
@@ -3028,8 +3106,7 @@ body.sports {
           box-shadow: 0px 0px 20px #b895950a;
   border-radius: 12px;
   border: 1px solid #E3E3E3;
-  -webkit-box-shadow: 0px 0px 20px #00000029;
-          box-shadow: 0px 0px 20px #00000029;
+  border-top: transparent;
 }
 
 @media screen and (min-width: 768px) {
@@ -3041,7 +3118,7 @@ body.sports {
 
 @media screen and (min-width: 1024px) {
   .only-sports article.sports-each {
-    padding: 76px 20px;
+    padding: 79px 20px;
     height: 800px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3073,6 +3150,14 @@ body.sports {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .only-sports article.sports-each {
+    border-top: #E3E3E3;
+    -webkit-box-shadow: 0px 0px 20px #00000029;
+            box-shadow: 0px 0px 20px #00000029;
   }
 }
 
@@ -3136,14 +3221,14 @@ body.sports {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 265px;
+  height: 235px;
   margin-bottom: 57px;
 }
 
 @media screen and (min-width: 768px) {
   .sports-each-img-div {
-    margin-bottom: 40px;
-    height: 230px;
+    margin-bottom: 74px;
+    height: 200px;
   }
 }
 
@@ -3155,13 +3240,25 @@ body.sports {
 }
 
 .sports-each-img-div img {
-  width: 100%;
+  width: calc( 100% - 31px);
   height: 100%;
   border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  -webkit-box-shadow: 31px 31px 6px -1px #f6f6f6;
+          box-shadow: 31px 31px 6px -1px #f6f6f6;
+}
+
+@media screen and (min-width: 1024px) {
+  .sports-each-img-div img {
+    border-radius: 12px;
+    width: 480px;
+    height: 560px;
+    -webkit-box-shadow: 31px 31px 3px -1px #f6f6f6;
+            box-shadow: 31px 31px 3px -1px #f6f6f6;
+  }
 }
 
 .sports-see-more {
@@ -3238,6 +3335,13 @@ body.sports {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .atech-article-img-div {
+    width: 534px;
+    height: 657.5px;
+  }
+}
+
 .atech-article-img-div img {
   width: 100%;
   height: 100%;
@@ -3251,6 +3355,10 @@ body.sports {
 @media screen and (min-width: 1024px) {
   .atech-article-img-div img {
     border-radius: 12px;
+    width: 480px;
+    height: 560px;
+    -webkit-box-shadow: 31px 31px 3px -1px #f6f6f6;
+            box-shadow: 31px 31px 3px -1px #f6f6f6;
   }
 }
 
@@ -3335,7 +3443,6 @@ article.atech-article > div > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 100%;
 }
 
 .atech-article-bottom-textbox {
@@ -3700,24 +3807,48 @@ article.atech-article > div > div {
   }
 }
 
+.big-data a {
+  color: #51C05B;
+}
+
 .big-data a::before {
   background: #51C05B;
+}
+
+.gamification a {
+  color: #A174B0;
 }
 
 .gamification a::before {
   background: #A174B0;
 }
 
+.internet-of-things a {
+  color: #5FCCD0;
+}
+
 .internet-of-things a::before {
   background: #5FCCD0;
+}
+
+.artificial-intelligence a {
+  color: #4CC465;
 }
 
 .artificial-intelligence a::before {
   background: #4CC465;
 }
 
+.e-commerce a {
+  color: #987CB5;
+}
+
 .e-commerce a::before {
   background: #987CB5;
+}
+
+.blockchain a {
+  color: #65CACE;
 }
 
 .blockchain a::before {
@@ -3743,6 +3874,7 @@ article.atech-article > div > div {
 @media screen and (min-width: 1024px) {
   .aboutus-article-div {
     padding: 36px 20px;
+    padding-top: 69px;
   }
 }
 
@@ -3776,6 +3908,13 @@ article.atech-article > div > div {
   article.aboutus-article.atech-article > div {
     height: 638px;
     min-height: 560px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home-aboutus.in-real-aboutus {
+    margin-bottom: 0;
+    padding-bottom: 35px;
   }
 }
 
@@ -3944,7 +4083,7 @@ article.atech-article > div > div {
 
 @media screen and (min-width: 1024px) {
   .donations-each {
-    padding: 76px 20px;
+    padding: 79px 20px;
     height: 800px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4248,6 +4387,12 @@ article.atech-article > div > div {
     display: flex;
     -ms-flex-negative: 0;
         flex-shrink: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rg-news.rg-arena.atech-article-outter.margin-top {
+    margin-top: -72px;
   }
 }
 /*# sourceMappingURL=style.css.map */

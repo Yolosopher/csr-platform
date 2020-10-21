@@ -146,14 +146,16 @@ $(".copyLink").mouseout(function () {
 // 	techGalleryZoomed();
 // });
 document.querySelector(".tech-section-outter").addEventListener("click", (e) => {
-	console.log(Boolean(e.target.closest('.tech-slider-navigation')));
+	
 	if (e.target.closest('.tech-slider-navigation')) {
 		return false;
 	} else {
 		techGalleryZoomed();
-	}
-	
+		atechGallerySwiper.update();
+		mainPhotoSwiper.update();
+	}	
 })
+
 $(".tech-slider-x-zoom").click(function () {
 	$("body").removeClass("active");
 	$(".for-zoom").removeClass("active");

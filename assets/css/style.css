@@ -3784,6 +3784,12 @@ article.atech-article > div > div {
   height: 100%;
 }
 
+@media screen and (min-width: 1024px) {
+  .for-zoom {
+    margin-bottom: 102px;
+  }
+}
+
 .for-zoom.active {
   position: fixed;
   z-index: 10;

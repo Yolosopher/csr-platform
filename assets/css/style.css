@@ -73,6 +73,21 @@
   src: url(../fonts/FiraGO-UltraLight.ttf);
 }
 
+@font-face {
+  font-family: mtavBold;
+  src: url(../fonts/PANTONMTAV3-BOLD.OTF);
+}
+
+@font-face {
+  font-family: mtavExtraBold;
+  src: url(../fonts/PANTONMTAV3-EXTRABOLD.OTF);
+}
+
+@font-face {
+  font-family: mtavRegular;
+  src: url(../fonts/PANTONMTAV3-REGULAR.OTF);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -575,6 +590,7 @@ header.removing::after {
 
 .lang-select a {
   text-transform: uppercase;
+  font-family: mtavBold;
 }
 
 .lang-select li {
@@ -667,6 +683,10 @@ footer .top-right-languagebar * {
   font-family: inherit;
 }
 
+footer .top-right-languagebar .lang-select {
+  font-family: mtavBold;
+}
+
 footer .top-right-languagebar.active {
   overflow: initial;
 }
@@ -693,6 +713,7 @@ footer .lang-select li {
   -webkit-transition: color .4s;
   transition: color .4s;
   text-transform: uppercase;
+  font-family: mtavBold;
 }
 
 @media screen and (min-width: 1024px) {
@@ -727,6 +748,7 @@ footer .lang-select li {
   max-width: 980px;
   height: 100%;
   padding-top: 31px;
+  font-family: mtavBold;
 }
 
 @media screen and (min-width: 1024px) {
@@ -750,6 +772,7 @@ footer .lang-select li {
 
 .header-nav-li {
   text-transform: uppercase;
+  font-family: mtavBold;
 }
 
 .header-nav-li a {
@@ -849,6 +872,7 @@ footer .lang-select li {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
+  font-family: mtavBold;
 }
 
 @media screen and (min-width: 1024px) {

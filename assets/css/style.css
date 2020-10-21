@@ -878,7 +878,7 @@ footer .lang-select li {
   }
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1410px) {
   .fixed .header-nav-li:last-child {
     display: unset;
   }
@@ -3033,50 +3033,51 @@ body.arena {
 
 .arena-right-image {
   width: 100%;
-  height: 265px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 264px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 360px) {
+  .arena-right-image {
+    margin-bottom: 48px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .arena-right-image {
-    height: 312px;
+    margin-bottom: 40px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .arena-right-image {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    width: 100%;
-    min-height: 755px;
-    height: 100%;
-    margin-left: 18px;
+    margin-bottom: 0;
+    height: 659px;
+    width: unset;
   }
 }
 
 .arena-right-image img {
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 34px);
+  height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  border-radius: 6px;
-}
-
-@media screen and (min-width: 768px) {
-  .arena-right-image img {
-    border-radius: 8px;
-  }
+  -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
+          box-shadow: 34px 34px 0 0 #f6f6f6;
 }
 
 @media screen and (min-width: 1024px) {
   .arena-right-image img {
-    border-radius: 12px;
-    width: 480px;
+    width: calc( 100% - 54px);
+    max-width: 480px;
     height: 560px;
-    -webkit-box-shadow: 49px 51px 3px -1px #f6f6f6;
-            box-shadow: 49px 51px 3px -1px #f6f6f6;
+    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
+            box-shadow: 54px 99px 0 0 #f6f6f6;
   }
 }
 
@@ -3254,43 +3255,48 @@ body.sports {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 235px;
-  margin-bottom: 57px;
+  height: 264px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 360px) {
+  .sports-each-img-div {
+    margin-bottom: 48px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .sports-each-img-div {
-    margin-bottom: 74px;
-    height: 200px;
+    margin-bottom: 40px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .sports-each-img-div {
     margin-bottom: 0;
-    height: 100%;
+    height: 659px;
+    width: unset;
   }
 }
 
 .sports-each-img-div img {
-  width: calc( 100% - 31px);
-  height: 100%;
-  border-radius: 8px;
+  width: calc(100% - 34px);
+  height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-box-shadow: 31px 31px 6px -1px #f6f6f6;
-          box-shadow: 31px 31px 6px -1px #f6f6f6;
+  -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
+          box-shadow: 34px 34px 0 0 #f6f6f6;
 }
 
 @media screen and (min-width: 1024px) {
   .sports-each-img-div img {
-    border-radius: 12px;
-    width: 480px;
+    width: calc( 100% - 54px);
+    max-width: 480px;
     height: 560px;
-    -webkit-box-shadow: 31px 31px 3px -1px #f6f6f6;
-            box-shadow: 31px 31px 3px -1px #f6f6f6;
+    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
+            box-shadow: 54px 99px 0 0 #f6f6f6;
   }
 }
 
@@ -3368,30 +3374,53 @@ body.sports {
   }
 }
 
+.atech-article-img-div {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 264px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 360px) {
+  .atech-article-img-div {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .atech-article-img-div {
+    margin-bottom: 40px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .atech-article-img-div {
-    width: 534px;
-    height: 657.5px;
+    margin-bottom: 0;
+    height: 659px;
+    width: unset;
   }
 }
 
 .atech-article-img-div img {
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 34px);
+  height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  border-radius: 4px;
+  -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
+          box-shadow: 34px 34px 0 0 #f6f6f6;
 }
 
 @media screen and (min-width: 1024px) {
   .atech-article-img-div img {
-    border-radius: 12px;
-    width: 480px;
+    width: calc( 100% - 54px);
+    max-width: 480px;
     height: 560px;
-    -webkit-box-shadow: 31px 31px 3px -1px #f6f6f6;
-            box-shadow: 31px 31px 3px -1px #f6f6f6;
+    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
+            box-shadow: 54px 99px 0 0 #f6f6f6;
   }
 }
 
@@ -4181,21 +4210,30 @@ article.atech-article > div > div {
 
 .donations-each-img-div {
   width: 100%;
-  height: 265px;
-  margin-bottom: 57px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 264px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 360px) {
+  .donations-each-img-div {
+    margin-bottom: 48px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .donations-each-img-div {
     margin-bottom: 40px;
-    height: 230px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .donations-each-img-div {
     margin-bottom: 0;
-    height: 643px;
+    height: 659px;
+    width: unset;
   }
 }
 

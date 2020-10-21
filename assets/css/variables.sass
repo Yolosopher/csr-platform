@@ -14,9 +14,13 @@ $darkbg: #363636
 
 
 // respo sizes
+$mobile-width: 360px
 $tablet-width: 768px
 $desktop-width: 1024px
 
+@mixin mobilePlus360()
+    @media screen and (min-width: $mobile-width)
+        @content
 @mixin tabletPlus768()
     @media screen and (min-width: $tablet-width)
         @content

@@ -1956,7 +1956,7 @@ footer {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    padding-right: 195px;
+    padding-right: 80px;
     min-height: unset;
     max-height: unset;
     -webkit-box-pack: justify;

@@ -142,10 +142,18 @@ $(".copyLink").mouseout(function () {
 	$(this).removeClass("active");
 });
 
-$(".tech-section-outter").click(function () {
-	techGalleryZoomed();
-});
-
+// $(".tech-section-outter").click(function () {
+// 	techGalleryZoomed();
+// });
+document.querySelector(".tech-section-outter").addEventListener("click", (e) => {
+	console.log(Boolean(e.target.closest('.tech-slider-navigation')));
+	if (e.target.closest('.tech-slider-navigation')) {
+		return false;
+	} else {
+		techGalleryZoomed();
+	}
+	
+})
 $(".tech-slider-x-zoom").click(function () {
 	$("body").removeClass("active");
 	$(".for-zoom").removeClass("active");
@@ -212,12 +220,16 @@ const mainPhotoSwiper = new Swiper(".tech-slider-main-image", {
 	// onClick: function
 });
 
-atechGallerySwiper.once("click", function () {
+atechGallerySwiper.once("click", function (e) {
 	if (!$(".for-zoom").hasClass("active")) {
-		$("body").addClass("active");
-		$(".for-zoom").addClass("active");
-		atechGallerySwiper.update();
-		mainPhotoSwiper.update();
+		if (e.target.closest('.tech-slider-navigation')) {
+			return false;
+		} else {
+			$("body").addClass("active");
+			$(".for-zoom").addClass("active");
+			atechGallerySwiper.update();
+			mainPhotoSwiper.update();
+		}
 	}
 });
 

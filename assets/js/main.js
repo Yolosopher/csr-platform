@@ -73,20 +73,17 @@ function disableSliderNav() {
 }
 
 function pageChecker() {
-	if ($('.sports-see-more')[0] || $('.donations-show-more')[0] || $('.menuAndSoc')[0]) {
+	if ($('.sports-see-more')[0] || $('.hero-content-sports')[0] || $('.menuAndSoc')[0]) {
 		$('body').addClass('bgcl-changed')
 	}
 	if ($('.year-accountings-download')[0]) {
 		document.querySelector('article').classList.add('margin-top');
 	}
+	if ($('.home-aboutus-h1')[0]) {
+		$('body').removeClass('bgcl-changed')
+	}
 }
 
-function seeMoreCheck() {
-	if ($('.sports-see-more')[0] && !$('.sports-each:nth-child(3)')[0]) {
-		$('.sports-see-more').css('display', 'none');
-	} 
-}
-    
 // EVENT LISTENERS
 window.addEventListener("load", () => {
 	$(".burger").click(function () {

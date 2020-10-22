@@ -46,23 +46,30 @@
         border-radius: 8px
         @include desktopPlus1024()
             border-radius: 12px
-
+.ps-article-text-p, .sports-each-text-div-p
+    li
+        list-style: initial
+        list-style-position: inside
+        font-size: inherit
+        font-family: inherit
+        font-weight: inherit
+        // padding-left: initial
 .ps-article-text
     padding: 15px
     h2
         margin-bottom: 37px
-        font-family: firaBold
+        font-family: mtavBold
         font-size: 16px
         line-height: 25.6px
         @include tabletPlus768()
             font-size: 20px
             line-height: 32px
         @include desktopPlus1024()
-            font-family: firaMedium
-            font-size: 36px
-            line-height: 57.6px
-            margin-bottom: 25.7px
-    p
+            font-family: mtavBold
+            font-size: 26px
+            line-height: 38.4px
+            margin-bottom: 58.7px
+    .ps-article-text-p
         font-family: firaBold
         font-size: 12px
         line-height: 19.2px
@@ -74,8 +81,8 @@
             line-height: 25.6px
         @include desktopPlus1024()
             font-family: firaMedium
-            font-size: 22px
-            line-height: 38px
+            font-size: 18px
+            line-height: 32px
             
     &.container
         @include desktopPlus1024()

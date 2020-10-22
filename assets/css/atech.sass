@@ -43,15 +43,20 @@
         @include desktopPlus1024()
             width: calc( 100% - 54px )
             max-width: 480px
-            height: 560px
+            height: 460px
             box-shadow: 54px 99px 0 0 #f6f6f6
+.atech-article-img-div.big-data
+    img
+        object-fit: scale-down
 .menuAndSoc.container
     max-width: 1100px
 article.atech-article
     max-width: 1100px
     h2
-        font-family: firaBold
+        font-family: mtavBold
+        text-transform: uppercase
         font-size: 16px
+        font-weight: normal
         line-height: 41.6px
         margin-bottom: 21px
         @include tabletPlus768()
@@ -72,8 +77,8 @@ article.atech-article
             font-size: 16px
             line-height: 26.6px
         @include desktopPlus1024()            
-            font-size: 22px
-            line-height: 38px
+            font-size: 18px
+            line-height: 32px
     > div
         display: flex
         flex-direction: column

@@ -21,8 +21,10 @@ function toggleBurger() {
 function headerBotFixer() {
 	if (window.pageYOffset > 100) {
 		headerBot.classList.add("fixed");
+		document.querySelector('body').style.paddingTop = "100px";
 	} else {
 		headerBot.classList.remove("fixed");
+		document.querySelector('body').style.paddingTop = "";
 	}
 }
 
@@ -79,7 +81,7 @@ function pageChecker() {
 	if ($('.year-accountings-download')[0]) {
 		document.querySelector('article').classList.add('margin-top');
 	}
-	if ($('.home-aboutus-h1')[0]) {
+	if ($('.home-aboutus-h1')[0] || $('.home-latest-news')[0]) {
 		$('body').removeClass('bgcl-changed')
 	}
 }
@@ -145,16 +147,19 @@ $(".copyLink").mouseout(function () {
 // $(".tech-section-outter").click(function () {
 // 	techGalleryZoomed();
 // });
-document.querySelector(".tech-section-outter").addEventListener("click", (e) => {
-	
-	if (e.target.closest('.tech-slider-navigation')) {
-		return false;
-	} else {
-		techGalleryZoomed();
-		atechGallerySwiper.update();
-		mainPhotoSwiper.update();
-	}	
-})
+if (document.querySelector(".tech-section-outter")) {
+	document
+	.querySelector(".tech-section-outter")
+	.addEventListener("click", (e) => {
+		if (e.target.closest(".tech-slider-navigation")) {
+			return false;
+		} else {
+			techGalleryZoomed();
+			atechGallerySwiper.update();
+			mainPhotoSwiper.update();
+		}
+	});
+};
 
 $(".tech-slider-x-zoom").click(function () {
 	$("body").removeClass("active");

@@ -1237,7 +1237,7 @@ main.arena-hero-content.respoGame.hero-content {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  font-family: firaBold;
+  font-family: mtavBold;
   font-size: 16px;
   padding-left: 31px;
   top: -50px;
@@ -1412,7 +1412,7 @@ main.arena-hero-content.respoGame.hero-content {
 .latest-news-li .latest-news-text-content h2 {
   font-size: 12px;
   line-height: 19.2px;
-  font-family: firaBold;
+  font-family: mtavBold;
   display: block;
   text-transform: uppercase;
 }
@@ -1446,6 +1446,13 @@ main.arena-hero-content.respoGame.hero-content {
   .home-personal-stories {
     height: 810px;
     padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-latest-news.ps-video-gallery {
+    margin-bottom: 0;
+    padding-bottom: 250px;
   }
 }
 
@@ -1496,7 +1503,7 @@ h1.personal-stories-h1 {
   left: 0;
   width: 100%;
   margin: 0 auto;
-  font-family: firaMedium;
+  font-family: mtavBold;
   font-size: 14px;
   line-height: 20.6px;
   display: -webkit-box;
@@ -1640,7 +1647,7 @@ h1.home-aboutus-h1 {
 
 .home-aboutus-inner .aboutus-cover, .home-aboutus-inner .aboutus-texts {
   width: 100%;
-  height: 269px;
+  height: 200px;
   font-family: firaBold;
   font-size: 12px;
   line-height: 15px;
@@ -1650,6 +1657,7 @@ h1.home-aboutus-h1 {
   .home-aboutus-inner .aboutus-cover, .home-aboutus-inner .aboutus-texts {
     font-family: firaMedium;
     font-size: 16px;
+    height: 269px;
     line-height: 25.6px;
   }
 }
@@ -1660,7 +1668,7 @@ h1.home-aboutus-h1 {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    height: 100%;
+    height: 330px;
   }
 }
 
@@ -1681,10 +1689,11 @@ h1.home-aboutus-h1 {
   .home-aboutus-inner .aboutus-cover {
     border-radius: 12px;
     padding: 0 20px;
+    min-height: 330px;
   }
 }
 
-.home-aboutus-inner .aboutus-cover svg {
+.home-aboutus-inner .aboutus-cover svg, .home-aboutus-inner .aboutus-cover img {
   width: 230px;
   height: 50px;
   -webkit-transform: translateY(40px);
@@ -1695,17 +1704,11 @@ h1.home-aboutus-h1 {
 }
 
 @media screen and (min-width: 1024px) {
-  .home-aboutus-inner .aboutus-cover svg {
+  .home-aboutus-inner .aboutus-cover svg, .home-aboutus-inner .aboutus-cover img {
     -webkit-transform: translateY(155px);
             transform: translateY(155px);
     height: 150px;
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .home-aboutus-inner .aboutus-cover {
-    height: 570px;
   }
 }
 
@@ -1745,7 +1748,7 @@ h1.home-aboutus-h1 {
   .home-aboutus-inner .aboutus-texts {
     border: none;
     padding: 0;
-    height: 570px;
+    min-height: 330px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1753,12 +1756,6 @@ h1.home-aboutus-h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .home-aboutus-inner {
-    min-height: 557px;
   }
 }
 
@@ -1801,17 +1798,20 @@ h1.home-aboutus-h1 {
 
 @media screen and (min-width: 1024px) {
   .home-aboutus-inner .aboutus-link {
-    margin-top: unset;
-    font-size: 22px;
-    line-height: 31px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    margin-top: 0;
+    font-size: 18px;
+    width: 100%;
+    line-height: 35.2px;
+    font-family: mtavBold;
+    text-align: left;
   }
 }
 
 .aboutus-divOfPs p {
   margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 19.2px;
+  font-family: firaBold;
 }
 
 .aboutus-divOfPs p:last-child {
@@ -1819,8 +1819,14 @@ h1.home-aboutus-h1 {
 }
 
 @media screen and (min-width: 1024px) {
+  .aboutus-divOfPs {
+    margin-bottom: 31px;
+  }
   .aboutus-divOfPs p {
+    font-size: 20px;
+    line-height: 32px;
     margin-bottom: 17px;
+    font-family: firaMedium;
   }
   .aboutus-divOfPs p:last-child {
     margin-bottom: 0;
@@ -2766,7 +2772,7 @@ body.arena {
       -ms-flex-align: center;
           align-items: center;
   width: 140px;
-  font-family: firaRegular;
+  font-family: mtavBold;
   font-size: 14px;
   height: 40px;
   text-transform: uppercase;
@@ -2803,8 +2809,9 @@ body.arena {
   position: relative;
   width: 12px;
   height: 12px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  line-height: 19px;
+  -webkit-transform: rotate(180deg) translateY(2px);
+          transform: rotate(180deg) translateY(2px);
   margin-right: 18px;
 }
 
@@ -3253,14 +3260,14 @@ body.sports {
   }
 }
 
-.sports-each-text-div p {
+.sports-each-text-div .sports-each-text-div-p {
   font-family: firaBold;
   font-size: 12px;
   line-height: 19.2px;
 }
 
 @media screen and (min-width: 768px) {
-  .sports-each-text-div p {
+  .sports-each-text-div .sports-each-text-div-p {
     font-family: firaMedium;
     font-size: 16px;
     line-height: 25.6px;
@@ -3268,7 +3275,7 @@ body.sports {
 }
 
 @media screen and (min-width: 1024px) {
-  .sports-each-text-div p {
+  .sports-each-text-div .sports-each-text-div-p {
     font-size: 22px;
     line-height: 38px;
   }
@@ -3442,10 +3449,15 @@ body.sports {
   .atech-article-img-div img {
     width: calc( 100% - 54px);
     max-width: 480px;
-    height: 560px;
+    height: 460px;
     -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
             box-shadow: 54px 99px 0 0 #f6f6f6;
   }
+}
+
+.atech-article-img-div.big-data img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .menuAndSoc.container {
@@ -3457,8 +3469,10 @@ article.atech-article {
 }
 
 article.atech-article h2 {
-  font-family: firaBold;
+  font-family: mtavBold;
+  text-transform: uppercase;
   font-size: 16px;
+  font-weight: normal;
   line-height: 41.6px;
   margin-bottom: 21px;
 }
@@ -3927,6 +3941,19 @@ article.atech-article > div > div {
   color: #5E7289;
 }
 
+.techjam-for-list {
+  font-family: firaBold;
+  font-size: 12px;
+  line-height: 19.2px;
+}
+
+@media screen and (min-width: 1024px) {
+  .techjam-for-list {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
 .techjam-for-list li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3934,6 +3961,13 @@ article.atech-article > div > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .techjam-for-list li {
+    margin-bottom: 0;
+  }
 }
 
 .techjam-for-list li::before {
@@ -3967,6 +4001,22 @@ article.atech-article > div > div {
 
 .techjam-for-list li:nth-child(6n+6)::before {
   background: #65CACE;
+}
+
+.bigdata-big {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .bigdata-big {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bigdata-small {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -4429,13 +4479,21 @@ article.atech-article > div > div {
   }
 }
 
+.ps-article-text-p li, .sports-each-text-div-p li {
+  list-style: initial;
+  list-style-position: inside;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
 .ps-article-text {
   padding: 15px;
 }
 
 .ps-article-text h2 {
   margin-bottom: 37px;
-  font-family: firaBold;
+  font-family: mtavBold;
   font-size: 16px;
   line-height: 25.6px;
 }
@@ -4449,14 +4507,14 @@ article.atech-article > div > div {
 
 @media screen and (min-width: 1024px) {
   .ps-article-text h2 {
-    font-family: firaMedium;
-    font-size: 36px;
-    line-height: 57.6px;
-    margin-bottom: 25.7px;
+    font-family: mtavBold;
+    font-size: 26px;
+    line-height: 38.4px;
+    margin-bottom: 58.7px;
   }
 }
 
-.ps-article-text p {
+.ps-article-text .ps-article-text-p {
   font-family: firaBold;
   font-size: 12px;
   line-height: 19.2px;
@@ -4464,17 +4522,17 @@ article.atech-article > div > div {
 }
 
 @media screen and (min-width: 768px) {
-  .ps-article-text p {
+  .ps-article-text .ps-article-text-p {
     font-size: 16px;
     line-height: 25.6px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .ps-article-text p {
+  .ps-article-text .ps-article-text-p {
     font-family: firaMedium;
-    font-size: 22px;
-    line-height: 38px;
+    font-size: 18px;
+    line-height: 32px;
   }
 }
 

@@ -66,10 +66,12 @@
 .techjam-textbox-important
     color: #5E7289
 
-.techjam-for-list
     li
         display: flex
         align-items: center
+        margin-bottom: 2px
+        @include tabletPlus768()
+            margin-bottom: 0
         &::before
             content: ''
             position: relative
@@ -97,3 +99,10 @@
                 background: #65CACE
 
                 
+.bigdata-big
+    display: none
+    @include desktopPlus1024()
+        display: initial
+.bigdata-small
+    @include desktopPlus1024()
+        display: none

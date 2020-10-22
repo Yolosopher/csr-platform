@@ -6,10 +6,12 @@
         background-image: url(../images/donations/grey-title-text-bg1024.svg)
 .donations-each
     @include sportsEach()
-    @include desktopPlus1024()
-        height: auto
     max-height: unset
     overflow: initial
+    // margin-bottom: 72px
+    @include desktopPlus1024()
+        height: auto
+        // margin-bottom: 102px
 
 .donations-each-text-div
     display: flex
@@ -106,3 +108,7 @@
         .shrink
             display: unset
 
+.donations-page
+    margin-bottom: 72px
+    @include desktopPlus1024() 
+        margin-bottom: 120px

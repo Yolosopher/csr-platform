@@ -37,11 +37,12 @@ header
         @include desktopPlus1024()
             width: 250px
     &.active
-        width: 90%
+        width: 95%
         height: 100vh
         padding: 0
         z-index: 10
         position: fixed
+        overflow: auto
         animation: burgerSlideStart 1s
         @include tabletPlus768()
             width: 430px
@@ -76,12 +77,12 @@ header
     1%
         width: 0        
     100%
-        width: 90%
+        width: 95%
 @keyframes burgerSlideStartReverse
     0%
-        width: 90%
+        width: 95%
     1%
-        width: 90%      
+        width: 95%      
     100%
         width: 0
 @keyframes burgerSlideStart768
@@ -115,7 +116,9 @@ header
     @include desktopPlus1024()
         height: 100px !important
         padding: 0 !important
-
+.active
+    .header-bot
+        padding: 0
 .header-bot
     height: unset
     display: none
@@ -283,7 +286,7 @@ footer
     margin: 0 auto
     max-width: 980px
     height: 100%
-    padding-top: 31px
+    // padding-top: 31px
     font-family: mtavBold
     @include desktopPlus1024()
         padding-top: 0
@@ -321,14 +324,16 @@ footer
     border-top: 1px solid #E8E8E8
     border-bottom: 1px solid #E8E8E8
     align-items: center
+    font-size: 12px
+    line-height: 14px
+    font-family: firaMedium
     @include desktopPlus1024()
         display: none
     p
-        margin-right: 10px
-        @include sizePlus(415px)
-            margin-right: 35px
+        margin-right: 35px
 .social-logos
-    width: 141px
+    width: 100%
+    flex: 1
     display: flex
     justify-content: space-between
     align-items: center
@@ -340,9 +345,11 @@ footer
     align-items: center
     text-transform: uppercase
     font-family: mtavBold
-header .respo-languagebar    
+header .respo-languagebar  
+    margin-bottom: 48px  
     @include desktopPlus1024()
         display: none
+        margin-bottom: 0
 
 header nav
     @include desktopPlus1024()

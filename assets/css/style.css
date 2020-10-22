@@ -255,11 +255,12 @@ header .header-logo-desktop {
 }
 
 header.active {
-  width: 90%;
+  width: 95%;
   height: 100vh;
   padding: 0;
   z-index: 10;
   position: fixed;
+  overflow: auto;
   -webkit-animation: burgerSlideStart 1s;
           animation: burgerSlideStart 1s;
 }
@@ -322,7 +323,7 @@ header.removing::after {
     width: 0;
   }
   100% {
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -334,16 +335,16 @@ header.removing::after {
     width: 0;
   }
   100% {
-    width: 90%;
+    width: 95%;
   }
 }
 
 @-webkit-keyframes burgerSlideStartReverse {
   0% {
-    width: 90%;
+    width: 95%;
   }
   1% {
-    width: 90%;
+    width: 95%;
   }
   100% {
     width: 0;
@@ -352,10 +353,10 @@ header.removing::after {
 
 @keyframes burgerSlideStartReverse {
   0% {
-    width: 90%;
+    width: 95%;
   }
   1% {
-    width: 90%;
+    width: 95%;
   }
   100% {
     width: 0;
@@ -454,6 +455,10 @@ header.removing::after {
     height: 100px !important;
     padding: 0 !important;
   }
+}
+
+.active .header-bot {
+  padding: 0;
 }
 
 .header-bot {
@@ -747,7 +752,6 @@ footer .lang-select li {
   margin: 0 auto;
   max-width: 980px;
   height: 100%;
-  padding-top: 31px;
   font-family: mtavBold;
 }
 
@@ -828,6 +832,9 @@ footer .lang-select li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: firaMedium;
 }
 
 @media screen and (min-width: 1025px) {
@@ -837,17 +844,14 @@ footer .lang-select li {
 }
 
 .header-socials p {
-  margin-right: 10px;
-}
-
-@media screen and (min-width: 415px) {
-  .header-socials p {
-    margin-right: 35px;
-  }
+  margin-right: 35px;
 }
 
 .social-logos {
-  width: 141px;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -875,9 +879,14 @@ footer .lang-select li {
   font-family: mtavBold;
 }
 
+header .respo-languagebar {
+  margin-bottom: 48px;
+}
+
 @media screen and (min-width: 1025px) {
   header .respo-languagebar {
     display: none;
+    margin-bottom: 0;
   }
 }
 
@@ -2035,6 +2044,17 @@ footer {
 .footer-nav-li a, .header-nav-li a {
   color: inherit;
   font-size: inherit;
+}
+
+.header-nav-li a {
+  font-size: 12px;
+  line-height: 25.6px;
+}
+
+@media screen and (min-width: 1025px) {
+  .header-nav-li a {
+    font-size: inherit;
+  }
 }
 
 .footer-nav-li a {
@@ -4466,6 +4486,16 @@ article.atech-article > div {
 
 .donations-show-more.active .shrink {
   display: unset;
+}
+
+.donations-page {
+  margin-bottom: 72px;
+}
+
+@media screen and (min-width: 1025px) {
+  .donations-page {
+    margin-bottom: 120px;
+  }
 }
 
 .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {

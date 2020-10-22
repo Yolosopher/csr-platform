@@ -1699,16 +1699,22 @@ h1.home-aboutus-h1 {
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
   margin: 0 auto;
-  width: 300px;
-  width-transform: translateY(60px);
+}
+
+@media screen and (min-width: 768px) {
+  .home-aboutus-inner .aboutus-cover svg, .home-aboutus-inner .aboutus-cover img {
+    width: 300px;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .home-aboutus-inner .aboutus-cover svg, .home-aboutus-inner .aboutus-cover img {
-    -webkit-transform: translateY(155px);
-            transform: translateY(155px);
+    -webkit-transform: translateY(75px);
+            transform: translateY(75px);
     height: 150px;
-    width: 100%;
+    width: 70%;
   }
 }
 
@@ -3510,8 +3516,8 @@ article.atech-article .atech-textbox-p {
 
 @media screen and (min-width: 1024px) {
   article.atech-article .atech-textbox-p {
-    font-size: 22px;
-    line-height: 38px;
+    font-size: 18px;
+    line-height: 32px;
   }
 }
 
@@ -3941,20 +3947,7 @@ article.atech-article > div > div {
   color: #5E7289;
 }
 
-.techjam-for-list {
-  font-family: firaBold;
-  font-size: 12px;
-  line-height: 19.2px;
-}
-
-@media screen and (min-width: 1024px) {
-  .techjam-for-list {
-    font-size: 18px;
-    line-height: 32px;
-  }
-}
-
-.techjam-for-list li {
+.techjam-textbox-important li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3965,12 +3958,12 @@ article.atech-article > div > div {
 }
 
 @media screen and (min-width: 768px) {
-  .techjam-for-list li {
+  .techjam-textbox-important li {
     margin-bottom: 0;
   }
 }
 
-.techjam-for-list li::before {
+.techjam-textbox-important li::before {
   content: '';
   position: relative;
   display: block;
@@ -3979,27 +3972,27 @@ article.atech-article > div > div {
   height: 20px;
 }
 
-.techjam-for-list li:nth-child(6n+1)::before {
+.techjam-textbox-important li:nth-child(6n+1)::before {
   background: #51C05B;
 }
 
-.techjam-for-list li:nth-child(6n+2)::before {
+.techjam-textbox-important li:nth-child(6n+2)::before {
   background: #A174B0;
 }
 
-.techjam-for-list li:nth-child(6n+3)::before {
+.techjam-textbox-important li:nth-child(6n+3)::before {
   background: #5FCCD0;
 }
 
-.techjam-for-list li:nth-child(6n+4)::before {
+.techjam-textbox-important li:nth-child(6n+4)::before {
   background: #4CC465;
 }
 
-.techjam-for-list li:nth-child(6n+5)::before {
+.techjam-textbox-important li:nth-child(6n+5)::before {
   background: #987CB5;
 }
 
-.techjam-for-list li:nth-child(6n+6)::before {
+.techjam-textbox-important li:nth-child(6n+6)::before {
   background: #65CACE;
 }
 

@@ -16,7 +16,6 @@
     flex-direction: column
     justify-content: space-between
 .donations-each-img-div
-
     width: 100%
     flex: 1
     height: 264px
@@ -27,11 +26,27 @@
         margin-bottom: 40px
     @include desktopPlus1024()
         margin-bottom: 0
-        height: 659px
+        height: 559px
         width: unset
-
+    img
+        width: calc(100% - 34px)
+        height: 230px       
+        object-fit: cover
+        object-position: center
+        border-radius: 4px
+        box-shadow: 34px 34px 0 0 #f6f6f6
+        @include desktopPlus1024()
+            width: calc( 100% - 54px )
+            max-width: 480px
+            height: 460px
+            border-radius: 0
+            box-shadow: 54px 99px 0 0 #f6f6f6
+            
 .donations-textNsee-more-btn
     flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     .donations-textNsee-more-btn-p
         overflow: hidden
         margin-bottom: 37px
@@ -41,12 +56,11 @@
         line-height: 19.2px
         transition: max-height -200ms 300ms ease-out
         @include tabletPlus768()
-            margin-bottom: 23px
+            margin-bottom: 0
             font-family: firaMedium
             font-size: 16px
             line-height: 25.6px
         @include desktopPlus1024()
-            margin-bottom: 100px
             max-height: 235px
             font-size: 18px
             line-height: 32px
@@ -55,6 +69,14 @@
             transition: max-height 400ms ease-in
             p
                 display: block !important
+            + a
+                @include tabletPlus768()
+                    margin-top: 48px
+                    transition: margin-top .1s ease-in
+        + a
+            @include tabletPlus768()
+                margin-top: 0
+                transition: margin-top .1s ease-out
         p
             margin-bottom: 40px
             &:last-child

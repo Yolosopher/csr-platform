@@ -3315,7 +3315,7 @@ body.sports {
 @media screen and (min-width: 1025px) {
   .sports-each-img-div {
     margin-bottom: 0;
-    height: 659px;
+    height: 559px;
     width: unset;
   }
 }
@@ -3336,7 +3336,7 @@ body.sports {
   .sports-each-img-div img {
     width: calc( 100% - 54px);
     max-width: 480px;
-    height: 560px;
+    height: 460px;
     border-radius: 0;
     -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
             box-shadow: 54px 99px 0 0 #f6f6f6;
@@ -4317,8 +4317,31 @@ article.atech-article > div {
 @media screen and (min-width: 1025px) {
   .donations-each-img-div {
     margin-bottom: 0;
-    height: 659px;
+    height: 559px;
     width: unset;
+  }
+}
+
+.donations-each-img-div img {
+  width: calc(100% - 34px);
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 4px;
+  -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
+          box-shadow: 34px 34px 0 0 #f6f6f6;
+}
+
+@media screen and (min-width: 1025px) {
+  .donations-each-img-div img {
+    width: calc( 100% - 54px);
+    max-width: 480px;
+    height: 460px;
+    border-radius: 0;
+    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
+            box-shadow: 54px 99px 0 0 #f6f6f6;
   }
 }
 
@@ -4326,6 +4349,16 @@ article.atech-article > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .donations-textNsee-more-btn .donations-textNsee-more-btn-p {
@@ -4341,7 +4374,7 @@ article.atech-article > div {
 
 @media screen and (min-width: 769px) {
   .donations-textNsee-more-btn .donations-textNsee-more-btn-p {
-    margin-bottom: 23px;
+    margin-bottom: 0;
     font-family: firaMedium;
     font-size: 16px;
     line-height: 25.6px;
@@ -4350,7 +4383,6 @@ article.atech-article > div {
 
 @media screen and (min-width: 1025px) {
   .donations-textNsee-more-btn .donations-textNsee-more-btn-p {
-    margin-bottom: 100px;
     max-height: 235px;
     font-size: 18px;
     line-height: 32px;
@@ -4365,6 +4397,22 @@ article.atech-article > div {
 
 .donations-textNsee-more-btn .donations-textNsee-more-btn-p.active p {
   display: block !important;
+}
+
+@media screen and (min-width: 769px) {
+  .donations-textNsee-more-btn .donations-textNsee-more-btn-p.active + a {
+    margin-top: 48px;
+    -webkit-transition: margin-top .1s ease-in;
+    transition: margin-top .1s ease-in;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .donations-textNsee-more-btn .donations-textNsee-more-btn-p + a {
+    margin-top: 0;
+    -webkit-transition: margin-top .1s ease-out;
+    transition: margin-top .1s ease-out;
+  }
 }
 
 .donations-textNsee-more-btn .donations-textNsee-more-btn-p p {

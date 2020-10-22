@@ -32,22 +32,39 @@
 
 .donations-textNsee-more-btn
     flex: 1
-    p
+    .donations-textNsee-more-btn-p
         overflow: hidden
         margin-bottom: 37px
         max-height: 194px
+        font-family: firaBold
+        font-size: 12px
+        line-height: 19.2px
         transition: max-height -200ms 300ms ease-out
         @include tabletPlus768()
             margin-bottom: 23px
+            font-family: firaMedium
+            font-size: 16px
+            line-height: 25.6px
         @include desktopPlus1024()
             margin-bottom: 100px
             max-height: 235px
+            font-size: 18px
+            line-height: 32px
         &.active
             max-height: 9999px
             transition: max-height 400ms ease-in
+            p
+                display: block !important
+        p
+            margin-bottom: 40px
+            &:last-child
+                margin-bottom: 0
+            &:not(:first-child)
+                display: none
+                
             
 .donations-show-more
-    font-family: firaBold
+    font-family: mtavBold
     text-decoration: underline
     color: $green
     font-size: 12px
@@ -55,7 +72,6 @@
     @include tabletPlus768()
         font-size: 18px
     @include desktopPlus1024()   
-        font-family: firaRegular 
         font-size: 22px
         line-height: 35.2px
     .shrink

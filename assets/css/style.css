@@ -444,13 +444,17 @@ header.removing::after {
   }
 }
 
-.header-top,
+@media screen and (min-width: 1025px) {
+  .header-top {
+    height: 100px !important;
+  }
+}
+
 .header-bot {
   padding: 0 20px;
 }
 
 @media screen and (min-width: 1025px) {
-  .header-top,
   .header-bot {
     height: 100px !important;
     padding: 0 !important;
@@ -1060,6 +1064,30 @@ header .respo-languagebar {
   header .header-nav-li:hover:nth-child(6)::after, header .header-nav-li:active:nth-child(6)::after {
     border-color: #C8495E;
   }
+}
+
+header.active .header-nav-li:first-child.active a {
+  background-color: #C8495E;
+}
+
+header.active .header-nav-li:nth-child(2).active a {
+  background-color: #2C7A60;
+}
+
+header.active .header-nav-li:nth-child(3).active a {
+  background-color: #5E7289;
+}
+
+header.active .header-nav-li:nth-child(4).active a {
+  background-color: #9C9E9F;
+}
+
+header.active .header-nav-li:nth-child(5).active a {
+  background-color: #203668;
+}
+
+header.active .header-nav-li:nth-child(6).active a {
+  background-color: #C8495E;
 }
 
 main {

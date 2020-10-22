@@ -110,7 +110,9 @@ header
             flex: 1
         @include flexing(space-between, center)
 
-.header-top,
+.header-top
+    @include desktopPlus1024()
+        height: 100px !important
 .header-bot
     padding: 0 20px
     @include desktopPlus1024()
@@ -371,7 +373,10 @@ header nav
     .fixed .header-nav-li
         &:last-child
             display: unset
+header.active
+
 header .header-nav-li
+    
     @include desktopPlus1024()   
         
         @include complexBoxLine()
@@ -421,4 +426,24 @@ header .header-nav-li
                 &::after
                     border-color: $pink
             
-         
+header.active
+    .header-nav-li
+        &:first-child
+            &.active a
+                background-color: $pink
+        &:nth-child(2)
+            &.active a 
+                background-color: $green
+        &:nth-child(3) 
+            &.active a
+                background-color: $lightblue
+        &:nth-child(4) 
+            &.active a
+                background-color: $lightgrey
+        &:nth-child(5) 
+            &.active a
+                background-color: $blue
+        &:nth-child(6) 
+            &.active a
+                background-color: $pink
+            

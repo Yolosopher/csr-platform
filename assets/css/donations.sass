@@ -70,13 +70,14 @@
             p
                 display: block !important
             + a
+                margin-top: 23px
+                transition: margin-top .1s ease-in
                 @include tabletPlus768()
                     margin-top: 48px
                     transition: margin-top .1s ease-in
         + a
-            @include tabletPlus768()
-                margin-top: 0
-                transition: margin-top .1s ease-out
+            margin-top: 0
+            transition: margin-top .1s ease-out
         p
             margin-bottom: 40px
             &:last-child

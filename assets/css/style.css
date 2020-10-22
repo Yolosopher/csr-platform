@@ -4399,6 +4399,12 @@ article.atech-article > div {
   display: block !important;
 }
 
+.donations-textNsee-more-btn .donations-textNsee-more-btn-p.active + a {
+  margin-top: 23px;
+  -webkit-transition: margin-top .1s ease-in;
+  transition: margin-top .1s ease-in;
+}
+
 @media screen and (min-width: 769px) {
   .donations-textNsee-more-btn .donations-textNsee-more-btn-p.active + a {
     margin-top: 48px;
@@ -4407,12 +4413,10 @@ article.atech-article > div {
   }
 }
 
-@media screen and (min-width: 769px) {
-  .donations-textNsee-more-btn .donations-textNsee-more-btn-p + a {
-    margin-top: 0;
-    -webkit-transition: margin-top .1s ease-out;
-    transition: margin-top .1s ease-out;
-  }
+.donations-textNsee-more-btn .donations-textNsee-more-btn-p + a {
+  margin-top: 0;
+  -webkit-transition: margin-top .1s ease-out;
+  transition: margin-top .1s ease-out;
 }
 
 .donations-textNsee-more-btn .donations-textNsee-more-btn-p p {

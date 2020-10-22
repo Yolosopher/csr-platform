@@ -19,12 +19,14 @@ function toggleBurger() {
 }
 
 function headerBotFixer() {
-	if (window.pageYOffset > 100) {
-		headerBot.classList.add("fixed");
-		document.querySelector('body').style.paddingTop = "100px";
-	} else {
-		headerBot.classList.remove("fixed");
-		document.querySelector('body').style.paddingTop = "";
+	if (window.innerWidth > 1024) {
+		if (window.pageYOffset > 100 ) {
+			headerBot.classList.add("fixed");
+			document.querySelector('body').style.paddingTop = "100px";
+		} else {
+			headerBot.classList.remove("fixed");
+			document.querySelector('body').style.paddingTop = "";
+		}
 	}
 }
 

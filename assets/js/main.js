@@ -18,6 +18,24 @@ function toggleBurger() {
 	}
 }
 
+function respoGameButtonAddClass() {
+	if ($('.arena-left-textbox > a')[0]) {
+		$('.arena-left-textbox > a').addClass('arena-try-it');
+		$('.arena-left-textbox > a').attr('target', '_blank');
+
+		if ($('#lang-select .active a').hasAttribute("eng")) {
+			$('.arena-left-textbox > a').text('try it!');
+
+		} else if ($('#lang-select .active a').hasAttribute("rus")) {
+			$('.arena-left-textbox > a').text('Попробуй!!');
+
+		} else {
+			$('.arena-left-textbox > a').html('სცადე!');
+		}
+		
+	}
+}
+
 function headerBotFixer() {
 	if (window.innerWidth > 1024) {
 		if (window.pageYOffset > 60 ) {
@@ -97,7 +115,8 @@ window.addEventListener("load", () => {
 	personalStoriesSetter();
 	if (document.querySelector(".atech-article")) {
 		$(".swiper-slide:first-child").attr("this-must-be-shown", true);
-	}
+	};
+	
 	// let url = document.URL;
 	// if (url.includes("responsible-games")) {
 	// 	$("header .header-nav-li:first-child").addClass("active");
@@ -120,6 +139,7 @@ window.addEventListener("load", () => {
 		);
 		$(".menuAndSoc-fb").attr("target", "_blank");
 	};
+	respoGameButtonAddClass();
 });
 window.onscroll = () => {
 	headerBotFixer();

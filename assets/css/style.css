@@ -1202,7 +1202,7 @@ main.arena-hero-content.respoGame.hero-content {
 
 @media screen and (min-width: 1420px) {
   .main-slider-hc-nav-inner {
-    max-width: 1416px;
+    max-width: 1336px;
   }
 }
 
@@ -1499,7 +1499,7 @@ main.arena-hero-content.respoGame.hero-content {
 
 @media screen and (min-width: 1025px) {
   .home-personal-stories {
-    height: 810px;
+    height: 550px;
     padding-bottom: 0;
   }
 }
@@ -1666,7 +1666,6 @@ h1.home-aboutus-h1 {
   background-color: white;
   margin-top: 30px;
   padding-bottom: 72px;
-  margin-bottom: 98px;
 }
 
 @media screen and (min-width: 769px) {
@@ -2591,9 +2590,6 @@ main h2 {
   .rg-news-div .rg-news-text-content {
     padding: 28px 49px 28px 24px;
     width: unset;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 
@@ -2812,6 +2808,7 @@ body.arena {
           flex-direction: column;
   width: 100%;
   height: auto;
+  gap: 48px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -2821,6 +2818,7 @@ body.arena {
         -ms-flex-direction: row;
             flex-direction: row;
     max-width: 1100px;
+    gap: 98px 35px;
   }
 }
 
@@ -3051,8 +3049,8 @@ body.arena {
 
 @media screen and (min-width: 1025px) {
   .arena-left-textbox .arena-text-div {
-    font-size: 22px;
-    line-height: 38px;
+    font-size: 18px;
+    line-height: 32px;
     margin-bottom: 11px;
   }
 }
@@ -3061,26 +3059,38 @@ body.arena {
   font-size: 12px;
   line-height: 19.2px;
   font-family: firabold;
+}
+
+.arena-left-textbox .arena-text-div-p:not(.only-arena-div-p) p:last-child:not(:first-child) {
   margin-bottom: 17.8px;
 }
 
 @media screen and (min-width: 769px) {
-  .arena-left-textbox .arena-text-div-p {
+  .arena-left-textbox .arena-text-div-p:not(.only-arena-div-p) p:last-child:not(:first-child) {
     margin-bottom: 36px;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .arena-left-textbox .arena-text-div-p {
+  .arena-left-textbox .arena-text-div-p:not(.only-arena-div-p) p:last-child:not(:first-child) {
     margin-bottom: 52px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .arena-left-textbox .arena-text-div-p {
     font-family: firaMedium;
     font-size: 18px;
-    line-height: 38px;
+    line-height: 32px;
   }
 }
 
 .arena-left-textbox .arena-text-div-p:last-child {
   margin-bottom: 0 !important;
+}
+
+.arena-left-textbox .arena-text-div-p a {
+  color: #C8495E;
 }
 
 .arena-left-textbox .arena-text-mainMessage {
@@ -3101,6 +3111,16 @@ body.arena {
   .arena-left-textbox .arena-text-mainMessage {
     font-size: 26px;
     margin-bottom: 62px;
+  }
+}
+
+.only-arena-div-p p:first-child {
+  margin-bottom: 18px;
+}
+
+@media screen and (min-width: 1025px) {
+  .only-arena-div-p p:first-child {
+    margin-bottom: 72px;
   }
 }
 
@@ -3195,11 +3215,6 @@ body.arena {
     -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
             box-shadow: 54px 99px 0 0 #f6f6f6;
   }
-}
-
-.martetamashi-see-here-link {
-  color: #C8495E;
-  display: inline;
 }
 
 body.sports {
@@ -3420,6 +3435,7 @@ body.sports {
 }
 
 .sports-see-more {
+  cursor: pointer;
   width: calc(100% - 40px);
   height: 50px;
   border: 1px solid #2C7A60;

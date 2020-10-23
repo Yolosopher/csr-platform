@@ -14,9 +14,11 @@ body.arena
     flex-direction: column
     width: 100%
     height: auto
+    gap: 48px
     @include desktopPlus1024()
         flex-direction: row
         max-width: 1100px
+        gap: 98px 35px
 .menuAndSoc
     display: flex
     align-items: center
@@ -150,23 +152,28 @@ body.arena
             line-height: 25px
             margin-bottom: 4px
         @include desktopPlus1024()
-            font-size: 22px
-            line-height: 38px
+            font-size: 18px
+            line-height: 32px
             margin-bottom: 11px
     .arena-text-div-p
         font-size: 12px
         line-height: 19.2px
         font-family: firabold
-        margin-bottom: 17.8px
-        @include tabletPlus768()
-            margin-bottom: 36px
+        &:not(.only-arena-div-p)
+            p:last-child:not(:first-child)
+                margin-bottom: 17.8px
+                @include tabletPlus768()
+                    margin-bottom: 36px
+                @include desktopPlus1024()
+                    margin-bottom: 52px
         @include desktopPlus1024()
-            margin-bottom: 52px
             font-family: firaMedium
             font-size: 18px
-            line-height: 38px
+            line-height: 32px
         &:last-child
             margin-bottom: 0 !important
+        a
+            color: $pink
     .arena-text-mainMessage
         font-family: mtavbold
         font-size: 16px
@@ -178,6 +185,12 @@ body.arena
         @include desktopPlus1024()
             font-size: 26px
             margin-bottom: 62px
+.only-arena-div-p
+    p:first-child
+        margin-bottom: 18px
+        @include desktopPlus1024()
+            margin-bottom: 72px
+
 .arena-try-it
     @include centering()
     width: 100%
@@ -201,7 +214,3 @@ body.arena
 
 .arena-right-image
     @include imageBG()
-
-.martetamashi-see-here-link
-    color: $pink
-    display: inline

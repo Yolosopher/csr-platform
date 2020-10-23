@@ -23,6 +23,9 @@ function respoGameButtonAddClass() {
 		$('.arena-left-textbox > a').addClass('arena-try-it');
 		$('.arena-left-textbox > a').attr('target', '_blank');		
 	}
+	if ($('.arena-text-div-p a')[0]) {
+		$('.arena-text-div-p a').addClass('martetamashi-see-here-link');
+	}
 }
 
 function headerBotFixer() {

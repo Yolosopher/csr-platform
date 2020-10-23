@@ -26,7 +26,7 @@ header
         height: 1px 
         background: $green
         position: absolute
-        top: 100px
+        top: 60px
         right: 0
         width: 100vw
         height: 1px
@@ -34,8 +34,6 @@ header
             display: block
     .header-logo-desktop
         width: 175px
-        @include desktopPlus1024()
-            width: 250px
     &.active
         width: 95%
         height: 100vh
@@ -104,19 +102,16 @@ header
     display: flex
     align-items: center
     justify-content: space-between  
-    height: 70px
+    height: 60px
     .header-top-left
         @include desktopPlus1024()
             flex: 1
         @include flexing(space-between, center)
 
-.header-top
-    @include desktopPlus1024()
-        height: 100px !important
 .header-bot
     padding: 0 20px
     @include desktopPlus1024()
-        height: 100px !important
+        height: 80px !important
         padding: 0 !important
 .active
     .header-bot
@@ -143,7 +138,8 @@ header
             align-items: center
             padding: 0 20px !important
             border-bottom: 1px solid $green
-        @include sizePlus(1350px)        
+        @include sizePlus(1350px)   
+            justify-content: center     
             .small-logo
                 display: unset
             .lang-when-scroll
@@ -168,12 +164,12 @@ header
         margin-top: 30px
         height: 375px
     
-
 .fixed
     .nav
         @include desktopPlus1024()
-            margin: auto 
-
+            margin: auto !important
+        @include sizePlus(1410px)
+            margin: 0 !important
 // burger
 .burger
     cursor: pointer
@@ -335,10 +331,20 @@ footer
         margin-right: 35px
 .social-logos
     width: 100%
+    max-width: 141px
     flex: 1
     display: flex
     justify-content: space-between
     align-items: center
+.header-fb
+    width: 13.45px
+    height: 24.45px
+.header-tw
+    width: 26.31px
+    height: 21.46px
+.header-ig
+    width: 26px
+    height: 26px
 .respo-languagebar
     margin-top: 46px
     display: flex

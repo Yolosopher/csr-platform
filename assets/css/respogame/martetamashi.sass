@@ -127,6 +127,7 @@ body.arena
         font-family: firaBold
         font-size: 16px
         line-height: 41px
+        font-weight: normal
         text-transform: uppercase
         margin-bottom: 21px
         @include tabletPlus768()
@@ -152,16 +153,22 @@ body.arena
             font-size: 22px
             line-height: 38px
             margin-bottom: 11px
-        p
-            margin-bottom: 17.8px
-            @include tabletPlus768()
-                margin-bottom: 36px
-            @include desktopPlus1024()
-                margin-bottom: 52px
-            &:last-child
-                margin-bottom: 0 !important
+    .arena-text-div-p
+        font-size: 12px
+        line-height: 19.2px
+        font-family: firabold
+        margin-bottom: 17.8px
+        @include tabletPlus768()
+            margin-bottom: 36px
+        @include desktopPlus1024()
+            margin-bottom: 52px
+            font-family: firaMedium
+            font-size: 18px
+            line-height: 38px
+        &:last-child
+            margin-bottom: 0 !important
     .arena-text-mainMessage
-        font-family: firaBold
+        font-family: mtavbold
         font-size: 16px
         line-height: 41.6px
         color: $pink
@@ -177,7 +184,7 @@ body.arena
     height: 50px
     background: $green
     border-radius: 12px
-    font-family: firaMedium
+    font-family: mtavbold
     font-size: 14px
     line-height: 25px
     color: white
@@ -193,29 +200,8 @@ body.arena
         background: #2E9674
 
 .arena-right-image
-    width: 100%
-    flex: 1
-    height: 264px
-    margin-bottom: 60px
-    @include mobilePlus360()
-        margin-bottom: 48px
-    @include tabletPlus768()
-        margin-bottom: 40px
-    @include desktopPlus1024()
-        margin-bottom: 0
-        height: 659px
-        width: unset
-    img
-        width: calc(100% - 34px)
-        height: 230px       
-        object-fit: cover
-        object-position: center
-        box-shadow: 34px 34px 0 0 #f6f6f6
-        @include desktopPlus1024()
-            width: calc( 100% - 54px )
-            max-width: 480px
-            height: 560px
-            box-shadow: 54px 99px 0 0 #f6f6f6
+    @include imageBG()
 
 .martetamashi-see-here-link
     color: $pink
+    display: inline

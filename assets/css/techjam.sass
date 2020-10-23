@@ -1,12 +1,50 @@
 .atech-each-bottom.techjam-each-bottom
     .atech-article-bottom-textbox
         justify-content: center
-
+        @include desktopPlus1024()
+            height: fit-content !important
+            width: 50%
+            transform: translateY(-80px)
+            flex: unset
+.techjam-article-top-list
+    width: 100%
+    flex: 1
+    height: 264px
+    margin-bottom: 60px
+    @include mobilePlus360()
+        margin-bottom: 48px
+    @include tabletPlus768()
+        margin-bottom: 40px
+    @include desktopPlus1024()
+        margin-bottom: 0
+        height: 559px
+        width: unset
+    .techjam-ul
+        width: 100%
+        display: flex
+        border: 1px solid $lightgrey
+        border-radius: 4px
+        flex-direction: column
+        justify-content: space-between
+        padding: 19px 17px
+        width: calc(100% - 34px)
+        height: 230px       
+        border-radius: 4px
+        box-shadow: 34px 34px 0 0 #f6f6f6
+        @include desktopPlus1024()
+            width: calc( 100% - 54px )
+            max-width: 480px
+            padding: 50px 41px
+            height: 460px
+            box-shadow: 54px 99px 0 0 #f6f6f6
+            
 // techjam list
 .techjam-ul
     height: 260px
     width: 100%
     display: flex
+    border: 1px solid $lightgrey
+    border-radius: 4px
     flex-direction: column
     justify-content: space-between
     padding: 19px 17px
@@ -63,13 +101,14 @@
     &::before
         background: #65CACE
 
-.techjam-textbox-important
+.techjam-for-list
     color: #5E7289
 
     li
         display: flex
         align-items: center
         margin-bottom: 2px
+        list-style: none
         @include tabletPlus768()
             margin-bottom: 0
         &::before

@@ -232,7 +232,7 @@ header::after {
   height: 1px;
   background: #2C7A60;
   position: absolute;
-  top: 100px;
+  top: 60px;
   right: 0;
   width: 100vw;
   height: 1px;
@@ -246,12 +246,6 @@ header::after {
 
 header .header-logo-desktop {
   width: 175px;
-}
-
-@media screen and (min-width: 1025px) {
-  header .header-logo-desktop {
-    width: 250px;
-  }
 }
 
 header.active {
@@ -421,7 +415,7 @@ header.removing::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 70px;
+  height: 60px;
 }
 
 .header-top .header-top-left {
@@ -444,19 +438,13 @@ header.removing::after {
   }
 }
 
-@media screen and (min-width: 1025px) {
-  .header-top {
-    height: 100px !important;
-  }
-}
-
 .header-bot {
   padding: 0 20px;
 }
 
 @media screen and (min-width: 1025px) {
   .header-bot {
-    height: 100px !important;
+    height: 80px !important;
     padding: 0 !important;
   }
 }
@@ -506,6 +494,11 @@ header.removing::after {
 }
 
 @media screen and (min-width: 1350px) {
+  .header-bot.fixed {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .header-bot.fixed .small-logo {
     display: unset;
   }
@@ -550,7 +543,13 @@ header.removing::after {
 
 @media screen and (min-width: 1025px) {
   .fixed .nav {
-    margin: auto;
+    margin: auto !important;
+  }
+}
+
+@media screen and (min-width: 1410px) {
+  .fixed .nav {
+    margin: 0 !important;
   }
 }
 
@@ -853,6 +852,7 @@ footer .lang-select li {
 
 .social-logos {
   width: 100%;
+  max-width: 141px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -865,6 +865,21 @@ footer .lang-select li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header-fb {
+  width: 13.45px;
+  height: 24.45px;
+}
+
+.header-tw {
+  width: 26.31px;
+  height: 21.46px;
+}
+
+.header-ig {
+  width: 26px;
+  height: 26px;
 }
 
 .respo-languagebar {
@@ -1458,6 +1473,8 @@ main.arena-hero-content.respoGame.hero-content {
   .latest-news-li .latest-news-text-content h2 {
     font-size: 18px;
     line-height: 28px;
+    overflow: hidden;
+    max-height: 78px;
   }
 }
 
@@ -1465,6 +1482,7 @@ main.arena-hero-content.respoGame.hero-content {
   .latest-news-li .latest-news-text-content h2 {
     font-size: 24px;
     line-height: 38.4px;
+    max-height: 114px;
   }
 }
 
@@ -2993,6 +3011,7 @@ body.arena {
   font-family: firaBold;
   font-size: 16px;
   line-height: 41px;
+  font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 21px;
 }
@@ -3038,28 +3057,34 @@ body.arena {
   }
 }
 
-.arena-left-textbox .arena-text-div p {
+.arena-left-textbox .arena-text-div-p {
+  font-size: 12px;
+  line-height: 19.2px;
+  font-family: firabold;
   margin-bottom: 17.8px;
 }
 
 @media screen and (min-width: 769px) {
-  .arena-left-textbox .arena-text-div p {
+  .arena-left-textbox .arena-text-div-p {
     margin-bottom: 36px;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .arena-left-textbox .arena-text-div p {
+  .arena-left-textbox .arena-text-div-p {
     margin-bottom: 52px;
+    font-family: firaMedium;
+    font-size: 18px;
+    line-height: 38px;
   }
 }
 
-.arena-left-textbox .arena-text-div p:last-child {
+.arena-left-textbox .arena-text-div-p:last-child {
   margin-bottom: 0 !important;
 }
 
 .arena-left-textbox .arena-text-mainMessage {
-  font-family: firaBold;
+  font-family: mtavbold;
   font-size: 16px;
   line-height: 41.6px;
   color: #C8495E;
@@ -3093,7 +3118,7 @@ body.arena {
   height: 50px;
   background: #2C7A60;
   border-radius: 12px;
-  font-family: firaMedium;
+  font-family: mtavbold;
   font-size: 14px;
   line-height: 25px;
   color: white;
@@ -3144,7 +3169,7 @@ body.arena {
 @media screen and (min-width: 1025px) {
   .arena-right-image {
     margin-bottom: 0;
-    height: 659px;
+    height: 559px;
     width: unset;
   }
 }
@@ -3156,6 +3181,7 @@ body.arena {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  border-radius: 4px;
   -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
           box-shadow: 34px 34px 0 0 #f6f6f6;
 }
@@ -3164,7 +3190,8 @@ body.arena {
   .arena-right-image img {
     width: calc( 100% - 54px);
     max-width: 480px;
-    height: 560px;
+    height: 460px;
+    border-radius: 0;
     -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
             box-shadow: 54px 99px 0 0 #f6f6f6;
   }
@@ -3172,6 +3199,7 @@ body.arena {
 
 .martetamashi-see-here-link {
   color: #C8495E;
+  display: inline;
 }
 
 body.sports {
@@ -3279,8 +3307,8 @@ body.sports {
 @media screen and (min-width: 769px) {
   .only-sports article.sports-each {
     border-top: #E3E3E3;
-    -webkit-box-shadow: 0px 0px 20px #00000029;
-            box-shadow: 0px 0px 20px #00000029;
+    -webkit-box-shadow: 0px 0px 20px #0000000A;
+            box-shadow: 0px 0px 20px #0000000A;
   }
 }
 
@@ -3397,6 +3425,8 @@ body.sports {
   border: 1px solid #2C7A60;
   border-radius: 8px;
   margin: 48px 20px;
+  font-size: 14px;
+  line-height: 25.6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3422,6 +3452,8 @@ body.sports {
     margin: 72px auto 118px;
     width: 300px;
     height: 60px;
+    font-family: mtavbold;
+    font-size: 16px;
     border-radius: 12px;
   }
 }
@@ -3489,7 +3521,8 @@ body.sports {
 @media screen and (min-width: 1025px) {
   .atech-article-img-div {
     margin-bottom: 0;
-    height: 659px;
+    height: 559px;
+    width: unset;
   }
 }
 
@@ -3500,6 +3533,7 @@ body.sports {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  border-radius: 4px;
   -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
           box-shadow: 34px 34px 0 0 #f6f6f6;
 }
@@ -3509,6 +3543,7 @@ body.sports {
     width: calc( 100% - 54px);
     max-width: 480px;
     height: 460px;
+    border-radius: 0;
     -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
             box-shadow: 54px 99px 0 0 #f6f6f6;
   }
@@ -3532,13 +3567,11 @@ article.atech-article h2 {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: normal;
-  line-height: 41.6px;
   margin-bottom: 21px;
 }
 
 @media screen and (min-width: 769px) {
   article.atech-article h2 {
-    font-family: firaMedium;
     font-size: 20px;
     line-height: 17.6px;
     margin-bottom: 32px;
@@ -3548,8 +3581,8 @@ article.atech-article h2 {
 @media screen and (min-width: 1025px) {
   article.atech-article h2 {
     margin-bottom: 56px;
-    font-size: 36px;
-    line-height: 57px;
+    font-size: 32px;
+    line-height: 38.4px;
   }
 }
 
@@ -3627,12 +3660,15 @@ article.atech-article > div {
     -webkit-box-ordinal-group: unset;
         -ms-flex-order: unset;
             order: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .atech-textbox-important {
-  color: #C8495E;
-  font-family: firaBold;
+  color: #5E7289;
+  font-family: mtavBold;
   font-size: 16px;
   line-height: 25.6px;
   margin-top: 20px;
@@ -3640,11 +3676,9 @@ article.atech-article > div {
 
 @media screen and (min-width: 1025px) {
   .atech-textbox-important {
-    margin-top: 48px;
-    color: #5E7289;
-    font-family: firaMedium;
-    font-size: 30px;
-    line-height: 48px;
+    margin-top: 24px;
+    font-size: 26px;
+    line-height: 38.4px;
   }
 }
 
@@ -3706,9 +3740,9 @@ article.atech-article > div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .for-zoom.active .tech-slider-main-image {
@@ -3717,18 +3751,26 @@ article.atech-article > div {
   display: flex;
   position: relative;
   padding: 0;
-  max-width: 1060px;
 }
 
-.for-zoom.active .tech-slider-outter {
-  height: 55vh;
-  margin-bottom: 0;
+@media screen and (min-width: 769px) {
+  .for-zoom.active .tech-slider-main-image {
+    max-width: 600px;
+    max-height: 336px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
-  .for-zoom.active .tech-slider-outter {
-    height: 100%;
+  .for-zoom.active .tech-slider-main-image {
+    max-width: 1104px;
+    max-height: 688.95px;
   }
+}
+
+.for-zoom.active .tech-slider-outter {
+  padding: 10px;
+  height: 100%;
+  margin-bottom: 0;
 }
 
 .tech-slider-outter {
@@ -3742,15 +3784,14 @@ article.atech-article > div {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 1025px) {
   .tech-slider-outter {
     margin-bottom: 123px;
-    display: initial;
   }
 }
 
@@ -3776,7 +3817,12 @@ article.atech-article > div {
   position: relative;
   padding: 0;
   height: 63px;
-  max-width: 1060px;
+}
+
+@media screen and (min-width: 769px) {
+  .tech-section-outter {
+    height: 78px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -3785,6 +3831,7 @@ article.atech-article > div {
         -ms-flex: unset;
             flex: unset;
     height: 171px;
+    width: 1104px;
   }
 }
 
@@ -3800,12 +3847,20 @@ article.atech-article > div {
   display: -ms-flexbox;
   display: flex;
   width: 114px;
-  height: 100%;
+  height: 63;
+}
+
+@media screen and (min-width: 769px) {
+  .tech-slider-section .swiper-slide {
+    width: 141px;
+    height: 78px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
   .tech-slider-section .swiper-slide {
     width: 306px;
+    height: 100%;
   }
 }
 
@@ -3875,12 +3930,20 @@ article.atech-article > div {
   z-index: 10;
   top: 0;
   right: 0;
-  padding-bottom: 43px;
 }
 
 @media screen and (min-width: 1025px) {
   .for-zoom.active {
-    padding: 67px 0 93px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -3894,12 +3957,90 @@ article.atech-article > div {
           justify-content: center;
 }
 
+@media screen and (min-width: 1025px) {
+  .atech-each-bottom.techjam-each-bottom .atech-article-bottom-textbox {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    width: 50%;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+}
+
+.techjam-article-top-list {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 264px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 361px) {
+  .techjam-article-top-list {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .techjam-article-top-list {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .techjam-article-top-list {
+    margin-bottom: 0;
+    height: 559px;
+    width: unset;
+  }
+}
+
+.techjam-article-top-list .techjam-ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #9C9E9F;
+  border-radius: 4px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 19px 17px;
+  width: calc(100% - 34px);
+  height: 230px;
+  border-radius: 4px;
+  -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
+          box-shadow: 34px 34px 0 0 #f6f6f6;
+}
+
+@media screen and (min-width: 1025px) {
+  .techjam-article-top-list .techjam-ul {
+    width: calc( 100% - 54px);
+    max-width: 480px;
+    padding: 50px 41px;
+    height: 460px;
+    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
+            box-shadow: 54px 99px 0 0 #f6f6f6;
+  }
+}
+
 .techjam-ul {
   height: 260px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid #9C9E9F;
+  border-radius: 4px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4003,11 +4144,11 @@ article.atech-article > div {
   background: #65CACE;
 }
 
-.techjam-textbox-important {
+.techjam-for-list {
   color: #5E7289;
 }
 
-.techjam-textbox-important li {
+.techjam-for-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4015,15 +4156,16 @@ article.atech-article > div {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 2px;
+  list-style: none;
 }
 
 @media screen and (min-width: 769px) {
-  .techjam-textbox-important li {
+  .techjam-for-list li {
     margin-bottom: 0;
   }
 }
 
-.techjam-textbox-important li::before {
+.techjam-for-list li::before {
   content: '';
   position: relative;
   display: block;
@@ -4032,27 +4174,27 @@ article.atech-article > div {
   height: 20px;
 }
 
-.techjam-textbox-important li:nth-child(6n+1)::before {
+.techjam-for-list li:nth-child(6n+1)::before {
   background: #51C05B;
 }
 
-.techjam-textbox-important li:nth-child(6n+2)::before {
+.techjam-for-list li:nth-child(6n+2)::before {
   background: #A174B0;
 }
 
-.techjam-textbox-important li:nth-child(6n+3)::before {
+.techjam-for-list li:nth-child(6n+3)::before {
   background: #5FCCD0;
 }
 
-.techjam-textbox-important li:nth-child(6n+4)::before {
+.techjam-for-list li:nth-child(6n+4)::before {
   background: #4CC465;
 }
 
-.techjam-textbox-important li:nth-child(6n+5)::before {
+.techjam-for-list li:nth-child(6n+5)::before {
   background: #987CB5;
 }
 
-.techjam-textbox-important li:nth-child(6n+6)::before {
+.techjam-for-list li:nth-child(6n+6)::before {
   background: #65CACE;
 }
 
@@ -4172,14 +4314,21 @@ article.atech-article > div {
 
 @media screen and (min-width: 769px) {
   .year-accountings-download a {
-    width: 306px;
+    width: 230px;
+    height: 60px;
+    font-size: 14px;
   }
 }
 
 .year-accountings-download a span {
   font-family: firaBold;
-  font-size: 24px;
-  line-height: 38.4px;
+  font-size: inherit;
+  line-height: unset;
+}
+
+.year-accountings-download a span svg {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 .year-accountings-download a:not([href="javascript:void(0)"]) {
@@ -4617,7 +4766,7 @@ article.atech-article > div {
   }
 }
 
-.ps-article-text-p li, .sports-each-text-div-p li {
+.ps-article-text-p li, .sports-each-text-div-p li, .arena-text-div-p li, .sports-each-text-div-p li, .donations-textNsee-more-btn-p li {
   list-style: initial;
   list-style-position: inside;
   font-size: inherit;

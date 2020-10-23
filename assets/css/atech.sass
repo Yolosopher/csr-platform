@@ -22,28 +22,7 @@
 // section
 
 .atech-article-img-div
-    width: 100%
-    flex: 1
-    height: 264px
-    margin-bottom: 60px
-    @include mobilePlus360()
-        margin-bottom: 48px
-    @include tabletPlus768()
-        margin-bottom: 40px
-    @include desktopPlus1024()
-        margin-bottom: 0
-        height: 659px
-    img
-        width: calc(100% - 34px)
-        height: 230px       
-        object-fit: cover
-        object-position: center
-        box-shadow: 34px 34px 0 0 #f6f6f6
-        @include desktopPlus1024()
-            width: calc( 100% - 54px )
-            max-width: 480px
-            height: 460px
-            box-shadow: 54px 99px 0 0 #f6f6f6
+    @include imageBG()
 .atech-article-img-div.big-data
     img
         object-fit: scale-down
@@ -56,17 +35,15 @@ article.atech-article
         text-transform: uppercase
         font-size: 16px
         font-weight: normal
-        line-height: 41.6px
         margin-bottom: 21px
         @include tabletPlus768()
-            font-family: firaMedium
             font-size: 20px
             line-height: 17.6px
             margin-bottom: 32px
         @include desktopPlus1024()
             margin-bottom: 56px            
-            font-size: 36px
-            line-height: 57px
+            font-size: 32px
+            line-height: 38.4px
     .atech-textbox-p
         font-family: firaBold
         font-size: 12px
@@ -99,21 +76,20 @@ article.atech-article
     order: -1
     @include desktopPlus1024()
         order: unset
+        justify-content: center
 
 
 
 .atech-textbox-important
-    color: $pink
-    font-family: firaBold
+    color: $lightblue
+    font-family: mtavBold
     font-size: 16px
     line-height: 25.6px
     margin-top: 20px  
     @include desktopPlus1024()
-        margin-top: 48px
-        color: $lightblue
-        font-family: firaMedium
-        font-size: 30px
-        line-height: 48px
+        margin-top: 24px
+        font-size: 26px
+        line-height: 38.4px
 
 
 
@@ -145,31 +121,32 @@ article.atech-article
 .for-zoom.active
     display: flex
     flex-direction: column
-    justify-content: flex-end
-    @include desktopPlus1024()
-
+    justify-content: space-between
     .tech-slider-main-image
         display: flex
         position: relative
         padding: 0
-        max-width: 1060px
-
+        @include tabletPlus768()
+            max-width: 600px
+            max-height: 336px
+        @include desktopPlus1024()
+            max-width: 1104px
+            max-height: 688.95px
 .for-zoom.active
     .tech-slider-outter
-        height: 55vh
+        padding: 10px
+        height: 100%
         margin-bottom: 0
-        @include desktopPlus1024()
-            height: 100%
+            
 .tech-slider-outter
     margin-bottom: 62px    
     padding: 0 20px
     display: flex
     flex-direction: column
     height: 100%
-    justify-content: flex-end
+    justify-content: center
     @include desktopPlus1024()
         margin-bottom: 123px
-        display: initial
     &.active
         position: fixed
         top: 0
@@ -187,19 +164,25 @@ article.atech-article
     position: relative
     padding: 0
     height: 63px
-    max-width: 1060px
+    @include tabletPlus768()
+        height: 78px
     @include desktopPlus1024()
         flex: unset
         height: 171px
+        width: 1104px
 .tech-slider-section
     display: flex
     height: 100%
     .swiper-slide
         display: flex
         width: 114px
+        height: 63
+        @include tabletPlus768()
+            width: 141px
+            height: 78px
         @include desktopPlus1024()        
             width: 306px
-        height: 100%
+            height: 100%
         img
             width: 100%
             height: 100%
@@ -240,8 +223,8 @@ article.atech-article
         z-index: 10
         top: 0
         right: 0
-        padding-bottom: 43px
         @include desktopPlus1024()
-            padding: 67px 0 93px
+            margin: auto
+            @include centering()
         .tech-slider-main-image
             margin-bottom: 28px

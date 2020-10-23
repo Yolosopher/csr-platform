@@ -36,7 +36,7 @@ body.sports
             flex-direction: row-reverse
     @include tabletPlus768()
         border-top: $e3
-        box-shadow: 0px 0px 20px #00000029
+        box-shadow: 0px 0px 20px #0000000A
         
 
 .sports-each-text-div
@@ -68,34 +68,15 @@ body.sports
         @include desktopPlus1024()
             font-size: 22px
             line-height: 38px
+
 .sports-each-img-div
-    width: 100%
-    flex: 1
-    height: 264px
-    margin-bottom: 60px
-    @include mobilePlus360()
-        margin-bottom: 48px
-    @include tabletPlus768()
-        margin-bottom: 40px
-    @include desktopPlus1024()
-        margin-bottom: 0
-        height: 559px
-        width: unset
-    img
-        width: calc(100% - 34px)
-        height: 230px       
-        object-fit: cover
-        object-position: center
-        border-radius: 4px
-        box-shadow: 34px 34px 0 0 #f6f6f6
-        @include desktopPlus1024()
-            width: calc( 100% - 54px )
-            max-width: 480px
-            height: 460px
-            border-radius: 0
-            box-shadow: 54px 99px 0 0 #f6f6f6
-            
-        
+    @include imageBG()
+
+// .home-aboutus
+//     @include desktopPlus1024()
+//     margin-bottom: 0
+//     @include sizePlus(1410px)
+//         margin: unset
 
 .sports-see-more
     width: calc(100% - 40px)
@@ -103,6 +84,8 @@ body.sports
     border: 1px solid $green
     border-radius: 8px
     margin: 48px 20px
+    font-size: 14px
+    line-height: 25.6px
     @include centering()
     transition: all .1s ease-in-out
 
@@ -113,6 +96,8 @@ body.sports
         margin: 72px auto 118px
         width: 300px
         height: 60px
+        font-family: mtavbold
+        font-size: 16px        
         border-radius: 12px
     &:hover
         background: $green

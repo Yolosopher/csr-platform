@@ -20,7 +20,7 @@ function toggleBurger() {
 
 function headerBotFixer() {
 	if (window.innerWidth > 1024) {
-		if (window.pageYOffset > 100 ) {
+		if (window.pageYOffset > 60 ) {
 			headerBot.classList.add("fixed");
 			document.querySelector('body').style.paddingTop = "100px";
 		} else {

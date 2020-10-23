@@ -18,32 +18,7 @@
     flex-direction: column
     justify-content: space-between
 .donations-each-img-div
-    width: 100%
-    flex: 1
-    height: 264px
-    margin-bottom: 60px
-    @include mobilePlus360()
-        margin-bottom: 48px
-    @include tabletPlus768()
-        margin-bottom: 40px
-    @include desktopPlus1024()
-        margin-bottom: 0
-        height: 559px
-        width: unset
-    img
-        width: calc(100% - 34px)
-        height: 230px       
-        object-fit: cover
-        object-position: center
-        border-radius: 4px
-        box-shadow: 34px 34px 0 0 #f6f6f6
-        @include desktopPlus1024()
-            width: calc( 100% - 54px )
-            max-width: 480px
-            height: 460px
-            border-radius: 0
-            box-shadow: 54px 99px 0 0 #f6f6f6
-            
+    @include imageBG()
 .donations-textNsee-more-btn
     flex: 1
     display: flex

@@ -21,18 +21,7 @@ function toggleBurger() {
 function respoGameButtonAddClass() {
 	if ($('.arena-left-textbox > a')[0]) {
 		$('.arena-left-textbox > a').addClass('arena-try-it');
-		$('.arena-left-textbox > a').attr('target', '_blank');
-
-		if ($('#lang-select .active a').hasAttribute("eng")) {
-			$('.arena-left-textbox > a').text('try it!');
-
-		} else if ($('#lang-select .active a').hasAttribute("rus")) {
-			$('.arena-left-textbox > a').text('Попробуй!!');
-
-		} else {
-			$('.arena-left-textbox > a').html('სცადე!');
-		}
-		
+		$('.arena-left-textbox > a').attr('target', '_blank');		
 	}
 }
 

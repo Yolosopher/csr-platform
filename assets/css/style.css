@@ -547,7 +547,7 @@ header.removing::after {
   }
 }
 
-@media screen and (min-width: 1410px) {
+@media screen and (min-width: 1360px) {
   .fixed .nav {
     margin: 0 !important;
   }
@@ -561,6 +561,12 @@ header.removing::after {
   width: 100%;
   height: 100%;
   content: url(../images/burger.svg);
+}
+
+@media screen and (min-width: 769px) {
+  .burger::after {
+    content: url(../images/burger-tablet.svg);
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -930,7 +936,7 @@ header .respo-languagebar {
   }
 }
 
-@media screen and (min-width: 1410px) {
+@media screen and (min-width: 1480px) {
   .fixed .header-nav-li:last-child {
     display: unset;
   }
@@ -1458,6 +1464,9 @@ main.arena-hero-content.respoGame.hero-content {
   .latest-news-li .latest-news-text-content {
     padding: 25px 26px 46px 30px;
     height: 230px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -1475,6 +1484,10 @@ main.arena-hero-content.respoGame.hero-content {
     line-height: 28px;
     overflow: hidden;
     max-height: 78px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    overflow: hidden;
   }
 }
 
@@ -1489,6 +1502,10 @@ main.arena-hero-content.respoGame.hero-content {
 .latest-news-li:hover {
   -webkit-box-shadow: 0px 0px 20px #00000029;
           box-shadow: 0px 0px 20px #00000029;
+}
+
+.latest-news-h2 {
+  overflow: hidden;
 }
 
 .home-personal-stories {
@@ -1529,7 +1546,7 @@ h1.personal-stories-h1 {
 }
 
 .personal-stories-content {
-  margin-top: 28px;
+  margin-top: 35px;
   margin-bottom: 28px;
   height: 100%;
   width: 100%;
@@ -1678,10 +1695,6 @@ h1.home-aboutus-h1 {
   .home-aboutus {
     padding-bottom: 143px;
   }
-}
-
-.home-aboutus.in-real-aboutus {
-  padding-bottom: 0;
 }
 
 .home-aboutus-inner {
@@ -2656,7 +2669,7 @@ main h2 {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    gap: 98px 35px;
+    gap: 98px 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -2818,7 +2831,7 @@ body.arena {
         -ms-flex-direction: row;
             flex-direction: row;
     max-width: 1100px;
-    gap: 98px 35px;
+    gap: 98px 36px;
   }
 }
 
@@ -2998,7 +3011,6 @@ body.arena {
 
 @media screen and (min-width: 1025px) {
   .arena-left-textbox {
-    margin-right: 16px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -3166,54 +3178,73 @@ body.arena {
 }
 
 .arena-right-image {
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 264px;
-  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  width: 100% !important;
+  height: 264px !important;
+  margin-bottom: 60px !important;
 }
 
 @media screen and (min-width: 361px) {
   .arena-right-image {
-    margin-bottom: 48px;
+    margin-bottom: 48px !important;
   }
 }
 
 @media screen and (min-width: 769px) {
   .arena-right-image {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .arena-right-image {
-    margin-bottom: 0;
-    height: 559px;
-    width: unset;
+    margin-bottom: 0 !important;
+    height: 520px !important;
+    width: 534px !important;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+.arena-right-image::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 41px);
+  height: calc(100% - 34px);
+  background: #f6f6f6;
+}
+
+@media screen and (min-width: 1025px) {
+  .arena-right-image::after {
+    width: calc(100% - 68px);
+    height: calc(100% - 100px);
   }
 }
 
 .arena-right-image img {
   width: calc(100% - 34px);
-  height: 230px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 4px;
-  -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
-          box-shadow: 34px 34px 0 0 #f6f6f6;
+  height: 230px !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+  border-radius: 4px !important;
 }
 
 @media screen and (min-width: 1025px) {
   .arena-right-image img {
-    width: calc( 100% - 54px);
-    max-width: 480px;
-    height: 460px;
-    border-radius: 0;
-    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
-            box-shadow: 54px 99px 0 0 #f6f6f6;
+    width: calc( 100% - 54px) !important;
+    width: 480px !important;
+    height: 460px !important;
+    border-radius: 0 !important;
   }
 }
 
@@ -3289,6 +3320,9 @@ body.sports {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 36px;
     margin-bottom: 72px;
   }
@@ -3305,9 +3339,7 @@ body.sports {
 }
 
 .only-sports article.sports-each .sports-each-text-div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  max-width: 534px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -3383,54 +3415,73 @@ body.sports {
 }
 
 .sports-each-img-div {
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 264px;
-  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  width: 100% !important;
+  height: 264px !important;
+  margin-bottom: 60px !important;
 }
 
 @media screen and (min-width: 361px) {
   .sports-each-img-div {
-    margin-bottom: 48px;
+    margin-bottom: 48px !important;
   }
 }
 
 @media screen and (min-width: 769px) {
   .sports-each-img-div {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .sports-each-img-div {
-    margin-bottom: 0;
-    height: 559px;
-    width: unset;
+    margin-bottom: 0 !important;
+    height: 520px !important;
+    width: 534px !important;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+.sports-each-img-div::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 41px);
+  height: calc(100% - 34px);
+  background: #f6f6f6;
+}
+
+@media screen and (min-width: 1025px) {
+  .sports-each-img-div::after {
+    width: calc(100% - 68px);
+    height: calc(100% - 100px);
   }
 }
 
 .sports-each-img-div img {
   width: calc(100% - 34px);
-  height: 230px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 4px;
-  -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
-          box-shadow: 34px 34px 0 0 #f6f6f6;
+  height: 230px !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+  border-radius: 4px !important;
 }
 
 @media screen and (min-width: 1025px) {
   .sports-each-img-div img {
-    width: calc( 100% - 54px);
-    max-width: 480px;
-    height: 460px;
-    border-radius: 0;
-    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
-            box-shadow: 54px 99px 0 0 #f6f6f6;
+    width: calc( 100% - 54px) !important;
+    width: 480px !important;
+    height: 460px !important;
+    border-radius: 0 !important;
   }
 }
 
@@ -3514,54 +3565,73 @@ body.sports {
 }
 
 .atech-article-img-div {
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 264px;
-  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  width: 100% !important;
+  height: 264px !important;
+  margin-bottom: 60px !important;
 }
 
 @media screen and (min-width: 361px) {
   .atech-article-img-div {
-    margin-bottom: 48px;
+    margin-bottom: 48px !important;
   }
 }
 
 @media screen and (min-width: 769px) {
   .atech-article-img-div {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .atech-article-img-div {
-    margin-bottom: 0;
-    height: 559px;
-    width: unset;
+    margin-bottom: 0 !important;
+    height: 520px !important;
+    width: 534px !important;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+.atech-article-img-div::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 41px);
+  height: calc(100% - 34px);
+  background: #f6f6f6;
+}
+
+@media screen and (min-width: 1025px) {
+  .atech-article-img-div::after {
+    width: calc(100% - 68px);
+    height: calc(100% - 100px);
   }
 }
 
 .atech-article-img-div img {
   width: calc(100% - 34px);
-  height: 230px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 4px;
-  -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
-          box-shadow: 34px 34px 0 0 #f6f6f6;
+  height: 230px !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+  border-radius: 4px !important;
 }
 
 @media screen and (min-width: 1025px) {
   .atech-article-img-div img {
-    width: calc( 100% - 54px);
-    max-width: 480px;
-    height: 460px;
-    border-radius: 0;
-    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
-            box-shadow: 54px 99px 0 0 #f6f6f6;
+    width: calc( 100% - 54px) !important;
+    width: 480px !important;
+    height: 460px !important;
+    border-radius: 0 !important;
   }
 }
 
@@ -3570,8 +3640,16 @@ body.sports {
      object-fit: scale-down;
 }
 
-.menuAndSoc.container {
-  max-width: 1100px;
+@media screen and (min-width: 769px) {
+  .menuAndSoc.container {
+    max-width: 668px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .menuAndSoc.container {
+    max-width: 1100px;
+  }
 }
 
 article.atech-article {
@@ -3644,14 +3722,6 @@ article.atech-article > div {
     gap: 36px;
     width: 100%;
     height: 560px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  article.atech-article > div > div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
   }
 }
 
@@ -3984,9 +4054,8 @@ article.atech-article > div {
 
 .techjam-article-top-list {
   width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   height: 264px;
   margin-bottom: 60px;
 }
@@ -4006,8 +4075,8 @@ article.atech-article > div {
 @media screen and (min-width: 1025px) {
   .techjam-article-top-list {
     margin-bottom: 0;
+    width: 534px;
     height: 559px;
-    width: unset;
   }
 }
 
@@ -4035,12 +4104,11 @@ article.atech-article > div {
 
 @media screen and (min-width: 1025px) {
   .techjam-article-top-list .techjam-ul {
-    width: calc( 100% - 54px);
-    max-width: 480px;
+    width: 480px;
     padding: 50px 41px;
     height: 460px;
-    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
-            box-shadow: 54px 99px 0 0 #f6f6f6;
+    -webkit-box-shadow: 54px 69px 0px -8px #f6f6f6;
+            box-shadow: 54px 69px 0px -8px #f6f6f6;
   }
 }
 
@@ -4461,6 +4529,9 @@ article.atech-article > div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 36px;
     margin-bottom: 72px;
   }
@@ -4477,9 +4548,7 @@ article.atech-article > div {
 }
 
 .donations-each .sports-each-text-div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  max-width: 534px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -4502,54 +4571,73 @@ article.atech-article > div {
 }
 
 .donations-each-img-div {
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 264px;
-  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  width: 100% !important;
+  height: 264px !important;
+  margin-bottom: 60px !important;
 }
 
 @media screen and (min-width: 361px) {
   .donations-each-img-div {
-    margin-bottom: 48px;
+    margin-bottom: 48px !important;
   }
 }
 
 @media screen and (min-width: 769px) {
   .donations-each-img-div {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .donations-each-img-div {
-    margin-bottom: 0;
-    height: 559px;
-    width: unset;
+    margin-bottom: 0 !important;
+    height: 520px !important;
+    width: 534px !important;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+.donations-each-img-div::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 41px);
+  height: calc(100% - 34px);
+  background: #f6f6f6;
+}
+
+@media screen and (min-width: 1025px) {
+  .donations-each-img-div::after {
+    width: calc(100% - 68px);
+    height: calc(100% - 100px);
   }
 }
 
 .donations-each-img-div img {
   width: calc(100% - 34px);
-  height: 230px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 4px;
-  -webkit-box-shadow: 34px 34px 0 0 #f6f6f6;
-          box-shadow: 34px 34px 0 0 #f6f6f6;
+  height: 230px !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+  border-radius: 4px !important;
 }
 
 @media screen and (min-width: 1025px) {
   .donations-each-img-div img {
-    width: calc( 100% - 54px);
-    max-width: 480px;
-    height: 460px;
-    border-radius: 0;
-    -webkit-box-shadow: 54px 99px 0 0 #f6f6f6;
-            box-shadow: 54px 99px 0 0 #f6f6f6;
+    width: calc( 100% - 54px) !important;
+    width: 480px !important;
+    height: 460px !important;
+    border-radius: 0 !important;
   }
 }
 
@@ -4878,6 +4966,18 @@ article.atech-article > div {
 @media screen and (min-width: 1025px) {
   .rg-news.rg-arena.atech-article-outter.margin-top {
     margin-top: -72px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menuAndSoc + .rg-news-inner.rg-arena-inner.container {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .menuAndSoc + .rg-news-inner.rg-arena-inner.container {
+    max-width: 1100px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -168,7 +168,7 @@ header
     .nav
         @include desktopPlus1024()
             margin: auto !important
-        @include sizePlus(1410px)
+        @include sizePlus(1360px)
             margin: 0 !important
 // burger
 .burger
@@ -177,12 +177,17 @@ header
         width: 100%
         height: 100%
         content: url(../images/burger.svg)
+        @include tabletPlus768()
+            content: url(../images/burger-tablet.svg)
+
     @include desktopPlus1024()
         display: none
 .active, .removing
     .burger
         &::after
             content: url(../images/x.svg)
+            
+                
 
 .lang-select
     flex: 1
@@ -375,7 +380,7 @@ header nav
                     color: $blue
                 &:nth-child(6)  
                     color: $pink
-@include sizePlus(1410px)     
+@include sizePlus(1480px)     
     .fixed .header-nav-li
         &:last-child
             display: unset

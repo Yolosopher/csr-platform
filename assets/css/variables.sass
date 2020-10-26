@@ -36,6 +36,7 @@ $desktop-width: 1025px
         padding: 79px 20px
         height: 800px       
         display: flex
+        justify-content: center
         gap: 36px
         margin-bottom: 72px
     @include sizePlus(1336px)
@@ -43,7 +44,7 @@ $desktop-width: 1025px
     &:last-child
         margin-bottom: 0
     .sports-each-text-div
-        flex: 1
+        max-width: 534px
 
 @mixin sizePlus($width)
     @media screen and (min-width: $width)
@@ -118,29 +119,45 @@ $desktop-width: 1025px
     font-weight: $weight
     
 @mixin imageBG()
-    width: 100%
-    flex: 1
-    height: 264px
-    margin-bottom: 60px
+    position: relative
+    z-index: 2
+    width: 100% !important
+    height: 264px !important
+    margin-bottom: 60px !important
     @include mobilePlus360()
-        margin-bottom: 48px
+        margin-bottom: 48px !important
     @include tabletPlus768()
-        margin-bottom: 40px
+        margin-bottom: 40px !important
     @include desktopPlus1024()
-        margin-bottom: 0
-        height: 559px
-        width: unset
+        margin-bottom: 0 !important
+        height: 520px !important
+        width: 534px !important
+        flex-shrink: 0
+    &::after
+        content: ''
+        z-index: -1
+        position: absolute
+        bottom: 0
+        right: 0
+        border-radius: 4px
+        display: flex
+        width: calc(100% - 41px)
+        height: calc(100% - 34px)
+        background: #f6f6f6
+        @include desktopPlus1024()
+            width: calc(100% - 68px)
+            height: calc(100% - 100px)
+         
     img
         width: calc(100% - 34px)
-        height: 230px       
-        object-fit: cover
-        object-position: center
-        border-radius: 4px
-        box-shadow: 34px 34px 0 0 #f6f6f6
+        height: 230px !important    
+        object-fit: cover !important
+        object-position: center !important
+        border-radius: 4px !important
+        // box-shadow: 34px 34px 0 0 #f6f6f6 !important
         @include desktopPlus1024()
-            width: calc( 100% - 54px )
-            max-width: 480px
-            height: 460px
-            border-radius: 0
-            box-shadow: 54px 99px 0 0 #f6f6f6
+            width: calc( 100% - 54px ) !important
+            width: 480px !important
+            height: 460px !important
+            border-radius: 0 !important
     

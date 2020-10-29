@@ -26,8 +26,10 @@ h1.personal-stories-h1
     height: 100%
     width: 100%
     background: white
+    @include tabletPlus768()
+        padding-bottom: 28px !important
     @include desktopPlus1024()
-        padding-bottom: 30px
+        padding-bottom: 30px !important
 
     img
         width: 100%
@@ -38,7 +40,7 @@ h1.personal-stories-h1
 .personal-stories-a-outter
     padding: 0 20px
     position: absolute
-    bottom: 33px
+    bottom: 59px
     left: 0
     width: 100%
     margin: 0 auto  
@@ -49,7 +51,6 @@ h1.personal-stories-h1
     align-items: center
     @include tabletPlus768()
         padding: 0 67px
-        bottom: 31px
     @include desktopPlus1024()
         font-size: 16px
         bottom: 53px
@@ -89,3 +90,7 @@ h1.personal-stories-h1
         left: 50%
         transform: translateX(-50%)
         padding: 0 20px
+
+.ps-article-text.container
+    @include tabletPlus768()
+        max-width: 498px

@@ -135,7 +135,12 @@ article.atech-article
             max-width: 1104px
             max-height: 700px
             justify-content: flex-end
-            
+        @include sizePlus(1440px)
+            width: 877px !important
+            margin-bottom: 57px !important
+        @include sizePlus(1900px)
+            width: 100%
+            margin-bottom: 61px !important
 .for-zoom.active
     .tech-slider-outter
         padding: 10px 10px 43px

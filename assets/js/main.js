@@ -66,15 +66,14 @@ function techGalleryZoomed() {
 }
 
 function initSwiper() {
-	var screenWidth = window.innerWidth;
-	if (screenWidth >= 1024 && videoSwiper == undefined) {
+	if (window.innerWidth >= 1025 && videoSwiper == undefined) {
 		videoSwiper = new Swiper(".swiper-container", {
 			slidesPerView: 3,
 			spaceBetween: 35,
 			keyboard: true,
 		});
 	} else {
-		videoSwiper.destroy();
+		if (videoSwiper) videoSwiper.destroy();
 		videoSwiper = undefined;
 		jQuery(".swiper-wrapper").removeAttr("style");
 		jQuery(".swiper-slide").removeAttr("style");

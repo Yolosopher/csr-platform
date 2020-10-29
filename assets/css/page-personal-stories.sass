@@ -26,8 +26,9 @@
             padding: 0 20px
     hr
         border-bottom: 1px solid #9C9E9F
-        transform: translateY(-72px)
-        @include tabletPlus768()
+        transform: translateY(-83px)
+        @include desktopPlus1024()  
+            transform: translateY(-72px)
 
 
 
@@ -37,15 +38,20 @@
     margin-bottom: 36px
     @include tabletPlus768()
         height: 450px
+        @include centering()
     @include desktopPlus1024()
         height: 750px
         margin-bottom: 100px
+        display: block !important
     iframe
         width: 100%
         height: 100%
         border-radius: 8px
+        @include tabletPlus768()
+            max-width: 796px
         @include desktopPlus1024()
-            border-radius: 12px
+            max-width: 1336px
+
 .ps-article-text-p, .sports-each-text-div-p, .arena-text-div-p, .sports-each-text-div-p, .donations-textNsee-more-btn-p
     li
         list-style: initial
@@ -90,7 +96,9 @@
 
 .personal-stories-article
     background: white
-    margin-bottom: 180px
+    margin-bottom: 92px
+    @include desktopPlus1024()
+        margin-bottom: 180px
 
 .img-div
     position: relative

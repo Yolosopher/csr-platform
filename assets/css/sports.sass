@@ -35,7 +35,7 @@ body.sports
         @include desktopPlus1024() 
             flex-direction: row-reverse
     @include tabletPlus768()
-        border-top: $e3
+        border-top: 1px solid $e3
         box-shadow: 0px 0px 20px #0000000A
         
 
@@ -53,10 +53,9 @@ body.sports
             font-size: 20px
             line-height: 17.6px
         @include desktopPlus1024()
-            margin-bottom: 100px
-            font-family: firaMedium
-            font-size: 36px
-            line-height: 57.6px
+            margin-bottom: 60px
+            font-size: 32px
+            line-height: 38.4px
     .sports-each-text-div-p
         font-family: firaBold
         font-size:  12px
@@ -71,6 +70,11 @@ body.sports
 
 .sports-each-img-div
     @include imageBG()
+    margin-bottom: 60px !important
+    @include tabletPlus768()
+        margin-bottom: 40px !important
+    @include desktopPlus1024()
+        margin-bottom: 0 !important
 
 // .home-aboutus
 //     @include desktopPlus1024()

@@ -493,7 +493,7 @@ header.removing::after {
   }
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1420px) {
   .header-bot.fixed {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -547,7 +547,7 @@ header.removing::after {
   }
 }
 
-@media screen and (min-width: 1360px) {
+@media screen and (min-width: 1580px) {
   .fixed .nav {
     margin: 0 !important;
   }
@@ -1482,7 +1482,6 @@ main.arena-hero-content.respoGame.hero-content {
   .latest-news-li .latest-news-text-content h2 {
     font-size: 18px;
     line-height: 28px;
-    overflow: hidden;
     max-height: 78px;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -1493,8 +1492,6 @@ main.arena-hero-content.respoGame.hero-content {
 
 @media screen and (min-width: 1025px) {
   .latest-news-li .latest-news-text-content h2 {
-    font-size: 24px;
-    line-height: 38.4px;
     max-height: 114px;
   }
 }
@@ -2131,9 +2128,9 @@ footer {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1025px) {
   .footer-nav-li a {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -2296,6 +2293,7 @@ footer .header-nav-ul {
     margin-right: 18px;
     font-size: 16px;
     line-height: 19px;
+    text-align: right;
   }
 }
 
@@ -2627,7 +2625,7 @@ main h2 {
 .rg-news-div .rg-news-text-content h2 {
   font-size: 12px;
   line-height: 19.2px;
-  font-family: firaBold;
+  font-family: mtavBold;
   display: block;
   text-transform: uppercase;
 }
@@ -2636,13 +2634,6 @@ main h2 {
   .rg-news-div .rg-news-text-content h2 {
     font-size: 18px;
     line-height: 28px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .rg-news-div .rg-news-text-content h2 {
-    font-size: 24px;
-    line-height: 38.4px;
   }
 }
 
@@ -3398,7 +3389,7 @@ body.sports {
 @media screen and (min-width: 1025px) {
   .sports-each-text-div h2 {
     margin-bottom: 60px;
-    font-size: 32px;
+    font-size: 26px;
     line-height: 38.4px;
   }
 }
@@ -3419,8 +3410,8 @@ body.sports {
 
 @media screen and (min-width: 1025px) {
   .sports-each-text-div .sports-each-text-div-p {
-    font-size: 22px;
-    line-height: 38px;
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
@@ -4747,7 +4738,7 @@ article.atech-article > div {
   .donations-textNsee-more-btn .donations-textNsee-more-btn-p {
     max-height: 235px;
     font-size: 18px;
-    line-height: 32px;
+    line-height: 28px;
   }
 }
 

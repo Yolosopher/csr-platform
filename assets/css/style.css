@@ -2661,7 +2661,6 @@ main h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 98px;
   margin-top: 50px;
 }
 
@@ -2748,6 +2747,16 @@ main h2 {
 @media screen and (min-width: 1336px) {
   .rg-news-each:nth-of-type(even)::after {
     right: calc((100vw - 1336px + 40px) / -2);
+  }
+}
+
+.rg-news-each:first-child {
+  margin-bottom: 98px;
+}
+
+@media screen and (min-width: 1025px) {
+  .rg-news-each:first-child {
+    margin-bottom: 0;
   }
 }
 

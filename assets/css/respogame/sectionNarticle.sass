@@ -81,7 +81,6 @@
 .rg-news-inner
     display: flex
     flex-direction: column
-    gap: 98px  
     margin-top: 50px
     @include desktopPlus1024()
         flex-flow: row wrap
@@ -130,6 +129,10 @@
                 top: 0  
             @include sizePlus(1336px)
                 right: calc((100vw - 1336px + 40px) / -2)
+    &:first-child
+        margin-bottom: 98px
+        @include desktopPlus1024()
+            margin-bottom: 0
         
         
 

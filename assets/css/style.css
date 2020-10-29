@@ -2254,18 +2254,21 @@ footer .header-nav-ul {
 
 .footer-socials .social-logos {
   width: unset;
-  gap: 40px;
+}
+
+.footer-socials .social-logos a:nth-child(2) {
+  margin: 0 40px;
 }
 
 @media screen and (min-width: 769px) {
-  .footer-socials .social-logos {
-    gap: 26px;
+  .footer-socials .social-logos a:nth-child(2) {
+    margin: 0 26px;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .footer-socials .social-logos {
-    gap: 16px;
+  .footer-socials .social-logos a:nth-child(2) {
+    margin: 0 16px;
   }
 }
 
@@ -2832,7 +2835,16 @@ body.arena {
           flex-direction: column;
   width: 100%;
   height: auto;
-  gap: 48px;
+}
+
+.rg-arena-inner.container .arena-left-textbox {
+  margin-bottom: 48px;
+}
+
+@media screen and (min-width: 1025px) {
+  .rg-arena-inner.container .arena-left-textbox {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -3733,7 +3745,6 @@ article.atech-article > div {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 30px;
-  gap: 35px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -3745,6 +3756,26 @@ article.atech-article > div {
     gap: 36px;
     width: 100%;
     height: 560px;
+  }
+}
+
+.atech-article-top-textbox {
+  margin-bottom: 35px;
+}
+
+@media screen and (min-width: 1025px) {
+  .atech-article-top-textbox {
+    margin-bottom: 0;
+  }
+}
+
+.atech-article-bottom-textbox {
+  margin-bottom: 35px;
+}
+
+@media screen and (min-width: 1025px) {
+  .atech-article-bottom-textbox {
+    margin-bottom: 0;
   }
 }
 

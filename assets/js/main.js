@@ -19,27 +19,38 @@ function toggleBurger() {
 }
 
 function respoGameButtonAddClass() {
-	if ($('.arena-left-textbox > a')[0]) {
-		$('.arena-left-textbox > a').addClass('arena-try-it');
-		$('.arena-left-textbox > a').attr('target', '_blank');		
+	if ($(".arena-left-textbox > a")[0]) {
+		$(".arena-left-textbox > a").addClass("arena-try-it");
+		$(".arena-left-textbox > a").attr("target", "_blank");
 	}
-	if ($('.arena-text-div-p a')[0]) {
-		$('.arena-text-div-p a').addClass('martetamashi-see-here-link');
+	if ($(".arena-text-div-p a")[0]) {
+		$(".arena-text-div-p a").addClass("martetamashi-see-here-link");
 	}
 }
 
 function headerBotFixer() {
 	if (window.innerWidth > 1024) {
-		if (window.pageYOffset > 60 ) {
+		if (window.pageYOffset > 60) {
 			headerBot.classList.add("fixed");
-			document.querySelector('body').style.paddingTop = "100px";
+			document.querySelector("body").style.paddingTop = "100px";
 		} else {
 			headerBot.classList.remove("fixed");
-			document.querySelector('body').style.paddingTop = "";
+			document.querySelector("body").style.paddingTop = "";
 		}
 	}
 }
-
+function minBodyMargin() {
+	let heightToAdd =
+		window.innerHeight - document.querySelector("body").offsetHeight;
+	let footerPrevEle = $("footer").prev();
+	if (heightToAdd > 0) {
+		let marginBot = footerPrevEle.css("margin-bottom");
+		footerPrevEle.css(
+			"margin-bottom",
+			`calc(${marginBot} + ${heightToAdd}px`
+		);
+	}
+}
 function slideBgChanger() {
 	$(".main-slider-hc .swiper-slide:first-child").css(
 		"background",
@@ -81,19 +92,23 @@ function initSwiper() {
 }
 
 function disableSliderNav() {
-    $('.main-slider-hc-nav').addClass('disabled');
-    return false;
+	$(".main-slider-hc-nav").addClass("disabled");
+	return false;
 }
 
 function pageChecker() {
-	if ($('.sports-see-more')[0] || $('.hero-content-sports')[0] || $('.menuAndSoc')[0]) {
-		$('body').addClass('bgcl-changed')
+	if (
+		$(".sports-see-more")[0] ||
+		$(".hero-content-sports")[0] ||
+		$(".menuAndSoc")[0]
+	) {
+		$("body").addClass("bgcl-changed");
 	}
-	if ($('.year-accountings-download')[0]) {
-		document.querySelector('article').classList.add('margin-top');
+	if ($(".year-accountings-download")[0]) {
+		document.querySelector("article").classList.add("margin-top");
 	}
-	if ($('.home-aboutus-h1')[0] || $('.home-latest-news')[0]) {
-		$('body').removeClass('bgcl-changed')
+	if ($(".home-aboutus-h1")[0] || $(".home-latest-news")[0]) {
+		$("body").removeClass("bgcl-changed");
 	}
 }
 
@@ -106,8 +121,8 @@ window.addEventListener("load", () => {
 	personalStoriesSetter();
 	if (document.querySelector(".atech-article")) {
 		$(".swiper-slide:first-child").attr("this-must-be-shown", true);
-	};
-	
+	}
+
 	// let url = document.URL;
 	// if (url.includes("responsible-games")) {
 	// 	$("header .header-nav-li:first-child").addClass("active");
@@ -129,8 +144,9 @@ window.addEventListener("load", () => {
 			`https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A5500%2Ftech-inovation-atech.html&amp;src=sdkpreparse`
 		);
 		$(".menuAndSoc-fb").attr("target", "_blank");
-	};
+	}
 	respoGameButtonAddClass();
+	minBodyMargin()
 });
 window.onscroll = () => {
 	headerBotFixer();
@@ -162,17 +178,17 @@ $(".copyLink").mouseout(function () {
 // });
 if (document.querySelector(".tech-section-outter")) {
 	document
-	.querySelector(".tech-section-outter")
-	.addEventListener("click", (e) => {
-		if (e.target.closest(".tech-slider-navigation")) {
-			return false;
-		} else {
-			techGalleryZoomed();
-			atechGallerySwiper.update();
-			mainPhotoSwiper.update();
-		}
-	});
-};
+		.querySelector(".tech-section-outter")
+		.addEventListener("click", (e) => {
+			if (e.target.closest(".tech-slider-navigation")) {
+				return false;
+			} else {
+				techGalleryZoomed();
+				atechGallerySwiper.update();
+				mainPhotoSwiper.update();
+			}
+		});
+}
 
 $(".tech-slider-x-zoom").click(function () {
 	$("body").removeClass("active");
@@ -196,20 +212,29 @@ $(".donations-show-more").click(function () {
 
 // main swiper
 const mainSwiper = new Swiper(".main-slider-hc", {
-    autoplay: $('.swiper-slide').length > 1 ? {
-		delay: 4000,
-		disableOnInteraction: false,
-    } : false,
-    loop: $('.swiper-slide').length > 1 ? true : false,
-    grabCursor: true,
-	navigation: $('.swiper-slide').length > 1 ? {
-		nextEl: ".main-slider-hc-next",
-		prevEl: ".main-slider-hc-prev",
-	} : disableSliderNav(),
-	pagination: $('.swiper-slide').length > 1 ? {
-		el: ".main-slider-hc-pagination",
-	} : false,
-    keyboard: true,
+	autoplay:
+		$(".swiper-slide").length > 1
+			? {
+					delay: 4000,
+					disableOnInteraction: false,
+			  }
+			: false,
+	loop: $(".swiper-slide").length > 1 ? true : false,
+	grabCursor: true,
+	navigation:
+		$(".swiper-slide").length > 1
+			? {
+					nextEl: ".main-slider-hc-next",
+					prevEl: ".main-slider-hc-prev",
+			  }
+			: disableSliderNav(),
+	pagination:
+		$(".swiper-slide").length > 1
+			? {
+					el: ".main-slider-hc-pagination",
+			  }
+			: false,
+	keyboard: true,
 });
 
 // atech gallery-swiper
@@ -242,7 +267,7 @@ const mainPhotoSwiper = new Swiper(".tech-slider-main-image", {
 
 atechGallerySwiper.once("click", function (e) {
 	if (!$(".for-zoom").hasClass("active")) {
-		if (e.target.closest('.tech-slider-navigation')) {
+		if (e.target.closest(".tech-slider-navigation")) {
 			return false;
 		} else {
 			$("body").addClass("active");

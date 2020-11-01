@@ -71,12 +71,10 @@
 // 
 
 .rg-news
-    margin-bottom: 40px
     @include tabletPlus768()    
         background: white 
-        margin-bottom: 
+        padding-bottom: 0
     @include desktopPlus1024()
-        margin-bottom: 0
 
 .rg-news-inner
     display: flex
@@ -103,10 +101,12 @@
     position: relative
     background: white 
     padding: 28px 18px 32px
+    &:last-child
+        padding: 28px 18px 72px
     @include desktopPlus1024()
         width: calc(50% - 17.5px)       
         background: none
-        padding: 0
+        padding: 0 !important
 
     &::after
         content: ''

@@ -6,7 +6,7 @@ header
     font-family: firaMedium
     display: flex
     flex-direction: column
-        
+    border-bottom: 1px solid $green
     @include desktopPlus1024()
         position: static
     .header-nav-li.active
@@ -42,6 +42,7 @@ header
         position: fixed
         overflow: auto
         animation: burgerSlideStart 1s
+        border-bottom: none
         @include tabletPlus768()
             width: 430px
             animation: burgerSlideStart768 1s
@@ -457,4 +458,8 @@ header.active
         &:nth-child(6) 
             &.active a
                 background-color: $pink
-            
+header nav .header-nav-li
+    @include desktopPlus1024() 
+        font-size: 12px
+    @include sizePlus(1680px)
+        font-size: 16px

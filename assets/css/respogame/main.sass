@@ -49,8 +49,11 @@
     p
         font-family: firaMedium
         font-size: 12px
+        max-height: 95px
         line-height: 19px
+        overflow: hidden
         @include tabletPlus768()
+            max-height: unset
             font-size: 16px
             line-height: 25px
         @include desktopPlus1024()

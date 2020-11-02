@@ -1109,14 +1109,26 @@ header.active .header-nav-li:nth-child(6).active a {
 }
 
 @media screen and (min-width: 1025px) {
-  header nav .header-nav-li {
+  header {
     font-size: 12px;
   }
 }
 
 @media screen and (min-width: 1680px) {
-  header nav .header-nav-li {
+  header {
     font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .footer-nav-li a {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .footer-nav-li a {
+    font-size: 16px !important;
   }
 }
 
@@ -1936,13 +1948,6 @@ footer {
   background-size: cover;
 }
 
-@media screen and (min-width: 1025px) {
-  footer .top-right-languagebar {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-}
-
 .footer-logo-div {
   width: 100%;
   height: 115px;
@@ -2060,12 +2065,17 @@ footer {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    padding-right: 80px;
     min-height: unset;
     max-height: unset;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .footer-top-inner .nav {
+    padding-right: 80px;
   }
 }
 
@@ -2188,6 +2198,15 @@ footer {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .footer-deskPlus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -2387,6 +2406,8 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
   }
 }
 
@@ -2409,6 +2430,24 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   margin-right: 13px;
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
+}
+
+.footer-bot-for-1440 {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .footer-bot-for-1440 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer-bot-for-1440 .footer-socials {
+    margin-right: 44px;
+  }
+  .footer-bot-for-1440 p {
+    color: white;
+  }
 }
 
 .hero-content.respoGame {
@@ -2548,7 +2587,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
 
 @media screen and (min-width: 900px) {
   .hero-respo-article p {
-    max-height: unset;
+    max-height: 75px;
   }
 }
 
@@ -2556,6 +2595,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   .hero-respo-article p {
     font-size: 18px;
     line-height: 28px;
+    max-height: 80px;
   }
 }
 

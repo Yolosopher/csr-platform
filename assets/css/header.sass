@@ -456,8 +456,14 @@ header.active
         &:nth-child(6) 
             &.active a
                 background-color: $pink
-header nav .header-nav-li
+header
+    nav .header-nav-li, .header-aboutus, #lang-select
     @include desktopPlus1024() 
         font-size: 12px
     @include sizePlus(1680px)
         font-size: 16px
+.footer-nav-li a
+    @include desktopPlus1024() 
+        font-size: 12px !important
+    @include sizePlus(1680px)
+        font-size: 16px !important

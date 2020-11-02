@@ -1,9 +1,7 @@
 footer
     background: url(../images/CSR_bg_2.jpg) no-repeat
     background-size: cover
-    .top-right-languagebar
-        @include desktopPlus1024()
-            transform: translateY(-30px)
+
 
 .footer-logo-div
     width: 100%
@@ -60,10 +58,11 @@ footer
             max-height: unset
         @include desktopPlus1024()
             flex: 1
-            padding-right: 80px
             min-height: unset
             max-height: unset
             justify-content: space-between
+        @include sizePlus(1680px)
+            padding-right: 80px
         .header-nav-ul
             flex-direction: column
             align-items: center
@@ -120,6 +119,9 @@ footer
     @include desktopPlus1024()
         height: unset
         justify-content: flex-end
+        display: none
+    @include sizePlus(1680px)
+        display: flex
     .respo-languagebar
         margin-top: 0
         display: none
@@ -213,6 +215,7 @@ footer .footer-respo-languagebar
         width: 100%
         @include desktopPlus1024()
             display: flex
+            transform: translateY(-30px)
     
 .copyright
     display: flex
@@ -226,3 +229,12 @@ footer .footer-respo-languagebar
         content: url(../images/copyright.svg)
         margin-right: 13px
         transform: translateY(1px)
+
+.footer-bot-for-1440
+    display: none
+    @include desktopPlus1024()
+        display: flex
+        .footer-socials
+            margin-right: 44px
+        p
+            color: white

@@ -22,7 +22,7 @@
         background-image: url(../images/respogame/hero-content-cover.svg)
     @include tabletPlus768()
         background-image: url(../images/respogame/hero-content-cover768.svg)
-    @include desktopPlus1024()
+    @include sizePlus(900px)
         background-image: url(../images/respogame/hero-content-cover1024.svg)
     @include sizePlus(1300px) 
         background-image: url(../images/respogame/hero-content-cover1300.svg)
@@ -31,8 +31,6 @@
         font-size: 16px
         margin-bottom: 7px
         @include tabletPlus768()
-
-        @include desktopPlus1024()
             font-size: 20px
             margin-bottom: 9.2px
         @include sizePlus(1300px) 
@@ -46,11 +44,10 @@
         line-height: 19px
         overflow: hidden
         @include tabletPlus768()
-
-        @include desktopPlus1024()
-            max-height: unset
             font-size: 16px
             line-height: 25px
+        @include sizePlus(900px)
+            max-height: unset
         @include sizePlus(1300px)
             font-size: 18px
             line-height: 28px

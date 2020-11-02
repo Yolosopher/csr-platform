@@ -1,9 +1,13 @@
 .hero-sports-game-cover-div.donations + * .hero-respo-article
-    background-image: url(../images/donations/grey-title-text-bg.svg)
+    background-image: url(../images/donations/hero-content-cover320.svg)    
+    @include sizePlus(360px) 
+        background-image: url(../images/donations/hero-content-cover.svg)
     @include tabletPlus768()
-        background-image: url(../images/donations/grey-title-text-bg768.svg)
+        background-image: url(../images/donations/hero-content-cover768.svg)
     @include desktopPlus1024()
-        background-image: url(../images/donations/grey-title-text-bg1024.svg)
+        background-image: url(../images/donations/hero-content-cover1024.svg)
+    @include sizePlus(1300px) 
+        background-image: url(../images/donations/hero-content-cover1300.svg)    
 .donations-each
     @include sportsEach()
     max-height: unset

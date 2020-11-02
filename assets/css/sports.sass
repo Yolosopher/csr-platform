@@ -12,12 +12,17 @@ body.sports
     h2
         text-transform: uppercase
 .hero-sports-game-cover-div + * .hero-respo-article
-    background-image: url(../images/sports/hero-content-cover.svg)
+    background-image: url(../images/sports/hero-content-cover320.svg)    
+    @include sizePlus(360px) 
+        background-image: url(../images/sports/hero-content-cover.svg)
     @include tabletPlus768()
         background-image: url(../images/sports/hero-content-cover768.svg)
     @include desktopPlus1024()
         background-image: url(../images/sports/hero-content-cover1024.svg)
+    @include sizePlus(1300px) 
+        background-image: url(../images/sports/hero-content-cover1300.svg)
 
+        
 .sports-inner.container
     
     @include tabletPlus768()

@@ -112,6 +112,10 @@ function pageChecker() {
 	}
 }
 
+function heroRespoArticle() {
+	$('.hero-respo-article').addClass('container-heroRespoArticle')
+}
+
 // EVENT LISTENERS
 window.addEventListener("load", () => {
 	$(".burger").click(function () {
@@ -146,7 +150,8 @@ window.addEventListener("load", () => {
 		$(".menuAndSoc-fb").attr("target", "_blank");
 	}
 	respoGameButtonAddClass();
-	minBodyMargin()
+	minBodyMargin();
+	heroRespoArticle();
 });
 window.onscroll = () => {
 	headerBotFixer();

@@ -160,3 +160,54 @@ $desktop-width: 1025px
             width: 480px !important
             height: 460px !important
             border-radius: 0 !important    
+
+@mixin complexBoxMain($padding, $boxWidth, $boxHeight)
+    width: $boxWidth !important
+    height: $boxHeight !important
+    background: transparent !important
+    color: transparent !important
+    border-top-right-radius: calc( #{$padding} * 2 ) !important
+    border-top-left-radius: calc( #{$padding} * 2 ) !important
+    display: flex !important
+    align-items: center !important
+    // justify-content: center
+    overflow: unset !important
+    position: relative !important
+    &::after, &::before
+        content: ''
+        display: block !important
+        position: absolute !important
+        top: 0 !important
+        right: calc( #{$padding} * -2 ) !important
+        
+        padding: 0 #{$padding} !important
+        height: calc(100% - (#{$padding} * 2) ) !important
+
+        border-bottom: calc(#{$padding} * 2 ) solid transparent !important
+    &::after
+        z-index: 1 !important
+        border-color: transparent !important    
+        border-bottom-left-radius: $padding !important
+
+@mixin containerHeroRespoArticle()
+    width: 294.4px
+    height: 150px
+    padding: 14px 30px 0 12px
+    background-repeat: no-repeat 
+    background-size: contain
+    background-position: left 
+    color: white
+    @include sizePlus(360px) 
+        width: 322.5px
+    @include tabletPlus768()
+        width: 510px
+        height: 164px
+        padding: 14px 37px 0 20px
+    @include desktopPlus1024()
+        width: 714px
+        height: 135px
+        padding: 16px 57px 0 20px
+    @include sizePlus(1300px)    
+        width: 1100px
+        height: 180px
+        padding: 36px 140px 0 36px

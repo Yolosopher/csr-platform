@@ -15,34 +15,27 @@
         
         
 
-.hero-respo-article //article.reo-respo    
-    background-image: url(../images/respogame/hero-content-cover.svg)
-    background-repeat: no-repeat 
-    background-size: contain
-    background-position: left
-    width: 322.5px
-    height: 150px
-    padding: 14px 30px 0 12px
-    color: white
+.hero-respo-article //article.reo-respo   
+    @include containerHeroRespoArticle() 
+    background-image: url(../images/respogame/hero-content-cover320.svg)    
+    @include sizePlus(360px) 
+        background-image: url(../images/respogame/hero-content-cover.svg)
     @include tabletPlus768()
-        width: 714px
-        height: 135px
         background-image: url(../images/respogame/hero-content-cover768.svg)
-        padding: 16px 57px 0 20px
-
     @include desktopPlus1024()
         background-image: url(../images/respogame/hero-content-cover1024.svg)
-        width: 1100px
-        height: 180px
-        padding: 36px 140px 0 36px
+    @include sizePlus(1300px) 
+        background-image: url(../images/respogame/hero-content-cover1300.svg)
     h2
         font-family: mtavBold
         font-size: 16px
         margin-bottom: 7px
         @include tabletPlus768()
+
+        @include desktopPlus1024()
             font-size: 20px
             margin-bottom: 9.2px
-        @include desktopPlus1024()
+        @include sizePlus(1300px) 
             font-size: 26px
             line-height: 41px
             margin-bottom: 12px
@@ -53,13 +46,14 @@
         line-height: 19px
         overflow: hidden
         @include tabletPlus768()
+
+        @include desktopPlus1024()
             max-height: unset
             font-size: 16px
             line-height: 25px
-        @include desktopPlus1024()
+        @include sizePlus(1300px)
             font-size: 18px
             line-height: 28px
-
 main
     h2
         text-transform: uppercase

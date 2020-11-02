@@ -2440,31 +2440,67 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
 }
 
 .hero-respo-article {
-  background-image: url(../images/respogame/hero-content-cover.svg);
+  width: 294.4px;
+  height: 150px;
+  padding: 14px 30px 0 12px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
-  width: 322.5px;
-  height: 150px;
-  padding: 14px 30px 0 12px;
   color: white;
+  background-image: url(../images/respogame/hero-content-cover320.svg);
+}
+
+@media screen and (min-width: 360px) {
+  .hero-respo-article {
+    width: 322.5px;
+  }
 }
 
 @media screen and (min-width: 769px) {
   .hero-respo-article {
+    width: 510px;
+    height: 164px;
+    padding: 14px 37px 0 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-respo-article {
     width: 714px;
     height: 135px;
-    background-image: url(../images/respogame/hero-content-cover768.svg);
     padding: 16px 57px 0 20px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hero-respo-article {
+    width: 1100px;
+    height: 180px;
+    padding: 36px 140px 0 36px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .hero-respo-article {
+    background-image: url(../images/respogame/hero-content-cover.svg);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero-respo-article {
+    background-image: url(../images/respogame/hero-content-cover768.svg);
   }
 }
 
 @media screen and (min-width: 1025px) {
   .hero-respo-article {
     background-image: url(../images/respogame/hero-content-cover1024.svg);
-    width: 1100px;
-    height: 180px;
-    padding: 36px 140px 0 36px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hero-respo-article {
+    background-image: url(../images/respogame/hero-content-cover1300.svg);
   }
 }
 
@@ -2474,14 +2510,14 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   margin-bottom: 7px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .hero-respo-article h2 {
     font-size: 20px;
     margin-bottom: 9.2px;
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1300px) {
   .hero-respo-article h2 {
     font-size: 26px;
     line-height: 41px;
@@ -2497,7 +2533,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   overflow: hidden;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .hero-respo-article p {
     max-height: unset;
     font-size: 16px;
@@ -2505,7 +2541,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1300px) {
   .hero-respo-article p {
     font-size: 18px;
     line-height: 28px;
@@ -3300,7 +3336,13 @@ body.sports {
 }
 
 .hero-sports-game-cover-div + * .hero-respo-article {
-  background-image: url(../images/sports/hero-content-cover.svg);
+  background-image: url(../images/sports/hero-content-cover320.svg);
+}
+
+@media screen and (min-width: 360px) {
+  .hero-sports-game-cover-div + * .hero-respo-article {
+    background-image: url(../images/sports/hero-content-cover.svg);
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -3312,6 +3354,12 @@ body.sports {
 @media screen and (min-width: 1025px) {
   .hero-sports-game-cover-div + * .hero-respo-article {
     background-image: url(../images/sports/hero-content-cover1024.svg);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hero-sports-game-cover-div + * .hero-respo-article {
+    background-image: url(../images/sports/hero-content-cover1300.svg);
   }
 }
 
@@ -3575,7 +3623,13 @@ body.sports {
 }
 
 .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
-  background-image: url(../images/inovations/hero-content-cover.svg);
+  background-image: url(../images/inovations/hero-content-cover320.svg);
+}
+
+@media screen and (min-width: 360px) {
+  .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
+    background-image: url(../images/inovations/hero-content-cover.svg);
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -3587,6 +3641,12 @@ body.sports {
 @media screen and (min-width: 1025px) {
   .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
     background-image: url(../images/inovations/hero-content-cover1024.svg);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
+    background-image: url(../images/inovations/hero-content-cover1300.svg);
   }
 }
 
@@ -4595,18 +4655,30 @@ article.atech-article > div {
 }
 
 .hero-sports-game-cover-div.donations + * .hero-respo-article {
-  background-image: url(../images/donations/grey-title-text-bg.svg);
+  background-image: url(../images/donations/hero-content-cover320.svg);
+}
+
+@media screen and (min-width: 360px) {
+  .hero-sports-game-cover-div.donations + * .hero-respo-article {
+    background-image: url(../images/donations/hero-content-cover.svg);
+  }
 }
 
 @media screen and (min-width: 769px) {
   .hero-sports-game-cover-div.donations + * .hero-respo-article {
-    background-image: url(../images/donations/grey-title-text-bg768.svg);
+    background-image: url(../images/donations/hero-content-cover768.svg);
   }
 }
 
 @media screen and (min-width: 1025px) {
   .hero-sports-game-cover-div.donations + * .hero-respo-article {
-    background-image: url(../images/donations/grey-title-text-bg1024.svg);
+    background-image: url(../images/donations/hero-content-cover1024.svg);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hero-sports-game-cover-div.donations + * .hero-respo-article {
+    background-image: url(../images/donations/hero-content-cover1300.svg);
   }
 }
 
@@ -4881,6 +4953,7 @@ article.atech-article > div {
 
 .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
   background-image: url(../images/personal-stories/blue-title-text-bg.svg);
+  background-image: url(../images/personal-stories/hero-content-cover320.svg);
 }
 
 @media screen and (min-width: 769px) {
@@ -4892,6 +4965,30 @@ article.atech-article > div {
 @media screen and (min-width: 1025px) {
   .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
     background-image: url(../images/personal-stories/blue-title-text-bg1024.svg);
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
+    background-image: url(../images/personal-stories/hero-content-cover.svg);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
+    background-image: url(../images/personal-stories/hero-content-cover768.svg);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
+    background-image: url(../images/personal-stories/hero-content-cover1024.svg);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
+    background-image: url(../images/personal-stories/hero-content-cover1300.svg);
   }
 }
 

@@ -1,11 +1,14 @@
 // main
 .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article
-    background-image: url(../images/inovations/hero-content-cover.svg)
+    background-image: url(../images/inovations/hero-content-cover320.svg)    
+    @include sizePlus(360px) 
+        background-image: url(../images/inovations/hero-content-cover.svg)
     @include tabletPlus768()
         background-image: url(../images/inovations/hero-content-cover768.svg)
     @include desktopPlus1024()
         background-image: url(../images/inovations/hero-content-cover1024.svg)
-
+    @include sizePlus(1300px) 
+        background-image: url(../images/inovations/hero-content-cover1300.svg)
 // article
 .rg-news-h1.tech-news-h1
     color: $lightblue

@@ -112,9 +112,7 @@ function pageChecker() {
 	}
 }
 
-function heroRespoArticle() {
-	$('.hero-respo-article').addClass('container-heroRespoArticle')
-}
+
 
 // EVENT LISTENERS
 window.addEventListener("load", () => {
@@ -151,7 +149,6 @@ window.addEventListener("load", () => {
 	}
 	respoGameButtonAddClass();
 	minBodyMargin();
-	heroRespoArticle();
 });
 window.onscroll = () => {
 	headerBotFixer();

@@ -1128,7 +1128,7 @@ header.active .header-nav-li:nth-child(6).active a {
 
 @media screen and (min-width: 1680px) {
   .footer-nav-li a {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 
@@ -2149,12 +2149,6 @@ footer {
 
 .footer-nav-li a {
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 1025px) {
-  .footer-nav-li a {
-    font-size: 14px;
-  }
 }
 
 .footer-deskPlus {

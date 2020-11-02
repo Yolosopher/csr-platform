@@ -84,25 +84,24 @@ article.aboutus-article.atech-article > div
     padding: 0 20px
 
 
-@supports not (gap: 30px)
-    .year-accountings-download
-        li 
-            display: flex
-            justify-content: space-between
-            margin-right: 12px
-            margin-bottom: 12px
-            @include tabletPlus768()
-                margin-right: 22px
-                margin-bottom: 22px
-            @include desktopPlus1024()
-                margin-right: 36px
-                margin-bottom: 36px
-            &:last-child
-                margin-right: 0
-@supports (gap: 30px)
-    .year-accountings-download
-        gap: 12px
+
+.year-accountings-download
+    @include desktopPlus1024()
+        gap: 36px
+    li 
+        display: flex
+        justify-content: space-between
+        margin-right: 12px
+        margin-bottom: 12px
         @include tabletPlus768()
-            gap: 22px
+            margin-right: 22px
+            margin-bottom: 22px
+            
         @include desktopPlus1024()
-            gap: 36px
+            margin-right: 0
+            margin-bottom: 0
+            
+        &:last-child
+            margin-right: 0
+
+            

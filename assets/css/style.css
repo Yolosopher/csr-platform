@@ -202,11 +202,6 @@ header {
   }
 }
 
-header .header-nav-li.active {
-  display: block;
-  width: 100%;
-}
-
 header .header-nav-li.active a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4626,48 +4621,39 @@ article.atech-article > div {
   }
 }
 
-@supports not (gap: 30px) {
-  .year-accountings-download li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-right: 12px;
-    margin-bottom: 12px;
-  }
-  @media screen and (min-width: 769px) {
-    .year-accountings-download li {
-      margin-right: 22px;
-      margin-bottom: 22px;
-    }
-  }
-  @media screen and (min-width: 1025px) {
-    .year-accountings-download li {
-      margin-right: 36px;
-      margin-bottom: 36px;
-    }
-  }
-  .year-accountings-download li:last-child {
-    margin-right: 0;
+@media screen and (min-width: 1025px) {
+  .year-accountings-download {
+    gap: 36px;
   }
 }
 
-@supports (gap: 30px) {
-  .year-accountings-download {
-    gap: 12px;
+.year-accountings-download li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 769px) {
+  .year-accountings-download li {
+    margin-right: 22px;
+    margin-bottom: 22px;
   }
-  @media screen and (min-width: 769px) {
-    .year-accountings-download {
-      gap: 22px;
-    }
+}
+
+@media screen and (min-width: 1025px) {
+  .year-accountings-download li {
+    margin-right: 0;
+    margin-bottom: 0;
   }
-  @media screen and (min-width: 1025px) {
-    .year-accountings-download {
-      gap: 36px;
-    }
-  }
+}
+
+.year-accountings-download li:last-child {
+  margin-right: 0;
 }
 
 .hero-sports-game-cover-div.donations + * .hero-respo-article {

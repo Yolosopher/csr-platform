@@ -1995,6 +1995,10 @@ footer {
 @media screen and (min-width: 1025px) {
   .footer-top {
     height: 100px;
+    background: none;
+    border-top: 1px solid #2C7A60;
+    border-bottom: 1px solid #2C7A60;
+    color: white;
   }
 }
 
@@ -2091,6 +2095,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-family: mtavBold;
 }
 
 .footer-top-inner .nav .header-nav-ul::after {
@@ -2123,6 +2128,20 @@ footer {
             flex-direction: row;
     padding-bottom: 0;
     border-bottom: 0;
+    max-width: 796px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .footer-top-inner .nav .header-nav-ul {
+    max-width: 1023px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer-top-inner .nav .header-nav-ul {
+    max-width: unset;
   }
 }
 
@@ -2183,16 +2202,26 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    min-width: 796px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .footer-deskPlus {
     height: unset;
+    max-width: unset;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
     display: none;
+    margin: unset;
+    min-width: unset;
+    -ms-flex-item-align: unset;
+        -ms-grid-row-align: unset;
+        align-self: unset;
   }
 }
 
@@ -2315,6 +2344,7 @@ footer .header-nav-ul {
     margin-right: 18px;
     font-size: 16px;
     line-height: 19px;
+    color: white;
     text-align: right;
   }
 }
@@ -2402,6 +2432,15 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
     display: flex;
     -webkit-transform: translateY(-30px);
             transform: translateY(-30px);
+    max-width: 1023px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  footer .footer-respo-languagebar .desktopSizeCandLang {
+    max-width: unset;
+    margin: unset;
   }
 }
 
@@ -2439,6 +2478,15 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   .footer-bot-for-1440 .footer-socials {
     margin-right: 44px;
   }
+}
+
+@media screen and (min-width: 1025px) and (min-width: 1680px) {
+  .footer-bot-for-1440 .footer-socials {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
   .footer-bot-for-1440 p {
     color: white;
   }

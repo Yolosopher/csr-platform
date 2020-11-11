@@ -27,6 +27,10 @@ footer
         height: 180px
     @include desktopPlus1024()
         height: 100px
+        background: none
+        border-top: 1px solid $green
+        border-bottom: 1px solid $green
+        color: white
 .footer-top-inner
     height: 100%
     display: flex
@@ -68,6 +72,7 @@ footer
             align-items: center
             padding-bottom: 23px
             justify-content: space-between
+            font-family: mtavBold
             &::after
                 content: ''
                 height: 1px
@@ -84,6 +89,12 @@ footer
                 flex-direction: row
                 padding-bottom: 0
                 border-bottom: 0
+                max-width: 796px
+                margin: 0 auto
+            @include desktopPlus1024()
+                max-width: 1023px                
+            @include sizePlus(1440px)
+                max-width: unset
 
 .footer-nav-li, .header-nav-li
     transition: color .4s 
@@ -114,10 +125,16 @@ footer
         height: 92px
         align-items: center
         justify-content: space-between
+        min-width: 796px
+        align-self: center
     @include desktopPlus1024()
         height: unset
+        max-width: unset
         justify-content: flex-end
         display: none
+        margin: unset
+        min-width: unset
+        align-self: unset
     @include sizePlus(1680px)
         display: flex
     .respo-languagebar
@@ -176,6 +193,7 @@ footer
             margin-right: 18px
             font-size: 16px
             line-height: 19px
+            color: white
             text-align: right
 footer 
     .lang-select li, .lang-select
@@ -214,6 +232,11 @@ footer .footer-respo-languagebar
         @include desktopPlus1024()
             display: flex
             transform: translateY(-30px)
+            max-width: 1023px
+            margin: 0 auto
+        @include sizePlus(1440px)
+            max-width: unset
+            margin: unset
     
 .copyright
     display: flex
@@ -234,5 +257,7 @@ footer .footer-respo-languagebar
         display: flex
         .footer-socials
             margin-right: 44px
+            @include sizePlus(1680px)
+                display: none
         p
             color: white

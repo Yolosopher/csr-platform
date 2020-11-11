@@ -112,7 +112,11 @@ function pageChecker() {
 	}
 }
 
-
+function noVideoGal() {
+	if (!document.querySelector('.ps-video-gallery')) {
+		$('.personal-stories-article').addClass('no-video-gallery')
+	}
+}
 
 // EVENT LISTENERS
 window.addEventListener("load", () => {
@@ -149,6 +153,7 @@ window.addEventListener("load", () => {
 	}
 	respoGameButtonAddClass();
 	minBodyMargin();
+	noVideoGal();
 });
 window.onscroll = () => {
 	headerBotFixer();

@@ -783,16 +783,18 @@ footer .lang-select li {
 .header-nav-li {
   text-transform: uppercase;
   font-family: mtavBold;
+  width: 100%;
 }
 
 .header-nav-li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 63px;
   max-height: 19px;
   overflow: hidden;
   text-align: left;
   padding: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -800,6 +802,9 @@ footer .lang-select li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: unset;
       -ms-flex-align: unset;
           align-items: unset;
@@ -2492,6 +2497,16 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
+.ig g * {
+  stroke: #ffffff;
+}
+
+@media screen and (min-width: 1025px) {
+  .ig g * {
+    stroke: #345e46;
+  }
+}
+
 .hero-content.respoGame {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3968,7 +3983,7 @@ article.atech-article > div {
   }
 }
 
-.atech-textbox-important {
+.atech-textbox-important, .atech-textbox-p span {
   color: #5E7289;
   font-family: mtavBold;
   font-size: 16px;
@@ -3977,7 +3992,7 @@ article.atech-article > div {
 }
 
 @media screen and (min-width: 1025px) {
-  .atech-textbox-important {
+  .atech-textbox-important, .atech-textbox-p span {
     margin-top: 24px;
     font-size: 26px;
     line-height: 38.4px;
@@ -4716,7 +4731,6 @@ article.atech-article > div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 12px;
   margin-bottom: 12px;
 }
 
@@ -5237,6 +5251,10 @@ article.atech-article > div {
     margin-top: -72px;
     padding-top: 72px;
   }
+}
+
+.personal-stories-article.no-video-gallery {
+  margin-bottom: 0;
 }
 
 .img-div {

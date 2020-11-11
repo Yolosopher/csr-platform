@@ -298,13 +298,16 @@ footer
 .header-nav-li
     text-transform: uppercase
     font-family: mtavBold
+    width: 100%
     a
+        display: flex
         height: 63px
         max-height: 19px
         overflow: hidden
         text-align: left
-        padding: 0 20px
+        padding: 0 20px        
         @include centering()
+        justify-content: flex-start
         align-items: unset
         white-space: nowrap
         @include desktopPlus1024()

@@ -696,6 +696,7 @@ footer .top-right-languagebar * {
 
 footer .top-right-languagebar .lang-select {
   font-family: mtavBold;
+  text-transform: uppercase;
 }
 
 footer .top-right-languagebar.active {
@@ -759,6 +760,7 @@ footer .lang-select li {
   max-width: 980px;
   height: 100%;
   font-family: mtavBold;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 1025px) {
@@ -784,6 +786,12 @@ footer .lang-select li {
   text-transform: uppercase;
   font-family: mtavBold;
   width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .header-nav-li {
+    width: unset;
+  }
 }
 
 .header-nav-li a {
@@ -1322,10 +1330,10 @@ main.arena-hero-content.respoGame.hero-content {
           align-items: center;
   color: white;
   font-family: mtavBold;
+  text-transform: uppercase;
   font-size: 16px;
   padding-left: 31px;
   top: -50px;
-  text-transform: uppercase;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1500,8 +1508,8 @@ main.arena-hero-content.respoGame.hero-content {
   font-size: 12px;
   line-height: 19.2px;
   font-family: mtavBold;
-  display: block;
   text-transform: uppercase;
+  display: block;
 }
 
 @media screen and (min-width: 769px) {
@@ -1609,6 +1617,7 @@ h1.personal-stories-h1 {
   width: 100%;
   margin: 0 auto;
   font-family: mtavBold;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 20.6px;
   display: -webkit-box;
@@ -1917,7 +1926,6 @@ h1.home-aboutus-h1 {
     font-size: 18px;
     width: 100%;
     line-height: 35.2px;
-    font-family: mtavBold;
     text-align: left;
   }
 }
@@ -2101,6 +2109,7 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-family: mtavBold;
+  text-transform: uppercase;
 }
 
 .footer-top-inner .nav .header-nav-ul::after {
@@ -2608,6 +2617,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
 
 .hero-respo-article h2 {
   font-family: mtavBold;
+  text-transform: uppercase;
   font-size: 16px;
   margin-bottom: 7px;
 }
@@ -2787,8 +2797,8 @@ main h2 {
   font-size: 12px;
   line-height: 19.2px;
   font-family: mtavBold;
-  display: block;
   text-transform: uppercase;
+  display: block;
 }
 
 @media screen and (min-width: 769px) {
@@ -3035,9 +3045,9 @@ body.arena {
           align-items: center;
   width: 140px;
   font-family: mtavBold;
+  text-transform: uppercase;
   font-size: 14px;
   height: 40px;
-  text-transform: uppercase;
   color: #2C7A60;
   border-radius: 6px;
   background: white;
@@ -3283,6 +3293,7 @@ body.arena {
 
 .arena-left-textbox .arena-text-mainMessage {
   font-family: mtavbold;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 41.6px;
   color: #C8495E;
@@ -3327,6 +3338,7 @@ body.arena {
   background: #2C7A60;
   border-radius: 12px;
   font-family: mtavbold;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 25px;
   color: white;
@@ -3560,6 +3572,7 @@ body.sports {
 .sports-each-text-div h2 {
   margin-bottom: 37px;
   font-family: mtavBold;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 25.6px;
 }
@@ -3720,6 +3733,7 @@ body.sports {
     width: 300px;
     height: 60px;
     font-family: mtavbold;
+    text-transform: uppercase;
     font-size: 16px;
     border-radius: 12px;
   }
@@ -3986,6 +4000,7 @@ article.atech-article > div {
 .atech-textbox-important, .atech-textbox-p span {
   color: #5E7289;
   font-family: mtavBold;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 25.6px;
   margin-top: 20px;
@@ -5004,6 +5019,7 @@ article.atech-article > div {
 
 .donations-show-more {
   font-family: mtavBold;
+  text-transform: uppercase;
   text-decoration: underline;
   color: #2C7A60;
   font-size: 12px;
@@ -5175,7 +5191,7 @@ article.atech-article > div {
   }
 }
 
-.ps-article-text-p li, .sports-each-text-div-p li, .arena-text-div-p li, .sports-each-text-div-p li, .donations-textNsee-more-btn-p li {
+.ps-article-text-p li, .sports-each-text-div-p li, .arena-text-div-p li, .sports-each-text-div-p li, .donations-textNsee-more-btn-p li, .atech-textbox-p li {
   list-style: initial;
   list-style-position: inside;
   font-size: inherit;
@@ -5190,6 +5206,7 @@ article.atech-article > div {
 .ps-article-text h2 {
   margin-bottom: 37px;
   font-family: mtavBold;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 25.6px;
 }
@@ -5203,7 +5220,6 @@ article.atech-article > div {
 
 @media screen and (min-width: 1025px) {
   .ps-article-text h2 {
-    font-family: mtavBold;
     font-size: 26px;
     line-height: 38.4px;
     margin-bottom: 58.7px;

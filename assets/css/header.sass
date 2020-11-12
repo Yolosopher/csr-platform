@@ -256,6 +256,7 @@ footer
             font-family: inherit
         .lang-select
             font-family: mtavBold
+            text-transform: uppercase
         &.active
             overflow: initial
             .lang-select
@@ -290,6 +291,7 @@ footer
     height: 100%
     // padding-top: 31px
     font-family: mtavBold
+    text-transform: uppercase
     @include desktopPlus1024()
         padding-top: 0
         @include flexingDir(row, center, center)
@@ -299,6 +301,8 @@ footer
     text-transform: uppercase
     font-family: mtavBold
     width: 100%
+    @include desktopPlus1024()
+        width: unset
     a
         display: flex
         height: 63px

@@ -47,6 +47,8 @@
     flex-direction: column
     @include desktopPlus1024()
         flex-direction: row
+        gap: 30px
+    @include sizePlus(1441px) 
         gap: 36px
 .latest-news-li
     width: 100%
@@ -66,6 +68,11 @@
             margin-top: 0
     @include desktopPlus1024()
         width: 420px
+        height: 380px
+        margin-top: 0
+        border-radius: 0 0 40px 40px
+    @include sizePlus(1441px) 
+        width: 420px
         margin-top: 0
         border-radius: 0 0 40px 40px
         height: unset
@@ -79,6 +86,10 @@
             width: 304px
             height: 160px
         @include desktopPlus1024()
+            width: 100%
+            max-width: 420px
+            height: 200px
+        @include sizePlus(1441px) 
             width: 100%
             max-width: 420px
             height: 260px

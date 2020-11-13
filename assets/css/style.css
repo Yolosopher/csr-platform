@@ -147,14 +147,20 @@ a {
 }
 
 @media screen and (min-width: 769px) {
-  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container, .personal-stories-a-outter.container, .main-slider-hc-nav-inner.container, header > div.container {
     max-width: 632px;
     padding: 0;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container, .personal-stories-a-outter.container, .main-slider-hc-nav-inner.container, header > div.container {
+    max-width: 978px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container, .personal-stories-a-outter.container, .main-slider-hc-nav-inner.container, header > div.container {
     max-width: 1336px;
     padding: 0 20px;
   }
@@ -167,6 +173,12 @@ a {
 }
 
 @media screen and (min-width: 1025px) {
+  .atech.aboutus-article-div .for-borderNpad {
+    max-width: 978px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
   .atech.aboutus-article-div .for-borderNpad {
     max-width: 1336px;
   }
@@ -490,7 +502,7 @@ header.removing::after {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1250px) {
   .header-bot.fixed {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -544,7 +556,7 @@ header.removing::after {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1250px) {
   .fixed .nav {
     margin: 0 !important;
   }
@@ -624,6 +636,30 @@ header.removing::after {
           transform: translateY(-62%);
 }
 
+@media screen and (min-width: 1250px) {
+  .lang-when-scroll .lang-select {
+    width: 72px;
+  }
+  .lang-when-scroll .lang-select::after {
+    right: unset;
+    right: 7px;
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .lang-when-scroll .lang-select {
+    width: 97px;
+  }
+  .lang-when-scroll .lang-select::after {
+    left: unset;
+    right: 14px;
+    -webkit-transform: translateY(-62%);
+            transform: translateY(-62%);
+  }
+}
+
 footer .lang-select::after {
   content: url(../images/Polygon-footer.svg);
   -webkit-transform: translateY(-50%);
@@ -646,6 +682,15 @@ footer .lang-select::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 70px;
+    margin-left: 28px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .top-right-languagebar {
+    width: 100px;
+    margin-left: 46px;
   }
 }
 
@@ -946,6 +991,12 @@ header .respo-languagebar {
   }
 }
 
+@media screen and (min-width: 1441px) {
+  .fixed .header-nav-li:last-child {
+    display: unset;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   header .header-nav-li::after {
     content: '';
@@ -1118,7 +1169,7 @@ header.active .header-nav-li:nth-child(6).active a, header.removing .header-nav-
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   header {
     font-size: 16px;
   }
@@ -1130,7 +1181,7 @@ header.active .header-nav-li:nth-child(6).active a, header.removing .header-nav-
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   .footer-nav-li a {
     font-size: 14px !important;
   }
@@ -1231,7 +1282,7 @@ main.arena-hero-content.respoGame.hero-content {
           justify-content: space-between;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   .main-slider-hc-nav-inner {
     max-width: 1336px;
   }
@@ -1364,6 +1415,12 @@ main.arena-hero-content.respoGame.hero-content {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .latest-news-ul {
     gap: 36px;
   }
 }
@@ -1399,6 +1456,15 @@ main.arena-hero-content.respoGame.hero-content {
 @media screen and (min-width: 1025px) {
   .latest-news-li {
     width: 420px;
+    height: 380px;
+    margin-top: 0;
+    border-radius: 0 0 40px 40px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .latest-news-li {
+    width: 420px;
     margin-top: 0;
     border-radius: 0 0 40px 40px;
     height: unset;
@@ -1423,6 +1489,14 @@ main.arena-hero-content.respoGame.hero-content {
 }
 
 @media screen and (min-width: 1025px) {
+  .latest-news-li img {
+    width: 100%;
+    max-width: 420px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
   .latest-news-li img {
     width: 100%;
     max-width: 420px;
@@ -2081,7 +2155,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   .footer-top-inner .nav {
     padding-right: 80px;
   }
@@ -2144,7 +2218,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   .footer-top-inner .nav .header-nav-ul {
     max-width: unset;
   }
@@ -2230,7 +2304,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   .footer-deskPlus {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2442,7 +2516,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   footer .footer-respo-languagebar .desktopSizeCandLang {
     max-width: unset;
     margin: unset;
@@ -2485,7 +2559,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
-@media screen and (min-width: 1025px) and (min-width: 1440px) {
+@media screen and (min-width: 1025px) and (min-width: 1441px) {
   .footer-bot-for-1440 .footer-socials {
     display: none;
   }
@@ -2574,7 +2648,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1441px) {
   .hero-respo-article {
     width: 1100px;
     height: 180px;
@@ -2600,7 +2674,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1441px) {
   .hero-respo-article {
     background-image: url(../images/respogame/hero-content-cover1300.svg);
   }
@@ -2620,7 +2694,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1441px) {
   .hero-respo-article h2 {
     font-size: 26px;
     line-height: 41px;
@@ -2649,7 +2723,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1441px) {
   .hero-respo-article p {
     font-size: 18px;
     line-height: 28px;
@@ -2720,6 +2794,13 @@ main h2 {
 @media screen and (min-width: 1025px) {
   .rg-news-div img {
     width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .rg-news-div img {
+    width: 100%;
     height: 330px;
   }
 }
@@ -2780,6 +2861,13 @@ main h2 {
 @media screen and (min-width: 1025px) {
   .rg-news-div .rg-news-text-content {
     padding: 25px 26px 46px 30px;
+    height: 170px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .rg-news-div .rg-news-text-content {
+    padding: 25px 26px 46px 30px;
     height: 220px;
   }
 }
@@ -2836,8 +2924,13 @@ main h2 {
 
 @media screen and (min-width: 1025px) {
   .rg-news-inner.container {
-    padding: 0 18px 32px;
     padding-bottom: 120px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .rg-news-inner.container {
+    padding: 0 18px 32px;
   }
 }
 
@@ -3468,7 +3561,7 @@ body.sports {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1441px) {
   .hero-sports-game-cover-div + * .hero-respo-article {
     background-image: url(../images/sports/hero-content-cover1300.svg);
   }
@@ -3757,7 +3850,7 @@ body.sports {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1441px) {
   .hero-respo-game-cover-div.hero-tech-ino-cover-div + * .hero-respo-article {
     background-image: url(../images/inovations/hero-content-cover1300.svg);
   }
@@ -4040,7 +4133,7 @@ article.atech-article > div {
   height: calc(90% - 72px);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   .tech-slider-main-image .swiper-wrapper {
     max-height: 492px;
   }
@@ -4100,7 +4193,7 @@ article.atech-article > div {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   .for-zoom.active .tech-slider-main-image {
     width: 877px !important;
     margin-bottom: 57px !important;
@@ -4211,7 +4304,7 @@ article.atech-article > div {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   .tech-slider-section .swiper-slide {
     width: 271px;
     height: 151px;
@@ -4780,7 +4873,7 @@ article.atech-article > div {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1441px) {
   .hero-sports-game-cover-div.donations + * .hero-respo-article {
     background-image: url(../images/donations/hero-content-cover1300.svg);
   }
@@ -5078,7 +5171,7 @@ article.atech-article > div {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1441px) {
   .hero-sports-game-cover-div.personal-stories + * .hero-respo-article {
     background-image: url(../images/personal-stories/hero-content-cover1300.svg);
   }

@@ -31,6 +31,9 @@
             height: 160px
         @include desktopPlus1024()
             width: 100%
+            height: 250px
+        @include sizePlus(1441px)
+            width: 100%
             height: 330px
     figure
         display: flex
@@ -57,6 +60,9 @@
             padding: 28px 49px 28px 24px
             width: unset
         @include desktopPlus1024()
+            padding: 25px 26px 46px 30px
+            height: 170px
+        @include sizePlus(1441px)
             padding: 25px 26px 46px 30px
             height: 220px
         h2            
@@ -87,8 +93,9 @@
 .rg-news-inner.container
     padding: 0
     @include desktopPlus1024()
-        padding: 0 18px 32px
         padding-bottom: 120px
+    @include sizePlus(1441px) 
+        padding: 0 18px 32px
 .rg-news-each-inner.container
     padding: 0
     @include desktopPlus1024()

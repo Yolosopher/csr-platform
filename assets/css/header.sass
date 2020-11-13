@@ -137,7 +137,7 @@ header
             align-items: center
             padding: 0 20px !important
             border-bottom: 1px solid $green
-        @include sizePlus(1420px)   
+        @include sizePlus(1440px)   
             justify-content: center     
             .small-logo
                 display: unset
@@ -167,7 +167,7 @@ header
     .nav
         @include desktopPlus1024()
             margin: auto !important
-        @include sizePlus(1580px)
+        @include sizePlus(1440px)
             margin: 0 !important
 // burger
 .burger
@@ -386,10 +386,10 @@ header nav
                     color: $blue
                 &:nth-child(6)  
                     color: $pink
-@include sizePlus(1480px)     
-    .fixed .header-nav-li
-        &:last-child
-            display: unset
+// @include sizePlus(1440px)     
+//     .fixed .header-nav-li
+//         &:last-child
+//             display: unset
 // header.active
 
 header .header-nav-li
@@ -397,8 +397,6 @@ header .header-nav-li
     @include desktopPlus1024()   
         
         @include complexBoxLine()
-        &:last-child
-            display: none
         &:not(:first-child)
             margin-left: 20px
         &::after
@@ -443,7 +441,7 @@ header .header-nav-li
                 &::after
                     border-color: $pink
             
-header.active
+header.active, header.removing
     .header-nav-li
         &:first-child
             &.active a
@@ -467,10 +465,10 @@ header
     nav .header-nav-li, .header-aboutus, #lang-select
     @include desktopPlus1024() 
         font-size: 12px
-    @include sizePlus(1680px)
+    @include sizePlus(1440px)
         font-size: 16px
 .footer-nav-li a
     @include desktopPlus1024() 
         font-size: 12px !important
-    @include sizePlus(1680px)
+    @include sizePlus(1440px)
         font-size: 14px !important

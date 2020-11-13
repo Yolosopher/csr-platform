@@ -490,7 +490,7 @@ header.removing::after {
   }
 }
 
-@media screen and (min-width: 1420px) {
+@media screen and (min-width: 1440px) {
   .header-bot.fixed {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -544,7 +544,7 @@ header.removing::after {
   }
 }
 
-@media screen and (min-width: 1580px) {
+@media screen and (min-width: 1440px) {
   .fixed .nav {
     margin: 0 !important;
   }
@@ -946,12 +946,6 @@ header .respo-languagebar {
   }
 }
 
-@media screen and (min-width: 1480px) {
-  .fixed .header-nav-li:last-child {
-    display: unset;
-  }
-}
-
 @media screen and (min-width: 1025px) {
   header .header-nav-li::after {
     content: '';
@@ -961,9 +955,6 @@ header .respo-languagebar {
     width: 100vw;
     height: 2px;
     border-top: 2px dashed transparent;
-  }
-  header .header-nav-li:last-child {
-    display: none;
   }
   header .header-nav-li:not(:first-child) {
     margin-left: 20px;
@@ -1097,27 +1088,27 @@ header .respo-languagebar {
   }
 }
 
-header.active .header-nav-li:first-child.active a {
+header.active .header-nav-li:first-child.active a, header.removing .header-nav-li:first-child.active a {
   background-color: #C8495E;
 }
 
-header.active .header-nav-li:nth-child(2).active a {
+header.active .header-nav-li:nth-child(2).active a, header.removing .header-nav-li:nth-child(2).active a {
   background-color: #2C7A60;
 }
 
-header.active .header-nav-li:nth-child(3).active a {
+header.active .header-nav-li:nth-child(3).active a, header.removing .header-nav-li:nth-child(3).active a {
   background-color: #5E7289;
 }
 
-header.active .header-nav-li:nth-child(4).active a {
+header.active .header-nav-li:nth-child(4).active a, header.removing .header-nav-li:nth-child(4).active a {
   background-color: #9C9E9F;
 }
 
-header.active .header-nav-li:nth-child(5).active a {
+header.active .header-nav-li:nth-child(5).active a, header.removing .header-nav-li:nth-child(5).active a {
   background-color: #203668;
 }
 
-header.active .header-nav-li:nth-child(6).active a {
+header.active .header-nav-li:nth-child(6).active a, header.removing .header-nav-li:nth-child(6).active a {
   background-color: #C8495E;
 }
 
@@ -1127,7 +1118,7 @@ header.active .header-nav-li:nth-child(6).active a {
   }
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1440px) {
   header {
     font-size: 16px;
   }
@@ -1139,7 +1130,7 @@ header.active .header-nav-li:nth-child(6).active a {
   }
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1440px) {
   .footer-nav-li a {
     font-size: 14px !important;
   }
@@ -1240,7 +1231,7 @@ main.arena-hero-content.respoGame.hero-content {
           justify-content: space-between;
 }
 
-@media screen and (min-width: 1420px) {
+@media screen and (min-width: 1440px) {
   .main-slider-hc-nav-inner {
     max-width: 1336px;
   }
@@ -2090,7 +2081,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1440px) {
   .footer-top-inner .nav {
     padding-right: 80px;
   }
@@ -2239,7 +2230,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1440px) {
   .footer-deskPlus {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2494,7 +2485,7 @@ footer .footer-respo-languagebar .desktopSizeCandLang {
   }
 }
 
-@media screen and (min-width: 1025px) and (min-width: 1680px) {
+@media screen and (min-width: 1025px) and (min-width: 1440px) {
   .footer-bot-for-1440 .footer-socials {
     display: none;
   }

@@ -216,14 +216,14 @@ header
         right: 14px
         transform: translateY(-62%)
 
-.lang-when-scroll .lang-select
-    @include sizePlus(1250px)
+header .lang-select
+    @include desktopPlus1024()
         width: 72px
         &::after   
             right: unset
             right: 7px
             transform: translateY(-90%) 
-.lang-when-scroll .lang-select
+header .lang-select
     @include sizePlus(1441px) 
         width: 97px
         &::after           

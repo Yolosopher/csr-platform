@@ -44,23 +44,29 @@ a
     width: 100%
 
 
-.home-latest-news-inner, .personal-stories-content, .home-personal-stories-inner, .home-aboutus-inner, .rg-news-inner, .sports-inner, .ps-article-text, .hero-respo-article-outter, .personal-stories-a-outter, .main-slider-hc-nav-inner, header > div
+.home-latest-news-inner, .personal-stories-content, .home-personal-stories-inner, .home-aboutus-inner, .rg-news-inner, .sports-inner, .ps-article-text, .hero-respo-article-outter, .personal-stories-a-outter, .main-slider-hc-nav-inner, .ps-article-inner, .ps-video-gallery, .ps-video-gallery > .container:first-child, .rg-news, .rg-arena
     &.container        
         @include tabletPlus768()
             max-width: 632px
-            padding: 0
         @include desktopPlus1024()
             max-width: 978px            
         @include sizePlus(1441px) 
             max-width: 1336px
             padding: 0 20px
-
+header > div
+    &.container        
+        @include desktopPlus1024()
+            max-width: 978px            
+        @include sizePlus(1441px) 
+            max-width: 1336px
+            padding: 0 20px
 .atech.aboutus-article-div
     .for-borderNpad
         @include tabletPlus768()
             max-width: 632px
         @include desktopPlus1024()
-            max-width: 978px
+            max-width: 1180px !important
+            padding: 0 !important
         @include sizePlus(1441px) 
             max-width: 1336px
     

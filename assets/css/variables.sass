@@ -130,6 +130,11 @@ $desktop-width: 1025px
         margin-bottom: 40px !important
     @include desktopPlus1024()
         margin-bottom: 0 !important
+        height: 461px !important
+        width: 473px !important
+        flex-shrink: 0
+    @include sizePlus(1441px)
+        margin-bottom: 0 !important
         height: 520px !important
         width: 534px !important
         flex-shrink: 0
@@ -156,6 +161,11 @@ $desktop-width: 1025px
         border-radius: 4px !important
         // box-shadow: 34px 34px 0 0 #f6f6f6 !important
         @include desktopPlus1024()
+            width: calc( 100% - 54px ) !important
+            width: 425px !important
+            height: 408px !important
+            border-radius: 0 !important    
+        @include sizePlus(1441px)
             width: calc( 100% - 54px ) !important
             width: 480px !important
             height: 460px !important

@@ -147,20 +147,32 @@ a {
 }
 
 @media screen and (min-width: 769px) {
-  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container, .personal-stories-a-outter.container, .main-slider-hc-nav-inner.container, header > div.container {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container, .personal-stories-a-outter.container, .main-slider-hc-nav-inner.container, .ps-article-inner.container, .ps-video-gallery.container, .ps-video-gallery > .container:first-child.container, .rg-news.container, .rg-arena.container {
     max-width: 632px;
-    padding: 0;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container, .personal-stories-a-outter.container, .main-slider-hc-nav-inner.container, header > div.container {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container, .personal-stories-a-outter.container, .main-slider-hc-nav-inner.container, .ps-article-inner.container, .ps-video-gallery.container, .ps-video-gallery > .container:first-child.container, .rg-news.container, .rg-arena.container {
     max-width: 978px;
   }
 }
 
 @media screen and (min-width: 1441px) {
-  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container, .personal-stories-a-outter.container, .main-slider-hc-nav-inner.container, header > div.container {
+  .home-latest-news-inner.container, .personal-stories-content.container, .home-personal-stories-inner.container, .home-aboutus-inner.container, .rg-news-inner.container, .sports-inner.container, .ps-article-text.container, .hero-respo-article-outter.container, .personal-stories-a-outter.container, .main-slider-hc-nav-inner.container, .ps-article-inner.container, .ps-video-gallery.container, .ps-video-gallery > .container:first-child.container, .rg-news.container, .rg-arena.container {
+    max-width: 1336px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  header > div.container {
+    max-width: 978px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  header > div.container {
     max-width: 1336px;
     padding: 0 20px;
   }
@@ -174,7 +186,8 @@ a {
 
 @media screen and (min-width: 1025px) {
   .atech.aboutus-article-div .for-borderNpad {
-    max-width: 978px;
+    max-width: 1180px !important;
+    padding: 0 !important;
   }
 }
 
@@ -636,11 +649,11 @@ header.removing::after {
           transform: translateY(-62%);
 }
 
-@media screen and (min-width: 1250px) {
-  .lang-when-scroll .lang-select {
+@media screen and (min-width: 1025px) {
+  header .lang-select {
     width: 72px;
   }
-  .lang-when-scroll .lang-select::after {
+  header .lang-select::after {
     right: unset;
     right: 7px;
     -webkit-transform: translateY(-90%);
@@ -649,10 +662,10 @@ header.removing::after {
 }
 
 @media screen and (min-width: 1441px) {
-  .lang-when-scroll .lang-select {
+  header .lang-select {
     width: 97px;
   }
-  .lang-when-scroll .lang-select::after {
+  header .lang-select::after {
     left: unset;
     right: 14px;
     -webkit-transform: translateY(-62%);
@@ -1595,6 +1608,13 @@ main.arena-hero-content.respoGame.hero-content {
   }
 }
 
+@media screen and (min-width: 1441px) {
+  .latest-news-li .latest-news-text-content h2 {
+    font-size: 24px;
+    line-height: 38.4px;
+  }
+}
+
 .latest-news-li:hover {
   -webkit-box-shadow: 0px 0px 20px #00000029;
           box-shadow: 0px 0px 20px #00000029;
@@ -1836,7 +1856,6 @@ h1.home-aboutus-h1 {
   .home-aboutus-inner .aboutus-cover, .home-aboutus-inner .aboutus-texts {
     font-family: firaMedium;
     font-size: 16px;
-    height: 269px;
     line-height: 25.6px;
   }
 }
@@ -2011,13 +2030,23 @@ h1.home-aboutus-h1 {
     margin-bottom: 31px;
   }
   .aboutus-divOfPs p {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 25.6px;
     margin-bottom: 17px;
     font-family: firaMedium;
   }
   .aboutus-divOfPs p:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .aboutus-divOfPs {
+    margin-bottom: 31px;
+  }
+  .aboutus-divOfPs p {
+    font-size: 20px;
+    line-height: 32px;
   }
 }
 
@@ -2237,6 +2266,12 @@ footer {
 .header-nav-li a {
   font-size: 12px;
   line-height: 25.6px;
+}
+
+@media screen and (min-width: 769px) {
+  .header-nav-li a {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -3472,6 +3507,16 @@ body.arena {
 @media screen and (min-width: 1025px) {
   .arena-right-image {
     margin-bottom: 0 !important;
+    height: 461px !important;
+    width: 473px !important;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .arena-right-image {
+    margin-bottom: 0 !important;
     height: 520px !important;
     width: 534px !important;
     -ms-flex-negative: 0;
@@ -3512,6 +3557,15 @@ body.arena {
 }
 
 @media screen and (min-width: 1025px) {
+  .arena-right-image img {
+    width: calc( 100% - 54px) !important;
+    width: 425px !important;
+    height: 408px !important;
+    border-radius: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1441px) {
   .arena-right-image img {
     width: calc( 100% - 54px) !important;
     width: 480px !important;
@@ -3567,10 +3621,14 @@ body.sports {
   }
 }
 
+.sports-inner.container {
+  padding: 0 20px;
+}
+
 @media screen and (min-width: 769px) {
   .sports-inner.container {
-    padding: 0 20px;
-    max-width: unset;
+    padding: 0;
+    max-width: 796px;
   }
 }
 
@@ -3722,6 +3780,16 @@ body.sports {
 @media screen and (min-width: 1025px) {
   .sports-each-img-div {
     margin-bottom: 0 !important;
+    height: 461px !important;
+    width: 473px !important;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .sports-each-img-div {
+    margin-bottom: 0 !important;
     height: 520px !important;
     width: 534px !important;
     -ms-flex-negative: 0;
@@ -3762,6 +3830,15 @@ body.sports {
 }
 
 @media screen and (min-width: 1025px) {
+  .sports-each-img-div img {
+    width: calc( 100% - 54px) !important;
+    width: 425px !important;
+    height: 408px !important;
+    border-radius: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1441px) {
   .sports-each-img-div img {
     width: calc( 100% - 54px) !important;
     width: 480px !important;
@@ -3897,6 +3974,16 @@ body.sports {
 @media screen and (min-width: 1025px) {
   .atech-article-img-div {
     margin-bottom: 0 !important;
+    height: 461px !important;
+    width: 473px !important;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .atech-article-img-div {
+    margin-bottom: 0 !important;
     height: 520px !important;
     width: 534px !important;
     -ms-flex-negative: 0;
@@ -3939,6 +4026,15 @@ body.sports {
 @media screen and (min-width: 1025px) {
   .atech-article-img-div img {
     width: calc( 100% - 54px) !important;
+    width: 425px !important;
+    height: 408px !important;
+    border-radius: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .atech-article-img-div img {
+    width: calc( 100% - 54px) !important;
     width: 480px !important;
     height: 460px !important;
     border-radius: 0 !important;
@@ -3958,12 +4054,14 @@ body.sports {
 
 @media screen and (min-width: 1025px) {
   .menuAndSoc.container {
-    max-width: 1100px;
+    max-width: 978px;
   }
 }
 
-article.atech-article {
-  max-width: 1100px;
+@media screen and (min-width: 1441px) {
+  .menuAndSoc.container {
+    max-width: 1100px;
+  }
 }
 
 article.atech-article h2 {
@@ -4006,6 +4104,13 @@ article.atech-article .atech-textbox-p {
 
 @media screen and (min-width: 1025px) {
   article.atech-article .atech-textbox-p {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  article.atech-article .atech-textbox-p {
     font-size: 18px;
     line-height: 32px;
   }
@@ -4023,6 +4128,18 @@ article.atech-article > div {
 }
 
 @media screen and (min-width: 1025px) {
+  article.atech-article > div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 36px;
+    width: 100%;
+    height: 461px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
   article.atech-article > div {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -4681,6 +4798,7 @@ article.atech-article > div {
   .aboutus-article-div {
     padding: 36px 20px;
     padding-top: 69px;
+    padding-bottom: 109px;
   }
 }
 
@@ -4699,21 +4817,24 @@ article.atech-article > div {
 @media screen and (min-width: 1025px) {
   .for-borderNpad {
     padding: 79px 35px;
+    padding-bottom: 0;
     border: 1px solid #E3E3E3;
     border-radius: 12px;
   }
 }
 
-@media screen and (min-width: 1336px) {
+@media screen and (min-width: 1441px) {
   .for-borderNpad {
-    padding: 79px 115px;
+    padding: 79px 35px;
+    border: 1px solid #E3E3E3;
+    border-radius: 12px;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  article.aboutus-article.atech-article > div {
-    height: 638px;
-    min-height: 560px;
+  .for-borderNpad article.atech-article {
+    padding: 94px 101px;
+    padding-bottom: 64px;
   }
 }
 
@@ -4967,6 +5088,16 @@ article.atech-article > div {
 @media screen and (min-width: 1025px) {
   .donations-each-img-div {
     margin-bottom: 0 !important;
+    height: 461px !important;
+    width: 473px !important;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .donations-each-img-div {
+    margin-bottom: 0 !important;
     height: 520px !important;
     width: 534px !important;
     -ms-flex-negative: 0;
@@ -5007,6 +5138,15 @@ article.atech-article > div {
 }
 
 @media screen and (min-width: 1025px) {
+  .donations-each-img-div img {
+    width: calc( 100% - 54px) !important;
+    width: 425px !important;
+    height: 408px !important;
+    border-radius: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1441px) {
   .donations-each-img-div img {
     width: calc( 100% - 54px) !important;
     width: 480px !important;
@@ -5252,8 +5392,15 @@ article.atech-article > div {
 @media screen and (min-width: 1025px) {
   .ps-article-video {
     height: 750px;
-    margin-bottom: 100px;
+    height: 456px;
+    margin-bottom: 85px;
     display: block !important;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .ps-article-video {
+    height: 750px;
   }
 }
 
@@ -5395,6 +5542,12 @@ article.atech-article > div {
 }
 
 @media screen and (min-width: 1025px) {
+  .menuAndSoc + .rg-news-inner.rg-arena-inner.container {
+    max-width: 978px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
   .menuAndSoc + .rg-news-inner.rg-arena-inner.container {
     max-width: 1100px;
   }

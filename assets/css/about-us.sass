@@ -34,7 +34,6 @@ h1.home-aboutus-h1
         @include tabletPlus768()
             font-family: firaMedium
             font-size: 16px
-            height: 269px
             line-height: 25.6px
         @include desktopPlus1024()
             width: unset
@@ -129,9 +128,14 @@ h1.home-aboutus-h1
     @include desktopPlus1024()     
         margin-bottom: 31px
         p     
-            font-size: 20px
-            line-height: 32px
+            font-size: 16px
+            line-height: 25.6px
             margin-bottom: 17px
             font-family: firaMedium
             &:last-child
                 margin-bottom: 0
+    @include sizePlus(1441px)  
+        margin-bottom: 31px
+        p     
+            font-size: 20px
+            line-height: 32px

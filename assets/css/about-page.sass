@@ -7,6 +7,7 @@
     @include desktopPlus1024()
         padding: 36px 20px
         padding-top: 69px
+        padding-bottom: 109px
     .atech-article-bottom-textbox
         justify-content: center
 .for-borderNpad
@@ -14,17 +15,23 @@
         padding: 0
     @include desktopPlus1024()
         padding: 79px 35px
+        padding-bottom: 0
         border: 1px solid $e3
         border-radius: 12px
-
-    @include sizePlus(1336px)
-        padding: 79px 115px
+    @include sizePlus(1441px)
+        padding: 79px 35px
+        border: 1px solid $e3
+        border-radius: 12px
+    article.atech-article 
+        @include desktopPlus1024()
+            padding: 94px 101px
+            padding-bottom: 64px
     
 
-article.aboutus-article.atech-article > div
-    @include desktopPlus1024()
-        height: 638px
-        min-height: 560px
+// article.aboutus-article.atech-article > div
+//     @include desktopPlus1024()
+//         height: 638px
+//         min-height: 560px
 
 
 // second section

@@ -1211,8 +1211,14 @@ main {
 
 @media screen and (min-width: 1025px) {
   main {
-    height: 500px;
+    height: 300px;
     margin-bottom: 180px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  main {
+    height: 550px;
   }
 }
 
@@ -1602,16 +1608,11 @@ main.arena-hero-content.respoGame.hero-content {
   }
 }
 
-@media screen and (min-width: 1025px) {
-  .latest-news-li .latest-news-text-content h2 {
-    max-height: 114px;
-  }
-}
-
 @media screen and (min-width: 1441px) {
   .latest-news-li .latest-news-text-content h2 {
     font-size: 24px;
     line-height: 38.4px;
+    max-height: 114px;
   }
 }
 
@@ -1632,8 +1633,14 @@ main.arena-hero-content.respoGame.hero-content {
 
 @media screen and (min-width: 1025px) {
   .home-personal-stories {
-    height: 550px;
+    height: 432px;
     padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .home-personal-stories {
+    height: 582px;
   }
 }
 
@@ -2018,22 +2025,21 @@ h1.home-aboutus-h1 {
   margin-bottom: 8px;
   font-size: 12px;
   line-height: 19.2px;
-  font-family: firaBold;
+  font-family: firaMedium;
 }
 
 .aboutus-divOfPs p:last-child {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) {
   .aboutus-divOfPs {
-    margin-bottom: 31px;
+    margin-bottom: 30px;
   }
   .aboutus-divOfPs p {
     font-size: 16px;
     line-height: 25.6px;
     margin-bottom: 17px;
-    font-family: firaMedium;
   }
   .aboutus-divOfPs p:last-child {
     margin-bottom: 0;
